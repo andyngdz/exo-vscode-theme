@@ -1,0 +1,57 @@
+/**
+ * Exo - Dawn Palette
+ * Dark theme inspired by sunrise and early morning light
+ *
+ * Identity: Morning glow - soft corals, rose pinks, golden rays
+ * - Contrast: Light text on dark background
+ * - Hierarchy: Clear text weight progression
+ * - Variety: Sunrise-inspired syntax colors
+ * - Unity: Warm morning tones throughout
+ */
+
+export const dawn = {
+  name: 'Exo - Dawn',
+
+  // Base - dark with warm undertone like pre-dawn sky
+  background: '#1a1618',
+  foreground: '#c8c0b8',
+  foregroundBright: '#f0e8e0',
+  foregroundDim: '#807870',
+
+  // Accent - soft coral like sunrise clouds
+  primary: '#e08870',
+
+  // Syntax - sunrise/morning palette
+  keyword: '#e07088', // rose pink - morning sky blush
+  function: '#d8b060', // golden yellow - first sun rays
+  string: '#70b080', // fresh green - morning dew
+  number: '#e09868', // peach - horizon glow
+  comment: '#686060', // warm gray - morning mist
+  operator: '#989088', // warm stone - neutral
+  type: '#70a0c0', // soft blue - clearing sky
+  constant: '#b0a890', // warm sand - beach at dawn
+  error: '#d06060', // warm red - errors
+
+  // UI - dark warm surfaces
+  border: '#2a2628',
+  surface: '#201c1e',
+  surfaceDark: '#141214',
+  surfaceLight: '#282426',
+  overlay: '#242022',
+  lineNumber: '#585050',
+  panelBackground: '#1a1618',
+
+  // Git - conventional colors with warm tint
+  added: '#70b080',
+  deleted: '#d06060',
+  modified: '#e08870',
+  ignored: '#686060',
+  conflicting: '#e09868',
+
+  // Terminal - warm morning tones
+  red: '#e07070',
+  green: '#78b888',
+  yellow: '#d8b868',
+  blue: '#78a8c8',
+  magenta: '#c078a0',
+} as const
