@@ -3,9 +3,9 @@
  */
 
 import type { Palette } from '@/palettes'
-import { darken, lighten, transparent, withOpacity } from '@/utils'
+import { lighten, transparent, withOpacity } from '@/utils'
 
-export function createTheme(palette: Palette, type: 'dark' | 'light') {
+export function createTheme(palette: Palette) {
   const colors = {
     // Editor
     'editor.background': palette.background,
@@ -38,15 +38,13 @@ export function createTheme(palette: Palette, type: 'dark' | 'light') {
     'editorError.foreground': palette.error,
     'editorWarning.foreground': palette.number,
     'editorLineNumber.foreground': palette.lineNumber,
-    'editorLineNumber.activeForeground': type === 'dark'
-      ? lighten(palette.lineNumber, 0.3)
-      : darken(palette.lineNumber, 0.3),
+    'editorLineNumber.activeForeground': lighten(palette.lineNumber, 0.3),
 
     // Activity Bar
     'activityBar.background': palette.background,
     'activityBar.foreground': palette.primary,
     'activityBarBadge.background': palette.primary,
-    'activityBarBadge.foreground': type === 'dark' ? palette.background : '#ffffff',
+    'activityBarBadge.foreground': palette.background,
 
     // Sidebar
     'sideBar.background': palette.background,
@@ -144,10 +142,8 @@ export function createTheme(palette: Palette, type: 'dark' | 'light') {
 
     // Button
     'button.background': palette.primary,
-    'button.foreground': type === 'dark' ? palette.background : '#ffffff',
-    'button.hoverBackground': type === 'dark'
-      ? lighten(palette.primary, 0.1)
-      : darken(palette.primary, 0.1),
+    'button.foreground': palette.background,
+    'button.hoverBackground': lighten(palette.primary, 0.1),
 
     // Scrollbar
     'scrollbarSlider.background': withOpacity(palette.foregroundDim, 0.28),
@@ -156,7 +152,7 @@ export function createTheme(palette: Palette, type: 'dark' | 'light') {
 
     // Badge
     'badge.background': palette.primary,
-    'badge.foreground': type === 'dark' ? palette.background : '#ffffff',
+    'badge.foreground': palette.background,
 
     // Misc
     'focusBorder': palette.primary,
@@ -696,7 +692,7 @@ export function createTheme(palette: Palette, type: 'dark' | 'light') {
 
   return {
     name: palette.name,
-    type,
+    type: 'dark',
     colors,
     tokenColors,
   }
