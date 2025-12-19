@@ -1,12 +1,13 @@
 import { writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 
-import { dawn, dusk } from '@/palettes'
+import { dawn, dusk, midnight } from '@/palettes'
 import { createTheme } from '@/theme'
 
 const themes = [
   { palette: dusk, type: 'dark' as const },
   { palette: dawn, type: 'dark' as const },
+  { palette: midnight, type: 'dark' as const },
 ]
 
 for (const { palette, type } of themes) {
