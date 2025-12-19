@@ -1,4 +1,4 @@
 export { dusk } from './dusk'
 export { dawn } from './dawn'
 
-export type Palette = typeof import('./dusk').dusk
+export type Palette = typeof import('./dusk').dusk | typeof import('./dawn').dawn
