@@ -1,57 +1,57 @@
 /**
  * Exo - Dawn Palette
- * Light theme inspired by morning paper and natural light
+ * Light theme inspired by sunrise and early morning light
  *
- * Identity: Clean, warm paper aesthetic with rich ink-like syntax colors
- * - Contrast: High contrast dark text on light background
+ * Identity: Sunrise warmth - soft golden light, peachy pinks, fresh greens
+ * - Contrast: Dark text on warm cream background
  * - Hierarchy: Clear text weight progression
- * - Variety: Saturated syntax colors for easy scanning
- * - Unity: Warm paper tones, rich natural syntax colors
+ * - Variety: Sunrise-inspired syntax colors
+ * - Unity: Warm morning tones throughout
  */
 
 export const dawn = {
   name: 'Exo - Dawn',
 
-  // Base - paper-like with strong text contrast
-  background: '#f5f0e8',
-  foreground: '#2a2e33',
-  foregroundBright: '#151820',
-  foregroundDim: '#5a6068',
+  // Base - warm cream like early morning light
+  background: '#faf6f0',
+  foreground: '#3a3530',
+  foregroundBright: '#1a1815',
+  foregroundDim: '#6a6560',
 
-  // Accent - warm terracotta for interactive elements
-  primary: '#b05840',
+  // Accent - soft coral like sunrise clouds
+  primary: '#d08060',
 
-  // Syntax - rich, saturated colors like quality ink
-  keyword: '#8b2252', // plum - control flow
-  function: '#0068a8', // deep azure - functions
-  string: '#1a7848', // emerald - strings
-  number: '#a85000', // burnt sienna - numbers
-  comment: '#7a8088', // slate - comments
-  operator: '#485058', // charcoal - punctuation
-  type: '#7040a0', // violet - types, classes
-  constant: '#306898', // steel blue - constants
-  error: '#c82020', // crimson - errors
+  // Syntax - sunrise color palette
+  keyword: '#c05070', // rose - control flow, like pink sky
+  function: '#b08020', // golden amber - functions, like sun rays
+  string: '#509050', // fresh green - strings, like morning grass
+  number: '#c07040', // peach orange - numbers, like horizon
+  comment: '#908580', // warm gray - comments, like morning mist
+  operator: '#685850', // warm brown - punctuation
+  type: '#4080a0', // morning sky blue - types, classes
+  constant: '#907040', // warm tan - constants
+  error: '#c03030', // warm red - errors
 
-  // UI - subtle warm surfaces
-  border: '#d8d0c8',
-  surface: '#ece6de',
-  surfaceDark: '#e0d8d0',
-  surfaceLight: '#f0ebe4',
-  overlay: '#f8f4ee',
-  lineNumber: '#a0988e',
-  panelBackground: '#ece6de',
+  // UI - soft warm surfaces
+  border: '#e0d8d0',
+  surface: '#f0ebe4',
+  surfaceDark: '#e8e0d8',
+  surfaceLight: '#f5f0ea',
+  overlay: '#fcf8f4',
+  lineNumber: '#b0a8a0',
+  panelBackground: '#f0ebe4',
 
-  // Git - conventional colors, saturated
-  added: '#1a7848',
-  deleted: '#c82020',
-  modified: '#b05840',
-  ignored: '#7a8088',
-  conflicting: '#a85000',
+  // Git - conventional colors with warm tint
+  added: '#509050',
+  deleted: '#c03030',
+  modified: '#d08060',
+  ignored: '#908580',
+  conflicting: '#c07040',
 
-  // Terminal - high contrast for light background
-  red: '#c82828',
-  green: '#1a8050',
-  yellow: '#a86800',
-  blue: '#0068b0',
-  magenta: '#8838a0',
+  // Terminal - warm saturated for light background
+  red: '#c03838',
+  green: '#408848',
+  yellow: '#b08020',
+  blue: '#3878b0',
+  magenta: '#a050a0',
 } as const
