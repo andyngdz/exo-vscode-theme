@@ -20,6 +20,11 @@
         "label": "Exo - Dawn",
         "uiTheme": "vs-dark",
         "path": "./themes/Exo - Dawn-color-theme.json"
+      },
+      {
+        "label": "Exo - Midnight",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Exo - Midnight-color-theme.json"
       }
     ]
   },
