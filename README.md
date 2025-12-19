@@ -1,42 +1,81 @@
-# Exo - Dusk
+# Exo Theme
 
-A muted, eye-friendly dark theme for VS Code. Part of the Exo theme family.
+A muted, eye-friendly dark theme family for VS Code. Five beautiful themes designed for long coding sessions without eye strain.
+
+## Themes
+
+| Theme | Inspiration | Accent |
+|-------|-------------|--------|
+| **Exo - Dusk** | Evening sunset | Warm amber |
+| **Exo - Dawn** | Morning sunrise | Soft coral |
+| **Exo - Midnight** | Night sky | Ice blue |
+| **Exo - Eclipse** | Solar eclipse | Deep crimson |
+| **Exo - Forest** | Woodland | Moss green |
 
 ## Features
 
-- **Very dark background** - Easy on the eyes for long coding sessions
-- **Muted cyan accent** - Subtle primary color that doesn't overwhelm
-- **Desaturated syntax colors** - Blues, cyans, and teals for a calm aesthetic
-- **Full terminal support** - Complete ANSI color palette
-- **Comprehensive UI coverage** - Minimap, peek view, debug, merge conflicts
+- **Eye comfort first** - Muted, low-saturation colors that don't cause fatigue
+- **Distinct personalities** - Each theme has its own unique color identity
+- **Semantic highlighting** - Colors follow coding conventions (green strings, etc.)
+- **Full UI coverage** - Editor, terminal, git, debug, minimap, and more
+- **Dark backgrounds** - Easy on the eyes for long coding sessions
 
-## Color Palette
+## Theme Previews
 
-| Color | Hex | Usage |
-|-------|-----|-------|
-| Background | `#0f1419` | Editor background |
-| Foreground | `#a8b5c4` | Default text |
-| Primary | `#6ba3a8` | Accent, functions |
-| Keyword | `#7b93a8` | Keywords, storage |
-| String | `#7a9e8c` | Strings, symbols |
-| Number | `#b8a586` | Numbers, constants |
-| Comment | `#4a5866` | Comments |
-| Error | `#b07070` | Errors, deletions |
+### Dusk (Evening)
+Soft purples and warm amber tones, like watching the sunset.
+
+### Dawn (Morning)
+Coral and sage green tones, fresh like the first light of day.
+
+### Midnight (Night)
+Cool blues and silver tones, calm like moonlit water.
+
+### Eclipse (Solar)
+Deep crimson and burnt gold, dramatic like a solar eclipse.
+
+### Forest (Woodland)
+Moss greens and earthy amber, grounded like an ancient forest.
+
+## Installation
+
+1. Open VS Code
+2. Go to Extensions (Ctrl+Shift+X)
+3. Search for "Exo Theme"
+4. Click Install
+5. Go to Preferences > Color Theme and select your preferred Exo theme
 
 ## Development
 
-The theme is built from TypeScript source files:
+The themes are built from TypeScript source files:
 
 ```bash
-npm install
-npm run build
+pnpm install
+pnpm run build
 ```
 
-Theme source files:
-- `src/palette.ts` - Color definitions
-- `src/theme.ts` - Theme configuration
-- `src/utils.ts` - Color utilities
-- `src/build.ts` - Build script
+### Project Structure
+
+```
+src/
+├── palettes/       # Color definitions for each theme
+│   ├── dusk.ts
+│   ├── dawn.ts
+│   ├── midnight.ts
+│   ├── eclipse.ts
+│   └── forest.ts
+├── theme.ts        # Theme generator
+├── utils.ts        # Color utilities
+└── build.ts        # Build script
+```
+
+## Design Principles
+
+1. **Eye comfort** - Muted colors that don't strain your eyes
+2. **Beautiful aesthetics** - "Wow, this looks good" feeling
+3. **Theme identity** - Colors match each theme's name and concept
+4. **Clear hierarchy** - Important elements stand out appropriately
+5. **Semantic meaning** - Colors follow universal coding conventions
 
 ## License
 
