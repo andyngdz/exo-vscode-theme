@@ -1,5 +1,5 @@
 // Exo Theme - Syntax Showcase
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 interface User {
   id: number
