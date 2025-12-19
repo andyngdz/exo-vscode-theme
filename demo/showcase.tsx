@@ -28,7 +28,6 @@ export function UserProfile({ userId }: { userId: number }) {
   }, [userId])
 
   const status = user?.isActive ? 'Online' : 'Offline'
-  const count = 42
 
   return <div className="profile">{user?.name ?? status}</div>
 }
