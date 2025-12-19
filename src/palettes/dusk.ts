@@ -1,58 +1,57 @@
 /**
  * Exo - Dusk Palette
- * Dark theme with muted cyan accent
+ * Dark theme inspired by sunset and evening twilight
  *
- * Design principles applied:
- * - Contrast: All text colors tested against background
- * - Hierarchy: foregroundBright > foreground > foregroundDim
- * - Variety: Each syntax color is distinct and recognizable
- * - Unity: All colors share a muted, desaturated quality
- * - Pattern: Red=error, Green=success, Yellow=warning
+ * Identity: Evening sky - deep purples, warm ambers, fading orange light
+ * - Contrast: Light text on dark background
+ * - Hierarchy: Clear text weight progression
+ * - Variety: Sunset-inspired syntax colors
+ * - Unity: Warm evening tones throughout
  */
 
 export const dusk = {
   name: 'Exo - Dusk',
 
-  // Base - hierarchy for text importance
-  background: '#0f1419',
-  foreground: '#b0bcc8',
-  foregroundBright: '#dce4ec',
-  foregroundDim: '#6a7a8a',
+  // Base - deep evening sky
+  background: '#1a1520',
+  foreground: '#c0b8c8',
+  foregroundBright: '#e8e0f0',
+  foregroundDim: '#787080',
 
-  // Accent - teal for interactive elements
-  primary: '#5a9ea4',
+  // Accent - warm amber like setting sun
+  primary: '#d89050',
 
-  // Syntax - distinct colors for each category
-  keyword: '#d4928a', // warm coral - control flow, keywords
-  function: '#e8c47a', // golden yellow - functions, methods
-  string: '#7eb89a', // sage green - string literals
-  number: '#d4a070', // amber - numeric values
-  comment: '#505c68', // muted gray - comments
-  operator: '#88969e', // neutral gray - punctuation, operators
-  type: '#7aafcc', // sky blue - types, classes
-  constant: '#98b0c4', // steel blue - constants
+  // Syntax - sunset/evening palette
+  keyword: '#c080b0', // dusty purple - twilight sky
+  function: '#e0a860', // golden amber - setting sun
+  string: '#80b898', // muted teal - evening water
+  number: '#d8a070', // warm copper - horizon glow
+  comment: '#605868', // muted purple-gray - fading light
+  operator: '#908898', // lavender gray - dusk haze
+  type: '#8090c8', // deep periwinkle - evening sky
+  constant: '#a8a0b8', // soft violet - twilight
   error: '#d07070', // muted red - errors
 
-  // UI - consistent surface hierarchy
-  border: '#202830',
-  surface: '#141a20',
-  surfaceDark: '#0a0e12',
-  surfaceLight: '#1a2028',
-  overlay: '#182028',
-  lineNumber: '#404c58',
-  panelBackground: '#0f1419',
+  // UI - deep purple-tinted surfaces
+  border: '#2a2430',
+  surface: '#201a28',
+  surfaceDark: '#141018',
+  surfaceLight: '#282030',
+  overlay: '#241e2c',
+  lineNumber: '#504860',
+  panelBackground: '#1a1520',
 
   // Git - conventional colors
-  added: '#7eb89a',
+  added: '#80b898',
   deleted: '#d07070',
-  modified: '#5a9ea4',
-  ignored: '#505c68',
-  conflicting: '#d4a070',
+  modified: '#d89050',
+  ignored: '#605868',
+  conflicting: '#d8a070',
 
-  // Terminal - bright enough for readability
+  // Terminal - warm evening tones
   red: '#e07878',
-  green: '#88c090',
-  yellow: '#e0c078',
-  blue: '#80b0d8',
-  magenta: '#c090c8',
+  green: '#88c098',
+  yellow: '#e0b870',
+  blue: '#8098d0',
+  magenta: '#c088b8',
 } as const

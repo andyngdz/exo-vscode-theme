@@ -6,7 +6,7 @@ import { createTheme } from '@/theme'
 
 const themes = [
   { palette: dusk, type: 'dark' as const },
-  { palette: dawn, type: 'light' as const },
+  { palette: dawn, type: 'dark' as const },
 ]
 
 for (const { palette, type } of themes) {
