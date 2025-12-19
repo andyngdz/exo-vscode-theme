@@ -21,16 +21,16 @@ export const dawn = {
   // Accent - soft coral like sunrise clouds
   primary: '#e08870',
 
-  // Syntax - sunrise/morning palette
-  keyword: '#e07088', // rose pink - morning sky blush
-  function: '#d8b060', // golden yellow - first sun rays
-  string: '#70b080', // fresh green - morning dew
-  number: '#e09868', // peach - horizon glow
+  // Syntax - sunrise/morning palette (corals, pinks, sage greens)
+  keyword: '#d88880', // soft coral - sunrise glow
+  function: '#c8a060', // golden honey - morning rays
+  string: '#7ab890', // fresh mint - morning dew
+  number: '#d8a080', // soft peach - first blush
   comment: '#686060', // warm gray - morning mist
   operator: '#989088', // warm stone - neutral
-  type: '#70a0c0', // soft blue - clearing sky
-  constant: '#b0a890', // warm sand - beach at dawn
-  error: '#d06060', // warm red - errors
+  type: '#80b0a8', // soft teal - clear sky
+  constant: '#c8a888', // warm cream - sandy shore
+  error: '#d07878', // soft red - gentle alert
 
   // UI - dark warm surfaces
   border: '#2a2628',

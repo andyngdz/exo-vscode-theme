@@ -21,16 +21,16 @@ export const dusk = {
   // Accent - warm amber like setting sun
   primary: '#d89050',
 
-  // Syntax - sunset/evening palette
-  keyword: '#c080b0', // dusty purple - twilight sky
-  function: '#e0a860', // golden amber - setting sun
-  string: '#80b898', // muted teal - evening water
-  number: '#d8a070', // warm copper - horizon glow
+  // Syntax - sunset/evening palette (purples, soft oranges, twilight)
+  keyword: '#c490b0', // soft orchid - twilight bloom
+  function: '#d4a870', // warm amber - fading sunlight
+  string: '#8aad98', // muted sage - evening calm
+  number: '#d0a878', // soft apricot - warm afterglow
   comment: '#605868', // muted purple-gray - fading light
   operator: '#908898', // lavender gray - dusk haze
-  type: '#8090c8', // deep periwinkle - evening sky
-  constant: '#a8a0b8', // soft violet - twilight
-  error: '#d07070', // muted red - errors
+  type: '#a8a0c8', // soft violet - evening sky
+  constant: '#c8a890', // warm sand - twilight glow
+  error: '#d08080', // muted coral - gentle warning
 
   // UI - deep purple-tinted surfaces
   border: '#2a2430',

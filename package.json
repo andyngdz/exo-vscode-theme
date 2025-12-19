@@ -25,6 +25,11 @@
         "label": "Exo - Midnight",
         "uiTheme": "vs-dark",
         "path": "./themes/Exo - Midnight-color-theme.json"
+      },
+      {
+        "label": "Exo - Eclipse",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Exo - Eclipse-color-theme.json"
       }
     ]
   },
