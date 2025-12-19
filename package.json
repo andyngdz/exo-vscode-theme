@@ -30,6 +30,11 @@
         "label": "Exo - Eclipse",
         "uiTheme": "vs-dark",
         "path": "./themes/Exo - Eclipse-color-theme.json"
+      },
+      {
+        "label": "Exo - Forest",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Exo - Forest-color-theme.json"
       }
     ]
   },
