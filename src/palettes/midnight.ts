@@ -21,16 +21,16 @@ export const midnight = {
   // Accent - ice blue like moonlight on water
   primary: '#70a0c0',
 
-  // Syntax - night sky palette
-  keyword: '#9080c0', // soft violet - distant stars
-  function: '#70b8c8', // pale cyan - aurora
-  string: '#70a898', // muted seafoam - bioluminescence
-  number: '#a0a8b8', // soft silver - starlight
+  // Syntax - night sky palette (blues, silvers, moonlight)
+  keyword: '#90a8d0', // soft periwinkle - starlit sky
+  function: '#78c0c8', // pale cyan - aurora glow
+  string: '#88b8a8', // soft seafoam - moonlit tide
+  number: '#a8b0c0', // cool silver - starlight
   comment: '#505868', // deep slate - night clouds
-  operator: '#808898', // cool gray - moonlit mist
-  type: '#8098c8', // cool periwinkle - pre-dawn sky
-  constant: '#9898b0', // pale lavender - distant nebula
-  error: '#c07080', // muted rose - warning beacon
+  operator: '#788090', // cool slate - shadow
+  type: '#80a8c8', // sky blue - distant horizon
+  constant: '#a0a8b8', // pale silver - moonbeam
+  error: '#c08088', // muted rose - soft warning
 
   // UI - deep blue-tinted surfaces
   border: '#1a2028',
