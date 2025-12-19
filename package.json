@@ -1,0 +1,33 @@
+{
+  "name": "exo-vscode-theme",
+  "displayName": "Exo - Dusk",
+  "description": "A muted, eye-friendly dark theme for VS Code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.107.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Exo - Dusk",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Exo Theme-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "tsx src/build.ts",
+    "watch": "tsx watch src/build.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "colord": "^2.9.3"
+  }
+}
