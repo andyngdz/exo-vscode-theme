@@ -1,9 +1,19 @@
-import { theme } from '@/theme'
 import { writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 
-const outputPath = resolve(__dirname, '../themes/Exo Theme-color-theme.json')
+import { dawn, dusk } from '@/palettes'
+import { createTheme } from '@/theme'
 
-writeFileSync(outputPath, JSON.stringify(theme, null, 2))
+const themes = [
+  { palette: dusk, type: 'dark' as const },
+  { palette: dawn, type: 'light' as const },
+]
 
-console.log(`✓ Theme generated: ${outputPath}`)
+for (const { palette, type } of themes) {
+  const theme = createTheme(palette, type)
+  const outputPath = resolve(__dirname, `../themes/${palette.name}-color-theme.json`)
+
+  writeFileSync(outputPath, JSON.stringify(theme, null, 2))
+
+  console.log(`✓ ${palette.name} generated`)
+}

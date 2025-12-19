@@ -12,4 +12,8 @@ export function lighten(hex: string, amount: number): string {
   return colord(hex).lighten(amount).toHex()
 }
 
+export function darken(hex: string, amount: number): string {
+  return colord(hex).darken(amount).toHex()
+}
+
 export const transparent = '#00000000'
