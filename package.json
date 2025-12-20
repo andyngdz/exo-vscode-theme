@@ -2,13 +2,31 @@
   "name": "exo-vscode-theme",
   "displayName": "Exo Theme",
   "description": "A muted, eye-friendly theme family for VS Code",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "publisher": "andyngdz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andyngdz/exo-vscode-theme"
+  },
   "engines": {
-    "vscode": "^1.107.0"
+    "vscode": "^1.60.0"
   },
   "categories": [
     "Themes"
   ],
+  "keywords": [
+    "theme",
+    "dark theme",
+    "color theme",
+    "eye-friendly",
+    "muted"
+  ],
+  "icon": "screenshots/exo_theme_banner.jpg",
+  "galleryBanner": {
+    "color": "#1a1520",
+    "theme": "dark"
+  },
   "contributes": {
     "themes": [
       {
@@ -40,14 +58,13 @@
   },
   "scripts": {
     "build": "tsx src/build.ts",
-    "watch": "tsx watch src/build.ts"
+    "watch": "tsx watch src/build.ts",
+    "package": "vsce package"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
+    "colord": "^2.9.3",
     "tsx": "^4.7.0",
     "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "colord": "^2.9.3"
   }
 }

@@ -1,0 +1,34 @@
+# Source files (not needed in extension)
+src/
+demo/
+openspec/
+.opencode/
+.claude/
+
+# Config files
+tsconfig.json
+pnpm-lock.yaml
+pnpm-workspace.yaml
+.gitignore
+.prettierrc
+AGENTS.md
+
+# Git
+.git/
+.github/
+
+# Node modules
+node_modules/
+**/node_modules/
+
+# Development files
+*.ts
+*.map
+
+# Misc
+.vscode/
+**/.DS_Store
+
+# Screenshots (except icon for marketplace)
+screenshots/*.png
+screenshots/.gitkeep
