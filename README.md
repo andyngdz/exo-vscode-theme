@@ -1,16 +1,18 @@
+![Exo Theme](https://github.com/user-attachments/assets/0c76215a-2088-49e3-bf77-75f94960d929)
+
 # Exo Theme
 
 A muted, eye-friendly dark theme family for VS Code. Five beautiful themes designed for long coding sessions without eye strain.
 
 ## Themes
 
-| Theme | Inspiration | Accent |
-|-------|-------------|--------|
-| **Exo - Dusk** | Evening sunset | Warm amber |
-| **Exo - Dawn** | Morning sunrise | Soft coral |
-| **Exo - Midnight** | Night sky | Ice blue |
-| **Exo - Eclipse** | Solar eclipse | Deep crimson |
-| **Exo - Forest** | Woodland | Moss green |
+| Theme              | Inspiration     | Accent       |
+| ------------------ | --------------- | ------------ |
+| **Exo - Dusk**     | Evening sunset  | Warm amber   |
+| **Exo - Dawn**     | Morning sunrise | Soft coral   |
+| **Exo - Midnight** | Night sky       | Ice blue     |
+| **Exo - Eclipse**  | Solar eclipse   | Deep crimson |
+| **Exo - Forest**   | Woodland        | Moss green   |
 
 ## Features
 
@@ -23,18 +25,23 @@ A muted, eye-friendly dark theme family for VS Code. Five beautiful themes desig
 ## Theme Previews
 
 ### Dusk (Evening)
+
 Soft purples and warm amber tones, like watching the sunset.
 
 ### Dawn (Morning)
+
 Coral and sage green tones, fresh like the first light of day.
 
 ### Midnight (Night)
+
 Cool blues and silver tones, calm like moonlit water.
 
 ### Eclipse (Solar)
+
 Deep crimson and burnt gold, dramatic like a solar eclipse.
 
 ### Forest (Woodland)
+
 Moss greens and earthy amber, grounded like an ancient forest.
 
 ## Installation

@@ -4,16 +4,10 @@ import { resolve } from 'node:path'
 import { dawn, dusk, eclipse, forest, midnight } from '@/palettes'
 import { createTheme } from '@/theme'
 
-const themes = [
-  { palette: dusk, type: 'dark' as const },
-  { palette: dawn, type: 'dark' as const },
-  { palette: midnight, type: 'dark' as const },
-  { palette: eclipse, type: 'dark' as const },
-  { palette: forest, type: 'dark' as const },
-]
+const palettes = [dusk, dawn, midnight, eclipse, forest]
 
-for (const { palette, type } of themes) {
-  const theme = createTheme(palette, type)
+for (const palette of palettes) {
+  const theme = createTheme(palette)
   const outputPath = resolve(__dirname, `../themes/${palette.name}-color-theme.json`)
 
   writeFileSync(outputPath, JSON.stringify(theme, null, 2))
