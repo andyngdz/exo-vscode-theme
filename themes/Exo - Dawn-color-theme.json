@@ -1,6 +1,7 @@
 {
   "name": "Exo - Dawn",
   "type": "dark",
+  "semanticHighlighting": true,
   "colors": {
     "editor.background": "#1a1618",
     "editor.foreground": "#d0c8c0",
@@ -239,7 +240,6 @@
     {
       "name": "Operator, Misc",
       "scope": [
-        "keyword.control",
         "constant.other.color",
         "punctuation",
         "meta.tag",
@@ -328,6 +328,15 @@
       ],
       "settings": {
         "foreground": "#f1cca7"
+      }
+    },
+    {
+      "name": "Support (Built-in Types, Classes, Functions)",
+      "scope": [
+        "support"
+      ],
+      "settings": {
+        "foreground": "#92d3a6"
       }
     },
     {

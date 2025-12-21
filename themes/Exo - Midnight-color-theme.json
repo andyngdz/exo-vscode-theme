@@ -1,6 +1,7 @@
 {
   "name": "Exo - Midnight",
   "type": "dark",
+  "semanticHighlighting": true,
   "colors": {
     "editor.background": "#0f1218",
     "editor.foreground": "#c0c8d8",
@@ -239,7 +240,6 @@
     {
       "name": "Operator, Misc",
       "scope": [
-        "keyword.control",
         "constant.other.color",
         "punctuation",
         "meta.tag",
@@ -328,6 +328,15 @@
       ],
       "settings": {
         "foreground": "#a8c8f0"
+      }
+    },
+    {
+      "name": "Support (Built-in Types, Classes, Functions)",
+      "scope": [
+        "support"
+      ],
+      "settings": {
+        "foreground": "#8ab0db"
       }
     },
     {

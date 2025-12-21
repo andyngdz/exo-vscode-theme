@@ -14,7 +14,7 @@ export { forestScales as scales }
 export const forest = {
   name: 'Exo - Forest',
 
-  // Base - manually tuned for optimal contrast
+  // Base
   background: '#101410',
   foreground: '#c8d0c0',
   foregroundBright: '#f0f8e8',
@@ -34,7 +34,7 @@ export const forest = {
   constant: forestScales.warning[3],
   error: forestScales.danger[3],
 
-  // UI - manually tuned for visual consistency
+  // UI
   border: '#1c201a',
   surface: '#141814',
   surfaceDark: '#0a0c0a',

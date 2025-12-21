@@ -287,7 +287,6 @@ export function createTheme(palette: Palette) {
     {
       name: 'Operator, Misc',
       scope: [
-        'keyword.control',
         'constant.other.color',
         'punctuation',
         'meta.tag',
@@ -367,6 +366,13 @@ export function createTheme(palette: Palette) {
       ],
       settings: {
         foreground: palette.string,
+      },
+    },
+    {
+      name: 'Support (Built-in Types, Classes, Functions)',
+      scope: ['support'],
+      settings: {
+        foreground: palette.type,
       },
     },
     {
@@ -693,6 +699,7 @@ export function createTheme(palette: Palette) {
   return {
     name: palette.name,
     type: 'dark',
+    semanticHighlighting: true,
     colors,
     tokenColors,
   }

@@ -1,6 +1,7 @@
 {
   "name": "Exo - Forest",
   "type": "dark",
+  "semanticHighlighting": true,
   "colors": {
     "editor.background": "#101410",
     "editor.foreground": "#c8d0c0",
@@ -239,7 +240,6 @@
     {
       "name": "Operator, Misc",
       "scope": [
-        "keyword.control",
         "constant.other.color",
         "punctuation",
         "meta.tag",
@@ -328,6 +328,15 @@
       ],
       "settings": {
         "foreground": "#b9dfc6"
+      }
+    },
+    {
+      "name": "Support (Built-in Types, Classes, Functions)",
+      "scope": [
+        "support"
+      ],
+      "settings": {
+        "foreground": "#92d3a6"
       }
     },
     {

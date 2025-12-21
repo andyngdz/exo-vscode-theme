@@ -15,7 +15,7 @@ export { midnightScales as scales }
 export const midnight = {
   name: 'Exo - Midnight',
 
-  // Base - manually tuned for optimal contrast
+  // Base
   background: '#0f1218',
   foreground: '#c0c8d8',
   foregroundBright: '#f0f4f8',
@@ -35,7 +35,7 @@ export const midnight = {
   constant: midnightScales.warning[2],
   error: midnightScales.danger[3],
 
-  // UI - manually tuned for visual consistency
+  // UI
   border: '#1a2028',
   surface: '#141820',
   surfaceDark: '#0a0c10',

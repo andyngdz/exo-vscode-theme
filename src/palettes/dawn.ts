@@ -14,7 +14,7 @@ export { dawnScales as scales }
 export const dawn = {
   name: 'Exo - Dawn',
 
-  // Base - manually tuned for optimal contrast
+  // Base - dark with warm undertone, bright foreground
   background: '#1a1618',
   foreground: '#d0c8c0',
   foregroundBright: '#f8f0e8',
@@ -34,7 +34,7 @@ export const dawn = {
   constant: dawnScales.warning[3],
   error: dawnScales.danger[3],
 
-  // UI - manually tuned for visual consistency
+  // UI - dark warm surfaces
   border: '#2a2628',
   surface: '#201c1e',
   surfaceDark: '#141214',

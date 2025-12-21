@@ -14,7 +14,7 @@ export { duskScales as scales }
 export const dusk = {
   name: 'Exo - Dusk',
 
-  // Base - manually tuned for optimal contrast
+  // Base - deep evening sky with bright foreground
   background: '#1a1520',
   foreground: '#d0c8d8',
   foregroundBright: '#f0e8f8',
@@ -34,7 +34,7 @@ export const dusk = {
   constant: duskScales.warning[3],
   error: duskScales.danger[3],
 
-  // UI - manually tuned for visual consistency
+  // UI - deep purple-tinted surfaces
   border: '#2a2430',
   surface: '#201a28',
   surfaceDark: '#141018',

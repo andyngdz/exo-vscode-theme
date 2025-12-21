@@ -15,7 +15,7 @@ export { eclipseScales as scales }
 export const eclipse = {
   name: 'Exo - Eclipse',
 
-  // Base - manually tuned for optimal contrast
+  // Base - near-black with warm undertone, bright foreground
   background: '#12100f',
   foreground: '#d0c8c0',
   foregroundBright: '#f8f0e8',
@@ -35,7 +35,7 @@ export const eclipse = {
   constant: eclipseScales.warning[3],
   error: eclipseScales.danger[3],
 
-  // UI - manually tuned for visual consistency
+  // UI - dark warm surfaces
   border: '#201c1a',
   surface: '#181412',
   surfaceDark: '#0a0908',
