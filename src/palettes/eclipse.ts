@@ -4,7 +4,7 @@
  *
  * Identity: Total eclipse - deep crimsons, warm shadows, corona flames
  * - Contrast: High contrast for dramatic effect
- * - Hierarchy: Clear text weight progression
+ * - Hierarchy: Code focus > UI chrome
  * - Variety: Eclipse-inspired syntax colors
  * - Unity: Warm dramatic tones throughout
  */
@@ -18,19 +18,19 @@ export const eclipse = {
   foregroundBright: '#f0e8e0',
   foregroundDim: '#706860',
 
-  // Accent - vivid crimson like solar corona
-  primary: '#e04040',
+  // Accent - muted crimson (10-15% saturation for UI)
+  primary: '#987878',
 
-  // Syntax - vibrant eclipse corona palette
-  keyword: '#e06080', // vivid rose - corona flames
-  function: '#e8a840', // bright gold - scattered sunlight
-  string: '#70c090', // vibrant sage - earth tone
-  number: '#e8b050', // bright bronze - light rays
+  // Syntax - vibrant (30-40% saturation) for code focus
+  keyword: '#d08090', // rose - corona flames
+  function: '#d0a060', // gold - scattered sunlight
+  string: '#78b898', // sage - earth tone
+  number: '#d0a070', // bronze - light rays
   comment: '#686058', // warm charcoal - deep shadow
   operator: '#a09888', // warm ash - smoke
-  type: '#c080c0', // vivid violet - corona haze
-  constant: '#e0b060', // warm gold - sunlit dust
-  error: '#f06060', // vivid coral - warning glow
+  type: '#b890b8', // violet - corona haze
+  constant: '#c8a070', // gold - sunlit dust
+  error: '#c88080', // coral - warning
 
   // UI - dark warm surfaces
   border: '#201c1a',
@@ -41,17 +41,17 @@ export const eclipse = {
   lineNumber: '#484038',
   panelBackground: '#12100f',
 
-  // Git - vibrant conventional colors
-  added: '#60c878',
-  deleted: '#f05050',
-  modified: '#e04040',
+  // Git - muted conventional colors (10-15% saturation)
+  added: '#88a088',
+  deleted: '#a08080',
+  modified: '#987878',
   ignored: '#585048',
-  conflicting: '#e8c050',
+  conflicting: '#a8a078',
 
-  // Terminal - vibrant dramatic tones
-  red: '#f06060',
-  green: '#70d070',
-  yellow: '#f0c840',
-  blue: '#60a0d0',
-  magenta: '#e060b0',
+  // Terminal - muted dramatic tones (10-15% saturation)
+  red: '#a08080',
+  green: '#88a088',
+  yellow: '#a8a078',
+  blue: '#8090a0',
+  magenta: '#a08090',
 } as const

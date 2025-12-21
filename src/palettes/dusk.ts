@@ -4,7 +4,7 @@
  *
  * Identity: Evening sky - deep purples, warm ambers, fading orange light
  * - Contrast: Light text on dark background
- * - Hierarchy: Clear text weight progression
+ * - Hierarchy: Code focus > UI chrome
  * - Variety: Sunset-inspired syntax colors
  * - Unity: Warm evening tones throughout
  */
@@ -18,19 +18,19 @@ export const dusk = {
   foregroundBright: '#e8e0f0',
   foregroundDim: '#787080',
 
-  // Accent - vivid amber like setting sun
-  primary: '#e8a050',
+  // Accent - muted amber (10-15% saturation for UI)
+  primary: '#a08870',
 
-  // Syntax - vibrant sunset/evening palette
-  keyword: '#e080b0', // vivid orchid - twilight bloom
-  function: '#e8b060', // bright amber - sunlight
-  string: '#60c890', // vibrant sage - fresh evening
-  number: '#e8a860', // bright apricot - warm glow
+  // Syntax - vibrant (30-40% saturation) for code focus
+  keyword: '#d888b0', // orchid - twilight bloom
+  function: '#d8a868', // amber - sunlight
+  string: '#70c8a0', // sage - evening calm
+  number: '#d8a070', // apricot - warm glow
   comment: '#706878', // muted purple-gray - fading light
   operator: '#a8a0b0', // lavender gray - dusk haze
-  type: '#b090e0', // vivid violet - evening sky
-  constant: '#e0a870', // warm gold - twilight glow
-  error: '#e86060', // vivid coral - clear warning
+  type: '#a890d0', // violet - evening sky
+  constant: '#d0a070', // gold - twilight glow
+  error: '#d08080', // coral - warning
 
   // UI - deep purple-tinted surfaces
   border: '#2a2430',
@@ -41,17 +41,17 @@ export const dusk = {
   lineNumber: '#504860',
   panelBackground: '#1a1520',
 
-  // Git - vibrant conventional colors
-  added: '#60c888',
-  deleted: '#e06060',
-  modified: '#e8a050',
+  // Git - muted conventional colors (10-15% saturation)
+  added: '#88a890',
+  deleted: '#a88080',
+  modified: '#a08870',
   ignored: '#605868',
-  conflicting: '#e8a860',
+  conflicting: '#a89880',
 
-  // Terminal - vibrant evening tones
-  red: '#f06868',
-  green: '#60d090',
-  yellow: '#f0c060',
-  blue: '#60a0e0',
-  magenta: '#e070c0',
+  // Terminal - muted evening tones (10-15% saturation)
+  red: '#a88080',
+  green: '#88a890',
+  yellow: '#a8a078',
+  blue: '#8090a8',
+  magenta: '#a080a0',
 } as const

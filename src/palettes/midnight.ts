@@ -4,7 +4,7 @@
  *
  * Identity: Starless night - deep blues, silver moonlight, cool stillness
  * - Contrast: Light text on dark background
- * - Hierarchy: Clear text weight progression
+ * - Hierarchy: Code focus > UI chrome
  * - Variety: Night-inspired syntax colors
  * - Unity: Cool blue tones throughout
  */
@@ -18,19 +18,19 @@ export const midnight = {
   foregroundBright: '#e0e8f0',
   foregroundDim: '#606878',
 
-  // Accent - vivid ice blue like moonlight on water
-  primary: '#50b0e0',
+  // Accent - muted ice blue (10-15% saturation for UI)
+  primary: '#7898a8',
 
-  // Syntax - vibrant night sky palette
-  keyword: '#70a0f0', // vivid periwinkle - starlit sky
-  function: '#50d8e0', // bright cyan - aurora glow
-  string: '#60d0b0', // vibrant seafoam - moonlit tide
-  number: '#a0c0e0', // bright silver - starlight
+  // Syntax - vibrant (30-40% saturation) for code focus
+  keyword: '#88a8d8', // periwinkle - starlit sky
+  function: '#68c0c8', // cyan - aurora glow
+  string: '#78c0b0', // seafoam - moonlit tide
+  number: '#a0b8d0', // silver-blue - starlight
   comment: '#606878', // deep slate - night clouds
   operator: '#90a0b0', // cool slate - shadow
-  type: '#60b8f0', // vivid sky blue - distant horizon
-  constant: '#b0c0d0', // bright silver - moonbeam
-  error: '#f07080', // vivid rose - clear warning
+  type: '#78b0d8', // sky blue - distant horizon
+  constant: '#a8b8c8', // silver - moonbeam
+  error: '#c88890', // rose - warning
 
   // UI - deep blue-tinted surfaces
   border: '#1a2028',
@@ -41,17 +41,17 @@ export const midnight = {
   lineNumber: '#404858',
   panelBackground: '#0f1218',
 
-  // Git - vibrant conventional colors
-  added: '#50d0a0',
-  deleted: '#f06878',
-  modified: '#50b0e0',
+  // Git - muted conventional colors (10-15% saturation)
+  added: '#88a898',
+  deleted: '#a88888',
+  modified: '#7898a8',
   ignored: '#505868',
-  conflicting: '#e0c060',
+  conflicting: '#a8a088',
 
-  // Terminal - vibrant night tones
-  red: '#f07080',
-  green: '#50e0a0',
-  yellow: '#e0d060',
-  blue: '#60b0f0',
-  magenta: '#d070e0',
+  // Terminal - muted night tones (10-15% saturation)
+  red: '#a88888',
+  green: '#88a898',
+  yellow: '#a8a088',
+  blue: '#8898a8',
+  magenta: '#a088a0',
 } as const
