@@ -2,7 +2,7 @@
   "name": "exo-vscode-theme",
   "displayName": "Exo Theme",
   "description": "A muted, eye-friendly theme family for VS Code",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "exohq",
   "license": "MIT",
   "repository": {
@@ -22,7 +22,7 @@
     "eye-friendly",
     "muted"
   ],
-  "icon": "screenshots/exo_theme_banner.jpg",
+  "icon": "logo.png",
   "galleryBanner": {
     "color": "#1a1520",
     "theme": "dark"
