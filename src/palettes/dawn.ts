@@ -4,7 +4,7 @@
  *
  * Identity: Morning glow - soft corals, rose pinks, golden rays
  * - Contrast: Light text on dark background
- * - Hierarchy: Clear text weight progression
+ * - Hierarchy: Code focus > UI chrome
  * - Variety: Sunrise-inspired syntax colors
  * - Unity: Warm morning tones throughout
  */
@@ -18,19 +18,19 @@ export const dawn = {
   foregroundBright: '#f0e8e0',
   foregroundDim: '#807870',
 
-  // Accent - soft coral like sunrise clouds
-  primary: '#e08870',
+  // Accent - muted coral (10-15% saturation for UI)
+  primary: '#a08078',
 
-  // Syntax - sunrise/morning palette (corals, pinks, sage greens)
-  keyword: '#d88880', // soft coral - sunrise glow
-  function: '#c8a060', // golden honey - morning rays
-  string: '#7ab890', // fresh mint - morning dew
-  number: '#d8a080', // soft peach - first blush
-  comment: '#686060', // warm gray - morning mist
-  operator: '#989088', // warm stone - neutral
-  type: '#80b0a8', // soft teal - clear sky
-  constant: '#c8a888', // warm cream - sandy shore
-  error: '#d07878', // soft red - gentle alert
+  // Syntax - vibrant (30-40% saturation) for code focus
+  keyword: '#d88080', // coral - sunrise glow
+  function: '#d0a060', // gold - morning rays
+  string: '#68c0a0', // mint - morning dew
+  number: '#d89870', // peach - first blush
+  comment: '#787070', // warm gray - morning mist
+  operator: '#a8a098', // warm stone - neutral
+  type: '#68b8b0', // teal - clear sky
+  constant: '#d0a068', // gold - sandy shore
+  error: '#c88080', // red - alert
 
   // UI - dark warm surfaces
   border: '#2a2628',
@@ -41,17 +41,17 @@ export const dawn = {
   lineNumber: '#585050',
   panelBackground: '#1a1618',
 
-  // Git - conventional colors with warm tint
-  added: '#70b080',
-  deleted: '#d06060',
-  modified: '#e08870',
+  // Git - muted conventional colors (10-15% saturation)
+  added: '#88a888',
+  deleted: '#a88080',
+  modified: '#a08078',
   ignored: '#686060',
-  conflicting: '#e09868',
+  conflicting: '#a89878',
 
-  // Terminal - warm morning tones
-  red: '#e07070',
-  green: '#78b888',
-  yellow: '#d8b868',
-  blue: '#78a8c8',
-  magenta: '#c078a0',
+  // Terminal - muted morning tones (10-15% saturation)
+  red: '#a88080',
+  green: '#88a888',
+  yellow: '#a8a078',
+  blue: '#8098a8',
+  magenta: '#a08090',
 } as const

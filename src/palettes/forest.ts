@@ -4,7 +4,7 @@
  *
  * Identity: Ancient forest - deep greens, moss, bark, sunlight through leaves
  * - Contrast: Light text on dark background
- * - Hierarchy: Clear text weight progression
+ * - Hierarchy: Code focus > UI chrome
  * - Variety: Nature-inspired syntax colors
  * - Unity: Earthy green tones throughout
  */
@@ -18,19 +18,19 @@ export const forest = {
   foregroundBright: '#e0e8d8',
   foregroundDim: '#687860',
 
-  // Accent - moss green like sunlit moss
-  primary: '#70a070',
+  // Accent - muted moss green (10-15% saturation for UI)
+  primary: '#789880',
 
-  // Syntax - woodland palette (greens, ambers, earth tones)
-  keyword: '#90b080', // soft sage - fern fronds
-  function: '#c8a060', // warm amber - sunlight through leaves
-  string: '#80b888', // moss green - forest undergrowth
-  number: '#c0a880', // warm tan - tree bark
-  comment: '#586850', // deep olive - forest shadow
-  operator: '#889080', // warm gray - stone
-  type: '#80a898', // soft teal - forest stream
-  constant: '#b8b090', // warm cream - dried leaves
-  error: '#c08070', // muted rust - autumn leaf
+  // Syntax - vibrant (30-40% saturation) for code focus
+  keyword: '#88c8a0', // sage - fern fronds
+  function: '#d0a058', // amber - sunlight through leaves
+  string: '#70c8a8', // moss - forest undergrowth
+  number: '#c8b070', // gold - tree bark
+  comment: '#687860', // deep olive - forest shadow
+  operator: '#98a890', // warm gray - stone
+  type: '#70c0b8', // teal - forest stream
+  constant: '#c0b068', // gold - dried leaves
+  error: '#c08870', // rust - autumn leaf
 
   // UI - deep green-tinted surfaces
   border: '#1c201a',
@@ -41,17 +41,17 @@ export const forest = {
   lineNumber: '#485040',
   panelBackground: '#101410',
 
-  // Git - conventional colors with forest tint
-  added: '#80b888',
-  deleted: '#c08070',
-  modified: '#70a070',
+  // Git - muted conventional colors (10-15% saturation)
+  added: '#88a890',
+  deleted: '#a08878',
+  modified: '#789880',
   ignored: '#586850',
-  conflicting: '#c0a880',
+  conflicting: '#a8a080',
 
-  // Terminal - earthy woodland tones
-  red: '#c88078',
-  green: '#88c088',
-  yellow: '#c8b068',
-  blue: '#78a0b0',
-  magenta: '#b088a0',
+  // Terminal - muted woodland tones (10-15% saturation)
+  red: '#a08878',
+  green: '#88a890',
+  yellow: '#a8a080',
+  blue: '#8098a0',
+  magenta: '#a08898',
 } as const
