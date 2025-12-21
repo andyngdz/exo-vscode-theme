@@ -1,4 +1,4 @@
-![Exo Theme](https://github.com/user-attachments/assets/0c76215a-2088-49e3-bf77-75f94960d929)
+![Exo Theme](screenshots/exo_theme_banner.jpg)
 
 # Exo Theme
 
