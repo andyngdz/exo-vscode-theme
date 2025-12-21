@@ -7,18 +7,22 @@
  * Hierarchy: Keywords > Functions > Strings > Types > Variables > Comments
  */
 
+import { createBackgroundColors } from '../background'
 import { forestScales } from './scales'
 
 export { forestScales as scales }
 
+// Forest background: green hue (120°), low saturation (11%)
+const bg = createBackgroundColors(120, 0.11)
+
 export const forest = {
   name: 'Exo - Forest',
 
-  // Base
-  background: '#101410',
+  // Base (WCAG AAA compliant)
+  ...bg,
   foreground: '#c8d0c0',
   foregroundBright: '#f0f8e8',
-  foregroundDim: '#687860',
+  foregroundDim: '#a0a898', // 7:1+ contrast
 
   // Accent - moss green
   primary: forestScales.info[3],
@@ -28,20 +32,14 @@ export const forest = {
   function: forestScales.secondary[3],
   string: forestScales.tertiary[2],
   number: forestScales.warning[3],
-  comment: forestScales.neutral[4],
+  comment: '#a0ab9a', // WCAG AAA: 7:1+ contrast
   operator: forestScales.neutral[2],
   type: forestScales.success[3],
   constant: forestScales.warning[3],
   error: forestScales.danger[3],
 
-  // UI
-  border: '#1c201a',
-  surface: '#141814',
-  surfaceDark: '#0a0c0a',
-  surfaceLight: '#1c201a',
-  overlay: '#181c18',
+  // UI - lineNumber needs fine-tuning per theme
   lineNumber: '#586850',
-  panelBackground: '#101410',
 
   // Git - using scales
   added: forestScales.success[3],

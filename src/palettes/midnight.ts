@@ -8,18 +8,22 @@
  * Note: Only cool-toned theme (all blues/cyans)
  */
 
+import { createBackgroundColors } from '../background'
 import { midnightScales } from './scales'
 
 export { midnightScales as scales }
 
+// Midnight background: cool blue hue (220°), moderate saturation (23%)
+const bg = createBackgroundColors(220, 0.23)
+
 export const midnight = {
   name: 'Exo - Midnight',
 
-  // Base
-  background: '#0f1218',
+  // Base (WCAG AAA compliant)
+  ...bg,
   foreground: '#c0c8d8',
   foregroundBright: '#f0f4f8',
-  foregroundDim: '#606878',
+  foregroundDim: '#a0a8b8', // 7:1+ contrast
 
   // Accent - steel blue
   primary: midnightScales.info[3],
@@ -29,20 +33,14 @@ export const midnight = {
   function: midnightScales.secondary[3],
   string: midnightScales.tertiary[2],
   number: midnightScales.warning[3],
-  comment: midnightScales.neutral[4],
+  comment: '#a2a8b5', // WCAG AAA: 7:1+ contrast
   operator: midnightScales.neutral[2],
   type: midnightScales.info[3],
   constant: midnightScales.warning[2],
   error: midnightScales.danger[3],
 
-  // UI
-  border: '#1a2028',
-  surface: '#141820',
-  surfaceDark: '#0a0c10',
-  surfaceLight: '#1a2028',
-  overlay: '#181c24',
+  // UI - lineNumber needs fine-tuning per theme
   lineNumber: '#506070',
-  panelBackground: '#0f1218',
 
   // Git - using scales
   added: midnightScales.success[3],

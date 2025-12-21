@@ -7,18 +7,22 @@
  * Hierarchy: Keywords > Functions > Strings > Types > Variables > Comments
  */
 
+import { createBackgroundColors } from '../background'
 import { dawnScales } from './scales'
 
 export { dawnScales as scales }
 
+// Dawn background: warm rose hue (330°), low saturation (8%)
+const bg = createBackgroundColors(330, 0.08)
+
 export const dawn = {
   name: 'Exo - Dawn',
 
-  // Base - dark with warm undertone, bright foreground
-  background: '#1a1618',
+  // Base - dark with warm undertone, bright foreground (WCAG AAA compliant)
+  ...bg,
   foreground: '#d0c8c0',
   foregroundBright: '#f8f0e8',
-  foregroundDim: '#807870',
+  foregroundDim: '#b0a8a0', // 7:1+ contrast
 
   // Accent - warm coral glow
   primary: dawnScales.info[3],
@@ -28,20 +32,14 @@ export const dawn = {
   function: dawnScales.secondary[3],
   string: dawnScales.tertiary[2],
   number: dawnScales.warning[3],
-  comment: dawnScales.neutral[4],
+  comment: '#aca5a5', // WCAG AAA: 7:1+ contrast
   operator: dawnScales.neutral[2],
   type: dawnScales.success[3],
   constant: dawnScales.warning[3],
   error: dawnScales.danger[3],
 
-  // UI - dark warm surfaces
-  border: '#2a2628',
-  surface: '#201c1e',
-  surfaceDark: '#141214',
-  surfaceLight: '#282426',
-  overlay: '#242022',
+  // UI - lineNumber needs fine-tuning per theme
   lineNumber: '#686058',
-  panelBackground: '#1a1618',
 
   // Git - using scales
   added: dawnScales.success[3],

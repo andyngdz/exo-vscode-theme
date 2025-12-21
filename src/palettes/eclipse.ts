@@ -8,18 +8,22 @@
  * Note: Most dramatic/saturated theme
  */
 
+import { createBackgroundColors } from '../background'
 import { eclipseScales } from './scales'
 
 export { eclipseScales as scales }
 
+// Eclipse background: warm orange hue (20°), low saturation (9%)
+const bg = createBackgroundColors(20, 0.09)
+
 export const eclipse = {
   name: 'Exo - Eclipse',
 
-  // Base - near-black with warm undertone, bright foreground
-  background: '#12100f',
+  // Base - near-black with warm undertone, bright foreground (WCAG AAA compliant)
+  ...bg,
   foreground: '#d0c8c0',
   foregroundBright: '#f8f0e8',
-  foregroundDim: '#706860',
+  foregroundDim: '#b0a8a0', // 7:1+ contrast
 
   // Accent - dramatic crimson
   primary: eclipseScales.info[3],
@@ -29,20 +33,14 @@ export const eclipse = {
   function: eclipseScales.secondary[3],
   string: eclipseScales.tertiary[3],
   number: eclipseScales.warning[3],
-  comment: eclipseScales.neutral[4],
+  comment: '#ada6a0', // WCAG AAA: 7:1+ contrast
   operator: eclipseScales.neutral[2],
   type: eclipseScales.info[2],
   constant: eclipseScales.warning[3],
   error: eclipseScales.danger[3],
 
-  // UI - dark warm surfaces
-  border: '#201c1a',
-  surface: '#181412',
-  surfaceDark: '#0a0908',
-  surfaceLight: '#201c1a',
-  overlay: '#1c1816',
+  // UI - lineNumber needs fine-tuning per theme
   lineNumber: '#585048',
-  panelBackground: '#12100f',
 
   // Git - using scales
   added: eclipseScales.success[3],

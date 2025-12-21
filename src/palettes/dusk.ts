@@ -7,18 +7,22 @@
  * Hierarchy: Keywords > Functions > Strings > Types > Variables > Comments
  */
 
+import { createBackgroundColors } from '../background'
 import { duskScales } from './scales'
 
 export { duskScales as scales }
 
+// Dusk background: purple hue (267°), moderate saturation (21%)
+const bg = createBackgroundColors(267, 0.21)
+
 export const dusk = {
   name: 'Exo - Dusk',
 
-  // Base - deep evening sky with bright foreground
-  background: '#1a1520',
-  foreground: '#d0c8d8',
-  foregroundBright: '#f0e8f8',
-  foregroundDim: '#787080',
+  // Base - deep evening sky with bright foreground (WCAG AAA compliant)
+  ...bg,
+  foreground: '#dcd4e4',
+  foregroundBright: '#f4ecfc',
+  foregroundDim: '#a8a0b0', // 7:1+ contrast
 
   // Accent - purple glow
   primary: duskScales.info[3],
@@ -28,20 +32,14 @@ export const dusk = {
   function: duskScales.secondary[2],
   string: duskScales.tertiary[2],
   number: duskScales.warning[3],
-  comment: duskScales.neutral[4],
+  comment: '#a8a2b0', // WCAG AAA: 7:1+ contrast
   operator: duskScales.neutral[2],
   type: duskScales.info[2],
   constant: duskScales.warning[3],
   error: duskScales.danger[3],
 
-  // UI - deep purple-tinted surfaces
-  border: '#2a2430',
-  surface: '#201a28',
-  surfaceDark: '#141018',
-  surfaceLight: '#282030',
-  overlay: '#241e2c',
+  // UI - lineNumber needs fine-tuning per theme
   lineNumber: '#605070',
-  panelBackground: '#1a1520',
 
   // Git - using scales
   added: duskScales.success[3],
