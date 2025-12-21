@@ -3,34 +3,38 @@
  * Dark theme inspired by sunrise and early morning light
  *
  * Identity: Warm sunrise - coral, gold, peach
- * GitHub-inspired: High brightness (70-85%), moderate saturation (35-55%)
+ * Scale indices: [2] = 80% lightness, [3] = 70% lightness
  * Hierarchy: Keywords > Functions > Strings > Types > Variables > Comments
  */
+
+import { dawnScales } from './scales'
+
+export { dawnScales as scales }
 
 export const dawn = {
   name: 'Exo - Dawn',
 
-  // Base - dark with warm undertone, bright foreground
+  // Base - manually tuned for optimal contrast
   background: '#1a1618',
   foreground: '#d0c8c0',
-  foregroundBright: '#f8f0e8', // Near-white for variables
+  foregroundBright: '#f8f0e8',
   foregroundDim: '#807870',
 
   // Accent - warm coral glow
-  primary: '#e09080',
+  primary: dawnScales.info[3],
 
-  // Syntax - GitHub-inspired brightness with warm hue family
-  keyword: '#f09888', // Coral - signature color (warm pink)
-  function: '#e8c868', // Gold - bright yellow-gold
-  string: '#f0c8a0', // Peach - warm pastel
-  number: '#e8b078', // Orange-peach
-  comment: '#787070', // Warm gray
-  operator: '#c0b8a8', // Warm stone
-  type: '#88d0c0', // Teal - cool contrast
-  constant: '#e0c078', // Soft gold
-  error: '#f08070', // Red-coral
+  // Syntax - using scales
+  keyword: dawnScales.primary[3],
+  function: dawnScales.secondary[3],
+  string: dawnScales.tertiary[2],
+  number: dawnScales.warning[3],
+  comment: dawnScales.neutral[4],
+  operator: dawnScales.neutral[2],
+  type: dawnScales.success[3],
+  constant: dawnScales.warning[3],
+  error: dawnScales.danger[3],
 
-  // UI - dark warm surfaces
+  // UI - manually tuned for visual consistency
   border: '#2a2628',
   surface: '#201c1e',
   surfaceDark: '#141214',
@@ -39,17 +43,17 @@ export const dawn = {
   lineNumber: '#686058',
   panelBackground: '#1a1618',
 
-  // Git - recognizable but not distracting
-  added: '#78c890',
-  deleted: '#e08078',
-  modified: '#e09080',
+  // Git - using scales
+  added: dawnScales.success[3],
+  deleted: dawnScales.danger[3],
+  modified: dawnScales.info[3],
   ignored: '#686060',
-  conflicting: '#d8b068',
+  conflicting: dawnScales.warning[3],
 
-  // Terminal - functional colors
-  red: '#e08078',
-  green: '#78c890',
-  yellow: '#d8c078',
-  blue: '#80a8d0',
-  magenta: '#d888a8',
+  // Terminal - using scales
+  red: dawnScales.danger[3],
+  green: dawnScales.success[3],
+  yellow: dawnScales.warning[3],
+  blue: dawnScales.info[3],
+  magenta: dawnScales.primary[3],
 } as const
