@@ -18,19 +18,19 @@ export const eclipse = {
   foregroundBright: '#f0e8e0',
   foregroundDim: '#706860',
 
-  // Accent - deep crimson like solar corona
-  primary: '#c85050',
+  // Accent - vivid crimson like solar corona
+  primary: '#e04040',
 
-  // Syntax - eclipse corona palette (burgundy, burnt orange, shadows)
-  keyword: '#c08088', // dusty rose - corona flames
-  function: '#c89860', // burnt gold - scattered sunlight
-  string: '#90a888', // muted sage - earth tone
-  number: '#c8a078', // warm bronze - light rays
-  comment: '#585048', // warm charcoal - deep shadow
-  operator: '#888078', // warm ash - smoke
-  type: '#a890a8', // dusty violet - corona haze
-  constant: '#b8a080', // warm sand - sunlit dust
-  error: '#c87878', // deep coral - warning glow
+  // Syntax - vibrant eclipse corona palette
+  keyword: '#e06080', // vivid rose - corona flames
+  function: '#e8a840', // bright gold - scattered sunlight
+  string: '#70c090', // vibrant sage - earth tone
+  number: '#e8b050', // bright bronze - light rays
+  comment: '#686058', // warm charcoal - deep shadow
+  operator: '#a09888', // warm ash - smoke
+  type: '#c080c0', // vivid violet - corona haze
+  constant: '#e0b060', // warm gold - sunlit dust
+  error: '#f06060', // vivid coral - warning glow
 
   // UI - dark warm surfaces
   border: '#201c1a',
@@ -41,17 +41,17 @@ export const eclipse = {
   lineNumber: '#484038',
   panelBackground: '#12100f',
 
-  // Git - conventional colors with warm tint
-  added: '#b08860',
-  deleted: '#d06060',
-  modified: '#c85050',
+  // Git - vibrant conventional colors
+  added: '#60c878',
+  deleted: '#f05050',
+  modified: '#e04040',
   ignored: '#585048',
-  conflicting: '#c8b080',
+  conflicting: '#e8c050',
 
-  // Terminal - warm dramatic tones
-  red: '#e07070',
-  green: '#a0b070',
-  yellow: '#d8b860',
-  blue: '#8090b0',
-  magenta: '#c080a0',
+  // Terminal - vibrant dramatic tones
+  red: '#f06060',
+  green: '#70d070',
+  yellow: '#f0c840',
+  blue: '#60a0d0',
+  magenta: '#e060b0',
 } as const

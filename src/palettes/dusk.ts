@@ -18,19 +18,19 @@ export const dusk = {
   foregroundBright: '#e8e0f0',
   foregroundDim: '#787080',
 
-  // Accent - warm amber like setting sun
-  primary: '#d89050',
+  // Accent - vivid amber like setting sun
+  primary: '#e8a050',
 
-  // Syntax - sunset/evening palette (purples, soft oranges, twilight)
-  keyword: '#c490b0', // soft orchid - twilight bloom
-  function: '#d4a870', // warm amber - fading sunlight
-  string: '#8aad98', // muted sage - evening calm
-  number: '#d0a878', // soft apricot - warm afterglow
-  comment: '#605868', // muted purple-gray - fading light
-  operator: '#908898', // lavender gray - dusk haze
-  type: '#a8a0c8', // soft violet - evening sky
-  constant: '#c8a890', // warm sand - twilight glow
-  error: '#d08080', // muted coral - gentle warning
+  // Syntax - vibrant sunset/evening palette
+  keyword: '#e080b0', // vivid orchid - twilight bloom
+  function: '#e8b060', // bright amber - sunlight
+  string: '#60c890', // vibrant sage - fresh evening
+  number: '#e8a860', // bright apricot - warm glow
+  comment: '#706878', // muted purple-gray - fading light
+  operator: '#a8a0b0', // lavender gray - dusk haze
+  type: '#b090e0', // vivid violet - evening sky
+  constant: '#e0a870', // warm gold - twilight glow
+  error: '#e86060', // vivid coral - clear warning
 
   // UI - deep purple-tinted surfaces
   border: '#2a2430',
@@ -41,17 +41,17 @@ export const dusk = {
   lineNumber: '#504860',
   panelBackground: '#1a1520',
 
-  // Git - conventional colors
-  added: '#80b898',
-  deleted: '#d07070',
-  modified: '#d89050',
+  // Git - vibrant conventional colors
+  added: '#60c888',
+  deleted: '#e06060',
+  modified: '#e8a050',
   ignored: '#605868',
-  conflicting: '#d8a070',
+  conflicting: '#e8a860',
 
-  // Terminal - warm evening tones
-  red: '#e07878',
-  green: '#88c098',
-  yellow: '#e0b870',
-  blue: '#8098d0',
-  magenta: '#c088b8',
+  // Terminal - vibrant evening tones
+  red: '#f06868',
+  green: '#60d090',
+  yellow: '#f0c060',
+  blue: '#60a0e0',
+  magenta: '#e070c0',
 } as const

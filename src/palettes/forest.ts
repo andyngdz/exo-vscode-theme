@@ -18,19 +18,19 @@ export const forest = {
   foregroundBright: '#e0e8d8',
   foregroundDim: '#687860',
 
-  // Accent - moss green like sunlit moss
-  primary: '#70a070',
+  // Accent - vivid moss green like sunlit moss
+  primary: '#50c070',
 
-  // Syntax - woodland palette (greens, ambers, earth tones)
-  keyword: '#90b080', // soft sage - fern fronds
-  function: '#c8a060', // warm amber - sunlight through leaves
-  string: '#80b888', // moss green - forest undergrowth
-  number: '#c0a880', // warm tan - tree bark
-  comment: '#586850', // deep olive - forest shadow
-  operator: '#889080', // warm gray - stone
-  type: '#80a898', // soft teal - forest stream
-  constant: '#b8b090', // warm cream - dried leaves
-  error: '#c08070', // muted rust - autumn leaf
+  // Syntax - vibrant woodland palette
+  keyword: '#70d080', // vivid sage - fern fronds
+  function: '#e8b040', // bright amber - sunlight through leaves
+  string: '#50d890', // vibrant moss - forest undergrowth
+  number: '#e0b860', // warm gold - tree bark
+  comment: '#687860', // deep olive - forest shadow
+  operator: '#98a890', // warm gray - stone
+  type: '#50c8b0', // vivid teal - forest stream
+  constant: '#d0c070', // warm gold - dried leaves
+  error: '#e06050', // vivid rust - autumn leaf
 
   // UI - deep green-tinted surfaces
   border: '#1c201a',
@@ -41,17 +41,17 @@ export const forest = {
   lineNumber: '#485040',
   panelBackground: '#101410',
 
-  // Git - conventional colors with forest tint
-  added: '#80b888',
-  deleted: '#c08070',
-  modified: '#70a070',
+  // Git - vibrant conventional colors
+  added: '#50d888',
+  deleted: '#e06050',
+  modified: '#50c070',
   ignored: '#586850',
-  conflicting: '#c0a880',
+  conflicting: '#e0c050',
 
-  // Terminal - earthy woodland tones
-  red: '#c88078',
-  green: '#88c088',
-  yellow: '#c8b068',
-  blue: '#78a0b0',
-  magenta: '#b088a0',
+  // Terminal - vibrant woodland tones
+  red: '#f06858',
+  green: '#50e080',
+  yellow: '#e8c840',
+  blue: '#50b8d0',
+  magenta: '#d060b0',
 } as const

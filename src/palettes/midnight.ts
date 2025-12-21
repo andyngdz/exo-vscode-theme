@@ -18,19 +18,19 @@ export const midnight = {
   foregroundBright: '#e0e8f0',
   foregroundDim: '#606878',
 
-  // Accent - ice blue like moonlight on water
-  primary: '#70a0c0',
+  // Accent - vivid ice blue like moonlight on water
+  primary: '#50b0e0',
 
-  // Syntax - night sky palette (blues, silvers, moonlight)
-  keyword: '#90a8d0', // soft periwinkle - starlit sky
-  function: '#78c0c8', // pale cyan - aurora glow
-  string: '#88b8a8', // soft seafoam - moonlit tide
-  number: '#a8b0c0', // cool silver - starlight
-  comment: '#505868', // deep slate - night clouds
-  operator: '#788090', // cool slate - shadow
-  type: '#80a8c8', // sky blue - distant horizon
-  constant: '#a0a8b8', // pale silver - moonbeam
-  error: '#c08088', // muted rose - soft warning
+  // Syntax - vibrant night sky palette
+  keyword: '#70a0f0', // vivid periwinkle - starlit sky
+  function: '#50d8e0', // bright cyan - aurora glow
+  string: '#60d0b0', // vibrant seafoam - moonlit tide
+  number: '#a0c0e0', // bright silver - starlight
+  comment: '#606878', // deep slate - night clouds
+  operator: '#90a0b0', // cool slate - shadow
+  type: '#60b8f0', // vivid sky blue - distant horizon
+  constant: '#b0c0d0', // bright silver - moonbeam
+  error: '#f07080', // vivid rose - clear warning
 
   // UI - deep blue-tinted surfaces
   border: '#1a2028',
@@ -41,17 +41,17 @@ export const midnight = {
   lineNumber: '#404858',
   panelBackground: '#0f1218',
 
-  // Git - conventional colors with cool tint
-  added: '#70a898',
-  deleted: '#c07080',
-  modified: '#70a0c0',
+  // Git - vibrant conventional colors
+  added: '#50d0a0',
+  deleted: '#f06878',
+  modified: '#50b0e0',
   ignored: '#505868',
-  conflicting: '#a0a8b8',
+  conflicting: '#e0c060',
 
-  // Terminal - cool night tones
-  red: '#d08088',
-  green: '#80c0a0',
-  yellow: '#c8b878',
-  blue: '#80a8d0',
-  magenta: '#b088c0',
+  // Terminal - vibrant night tones
+  red: '#f07080',
+  green: '#50e0a0',
+  yellow: '#e0d060',
+  blue: '#60b0f0',
+  magenta: '#d070e0',
 } as const

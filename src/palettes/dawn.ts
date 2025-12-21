@@ -18,19 +18,19 @@ export const dawn = {
   foregroundBright: '#f0e8e0',
   foregroundDim: '#807870',
 
-  // Accent - soft coral like sunrise clouds
-  primary: '#e08870',
+  // Accent - vivid coral like sunrise clouds
+  primary: '#f07860',
 
-  // Syntax - sunrise/morning palette (corals, pinks, sage greens)
-  keyword: '#d88880', // soft coral - sunrise glow
-  function: '#c8a060', // golden honey - morning rays
-  string: '#7ab890', // fresh mint - morning dew
-  number: '#d8a080', // soft peach - first blush
-  comment: '#686060', // warm gray - morning mist
-  operator: '#989088', // warm stone - neutral
-  type: '#80b0a8', // soft teal - clear sky
-  constant: '#c8a888', // warm cream - sandy shore
-  error: '#d07878', // soft red - gentle alert
+  // Syntax - vibrant sunrise/morning palette
+  keyword: '#f07070', // vivid coral - sunrise glow
+  function: '#e0b050', // bright gold - morning rays
+  string: '#50d098', // vibrant mint - morning dew
+  number: '#f0a060', // bright peach - first blush
+  comment: '#787070', // warm gray - morning mist
+  operator: '#a8a098', // warm stone - neutral
+  type: '#50c8c0', // vivid teal - clear sky
+  constant: '#e0b070', // warm gold - sandy shore
+  error: '#f06060', // vivid red - clear alert
 
   // UI - dark warm surfaces
   border: '#2a2628',
@@ -41,17 +41,17 @@ export const dawn = {
   lineNumber: '#585050',
   panelBackground: '#1a1618',
 
-  // Git - conventional colors with warm tint
-  added: '#70b080',
-  deleted: '#d06060',
-  modified: '#e08870',
+  // Git - vibrant conventional colors
+  added: '#50d080',
+  deleted: '#f05858',
+  modified: '#f07860',
   ignored: '#686060',
-  conflicting: '#e09868',
+  conflicting: '#f0a050',
 
-  // Terminal - warm morning tones
-  red: '#e07070',
-  green: '#78b888',
-  yellow: '#d8b868',
-  blue: '#78a8c8',
-  magenta: '#c078a0',
+  // Terminal - vibrant morning tones
+  red: '#f06060',
+  green: '#50d088',
+  yellow: '#f0c850',
+  blue: '#50b0e0',
+  magenta: '#e060a8',
 } as const
