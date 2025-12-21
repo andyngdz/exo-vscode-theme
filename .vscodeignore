@@ -29,6 +29,5 @@ node_modules/
 .vscode/
 **/.DS_Store
 
-# Screenshots (except icon for marketplace)
-screenshots/*.png
-screenshots/.gitkeep
+# Screenshots (all excluded - only for docs/marketing)
+screenshots/
