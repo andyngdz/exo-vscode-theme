@@ -1,8 +1,9 @@
 ## 1. Implementation
 
-- [x] 1.1 Revise Dusk syntax colors - purple/lavender palette with soft peach accents
-- [x] 1.2 Revise Dawn syntax colors - coral/rose palette with sage green accents
-- [x] 1.3 Revise Midnight syntax colors - blue/silver palette with soft teal accents
-- [x] 1.4 Revise Eclipse syntax colors - burgundy/mauve palette with burnt earth accents
-- [x] 1.5 Rebuild all themes
-- [x] 1.6 Test each theme for eye comfort and distinctiveness
+- [x] 1.1 Update Dusk palette - Orchid keywords, Lavender functions, Soft Violet strings, brighter foreground
+- [x] 1.2 Update Dawn palette - Coral keywords, Gold functions, Peach strings, brighter foreground
+- [x] 1.3 Update Eclipse palette - Orange-Red keywords, Orange functions, Gold strings, brighter foreground
+- [x] 1.4 Update Forest palette - Emerald keywords, Tan functions, Moss strings, brighter foreground
+- [x] 1.5 Update Midnight palette - Periwinkle keywords, Cyan functions, Ice Blue strings, brighter foreground
+- [x] 1.6 Build themes and copy to installed extension
+- [x] 1.7 Verify all themes have GitHub-level clarity with unique identities

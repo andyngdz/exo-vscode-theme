@@ -260,7 +260,7 @@ export function createTheme(palette: Palette) {
       name: 'Variables',
       scope: ['variable', 'string constant.other.placeholder'],
       settings: {
-        foreground: palette.foreground,
+        foreground: palette.foregroundBright,
       },
     },
     {

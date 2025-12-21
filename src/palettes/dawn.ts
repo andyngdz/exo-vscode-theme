@@ -2,35 +2,33 @@
  * Exo - Dawn Palette
  * Dark theme inspired by sunrise and early morning light
  *
- * Identity: Morning glow - soft corals, rose pinks, golden rays
- * - Contrast: Light text on dark background
- * - Hierarchy: Code focus > UI chrome
- * - Variety: Sunrise-inspired syntax colors
- * - Unity: Warm morning tones throughout
+ * Identity: Warm sunrise - coral, gold, peach
+ * GitHub-inspired: High brightness (70-85%), moderate saturation (35-55%)
+ * Hierarchy: Keywords > Functions > Strings > Types > Variables > Comments
  */
 
 export const dawn = {
   name: 'Exo - Dawn',
 
-  // Base - dark with warm undertone like pre-dawn sky
+  // Base - dark with warm undertone, bright foreground
   background: '#1a1618',
-  foreground: '#c8c0b8',
-  foregroundBright: '#f0e8e0',
+  foreground: '#d0c8c0',
+  foregroundBright: '#f8f0e8', // Near-white for variables
   foregroundDim: '#807870',
 
-  // Accent - muted coral (10-15% saturation for UI)
-  primary: '#a08078',
+  // Accent - warm coral glow
+  primary: '#e09080',
 
-  // Syntax - vibrant (30-40% saturation) for code focus
-  keyword: '#d88080', // coral - sunrise glow
-  function: '#d0a060', // gold - morning rays
-  string: '#68c0a0', // mint - morning dew
-  number: '#d89870', // peach - first blush
-  comment: '#787070', // warm gray - morning mist
-  operator: '#a8a098', // warm stone - neutral
-  type: '#68b8b0', // teal - clear sky
-  constant: '#d0a068', // gold - sandy shore
-  error: '#c88080', // red - alert
+  // Syntax - GitHub-inspired brightness with warm hue family
+  keyword: '#f09888', // Coral - signature color (warm pink)
+  function: '#e8c868', // Gold - bright yellow-gold
+  string: '#f0c8a0', // Peach - warm pastel
+  number: '#e8b078', // Orange-peach
+  comment: '#787070', // Warm gray
+  operator: '#c0b8a8', // Warm stone
+  type: '#88d0c0', // Teal - cool contrast
+  constant: '#e0c078', // Soft gold
+  error: '#f08070', // Red-coral
 
   // UI - dark warm surfaces
   border: '#2a2628',
@@ -38,20 +36,20 @@ export const dawn = {
   surfaceDark: '#141214',
   surfaceLight: '#282426',
   overlay: '#242022',
-  lineNumber: '#585050',
+  lineNumber: '#686058',
   panelBackground: '#1a1618',
 
-  // Git - muted conventional colors (10-15% saturation)
-  added: '#88a888',
-  deleted: '#a88080',
-  modified: '#a08078',
+  // Git - recognizable but not distracting
+  added: '#78c890',
+  deleted: '#e08078',
+  modified: '#e09080',
   ignored: '#686060',
-  conflicting: '#a89878',
+  conflicting: '#d8b068',
 
-  // Terminal - muted morning tones (10-15% saturation)
-  red: '#a88080',
-  green: '#88a888',
-  yellow: '#a8a078',
-  blue: '#8098a8',
-  magenta: '#a08090',
+  // Terminal - functional colors
+  red: '#e08078',
+  green: '#78c890',
+  yellow: '#d8c078',
+  blue: '#80a8d0',
+  magenta: '#d888a8',
 } as const
