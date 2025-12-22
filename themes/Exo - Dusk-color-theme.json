@@ -290,6 +290,16 @@
       }
     },
     {
+      "name": "Module References",
+      "scope": [
+        "meta.module-reference",
+        "meta.import variable.other.readwrite.alias"
+      ],
+      "settings": {
+        "foreground": "#ceb6e2"
+      }
+    },
+    {
       "name": "Other Variable, String Link",
       "scope": [
         "support.other.variable",

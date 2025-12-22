@@ -440,6 +440,11 @@ const SUB_METHOD_SCOPES = [
   'variable.other.class.js',
 ]
 
+const MODULE_REFERENCE_SCOPES = [
+  'meta.module-reference',
+  'meta.import variable.other.readwrite.alias',
+]
+
 const META_METHOD_SCOPES = [
   'meta.class-method.js entity.name.function.js',
   'variable.function.constructor',
@@ -545,6 +550,13 @@ function createCoreTokenColors(palette: Palette): TokenColor[] {
       scope: ['meta.block variable.other'],
       settings: {
         foreground: palette.constant,
+      },
+    },
+    {
+      name: 'Module References',
+      scope: MODULE_REFERENCE_SCOPES,
+      settings: {
+        foreground: palette.type,
       },
     },
     {
