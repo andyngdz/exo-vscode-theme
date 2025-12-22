@@ -2,56 +2,61 @@
  * Exo - Midnight Palette
  * Dark theme inspired by deep night sky and moonlight
  *
- * Identity: Starless night - deep blues, silver moonlight, cool stillness
- * - Contrast: Light text on dark background
- * - Hierarchy: Code focus > UI chrome
- * - Variety: Night-inspired syntax colors
- * - Unity: Cool blue tones throughout
+ * Identity: Cool night - periwinkle, cyan, ice blue
+ * Scale indices: [2] = 80% lightness, [3] = 70% lightness
+ * Hierarchy: Keywords > Functions > Strings > Types > Variables > Comments
+ * Note: Only cool-toned theme (all blues/cyans)
  */
+
+import { colord } from 'colord'
+
+import { createBackgroundColors, mixMirageWithHue } from '@/background'
+import { midnightScales } from '@/palettes/scales'
+
+export { midnightScales as scales }
+
+const midnightBias = mixMirageWithHue(midnightScales.primary[2], 0.03)
+const midnightBiasHsl = colord(midnightBias).toHsl()
+// Midnight background: Exact Mirage base blended 3% toward midnight hue
+const bg = createBackgroundColors(midnightBiasHsl.h, midnightBiasHsl.s / 100)
 
 export const midnight = {
   name: 'Exo - Midnight',
 
-  // Base - deep blue-black night sky
-  background: '#0f1218',
-  foreground: '#b0b8c8',
-  foregroundBright: '#e0e8f0',
-  foregroundDim: '#606878',
+  // Base (WCAG AAA compliant)
+  ...bg,
+  foreground: '#c0c8d8',
+  foregroundBright: '#f0f4f8',
+  foregroundDim: '#a0a8b8', // 7:1+ contrast
 
-  // Accent - muted ice blue (10-15% saturation for UI)
-  primary: '#7898a8',
+  // Accent - steel blue
+  primary: midnightScales.info[3],
 
-  // Syntax - vibrant (30-40% saturation) for code focus
-  keyword: '#88a8d8', // periwinkle - starlit sky
-  function: '#68c0c8', // cyan - aurora glow
-  string: '#78c0b0', // seafoam - moonlit tide
-  number: '#a0b8d0', // silver-blue - starlight
-  comment: '#606878', // deep slate - night clouds
-  operator: '#90a0b0', // cool slate - shadow
-  type: '#78b0d8', // sky blue - distant horizon
-  constant: '#a8b8c8', // silver - moonbeam
-  error: '#c88890', // rose - warning
+  // Syntax - using scales
+  keyword: midnightScales.primary[2],
+  function: midnightScales.secondary[3],
+  string: midnightScales.tertiary[2],
+  number: midnightScales.warning[3],
+  comment: '#a2a8b5', // WCAG AAA: 7:1+ contrast
+  operator: midnightScales.neutral[2],
+  type: midnightScales.secondary[4],
+  constant: midnightScales.warning[2],
+  error: midnightScales.danger[3],
 
-  // UI - deep blue-tinted surfaces
-  border: '#1a2028',
-  surface: '#141820',
-  surfaceDark: '#0a0c10',
-  surfaceLight: '#1a2028',
-  overlay: '#181c24',
-  lineNumber: '#404858',
-  panelBackground: '#0f1218',
+  // UI - lineNumber needs fine-tuning per theme
+  lineNumber: '#506070',
 
-  // Git - muted conventional colors (10-15% saturation)
-  added: '#88a898',
-  deleted: '#a88888',
-  modified: '#7898a8',
+  // Git - using scales
+  added: midnightScales.success[3],
+  deleted: midnightScales.danger[3],
+  modified: midnightScales.info[3],
   ignored: '#505868',
-  conflicting: '#a8a088',
+  conflicting: midnightScales.warning[3],
 
-  // Terminal - muted night tones (10-15% saturation)
-  red: '#a88888',
-  green: '#88a898',
-  yellow: '#a8a088',
-  blue: '#8898a8',
-  magenta: '#a088a0',
+  // Terminal - using scales
+  red: midnightScales.danger[3],
+  green: midnightScales.success[3],
+  yellow: midnightScales.warning[3],
+  blue: midnightScales.info[3],
+  magenta: midnightScales.primary[3],
 } as const

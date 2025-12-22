@@ -1,41 +1,43 @@
-# Change: Revise Theme Syntax Colors for Distinction and Eye Comfort
+# Change: Revise Theme Syntax Colors (GitHub-Inspired)
 
 ## Why
 
-The current 4 themes have syntax colors that are too similar, and some don't fully represent their theme names. We need colors that:
+Current themes lack visual clarity. After analyzing GitHub Theme, we identified:
 
-1. **Eye comfort first** - Muted, low-saturation colors that don't cause fatigue
-2. **Beautiful aesthetics** - "Wow, this looks good" feeling
-3. **Match theme names** - Colors should evoke the theme's identity
-4. **Distinct personalities** - Each theme must feel uniquely different
+1. **Brightness too low** - Our syntax colors are darker than GitHub's (which uses 70-85% lightness)
+2. **Poor contrast** - Elements don't stand out enough from each other
+3. **Hierarchy unclear** - Keywords, functions, strings all blend together
 
-## Theme Identities
-
-### Dusk (Evening/Sunset)
-- **Feeling**: Relaxing end of day, warm fading light
-- **Palette**: Soft purples, muted oranges, dusty pinks, twilight blues
-- **Key colors**: Lavender keywords, soft amber functions, dusty rose strings
-
-### Dawn (Morning/Sunrise)  
-- **Feeling**: Fresh start, gentle awakening, hope
-- **Palette**: Soft corals, peachy pinks, sage greens, golden highlights
-- **Key colors**: Coral keywords, soft gold functions, fresh sage strings
-
-### Midnight (Deep Night)
-- **Feeling**: Calm, focused, serene stillness
-- **Palette**: Deep blues, silver, soft cyan, moonlit tones
-- **Key colors**: Soft blue keywords, pale cyan functions, seafoam strings
-
-### Eclipse (Solar Eclipse)
-- **Feeling**: Dramatic, mysterious, powerful
-- **Palette**: Deep burgundy, burnt orange corona, dark shadows
-- **Key colors**: Wine/burgundy keywords, burnt sienna functions, muted ochre strings
+GitHub Theme works because it uses **high lightness (70-85%)** with **moderate saturation (40-60%)**.
 
 ## What Changes
 
-Revise syntax colors in all 4 palette files to match their theme identities while maintaining eye comfort.
+### Apply GitHub's Color Structure While Keeping Our Identity
+
+| Principle | GitHub Approach | Our Adaptation |
+|-----------|-----------------|----------------|
+| Brightness | 70-85% lightness | Same, but with theme-tinted hues |
+| Saturation | 40-60% | Slightly lower (35-55%) for muted feel |
+| Hierarchy | Keywords brightest | Same structure |
+| Uniqueness | One color scheme | 5 unique schemes |
+
+### Theme-Specific Syntax Colors
+
+| Theme | Keywords | Functions | Strings | Types |
+|-------|----------|-----------|---------|-------|
+| **Dusk** | `#e098c8` Orchid | `#c8a8e8` Lavender | `#b0a8e0` Soft Violet | `#e8c0a8` Peach |
+| **Dawn** | `#f09888` Coral | `#e8c868` Gold | `#f0c8a0` Peach | `#88d0c0` Teal |
+| **Eclipse** | `#f08868` Orange-Red | `#f0a868` Orange | `#e8c888` Gold | `#e0a0b8` Rose |
+| **Forest** | `#78d898` Emerald | `#d0b888` Tan | `#a8d8b8` Moss | `#88c8c0` Teal |
+| **Midnight** | `#98a8f0` Periwinkle | `#88d0e0` Cyan | `#a8c8f0` Ice Blue | `#88c0e8` Sky |
+
+### Foreground Brightness Increase
+
+All themes get brighter foreground for better variable visibility:
+- `foregroundBright`: Increase to ~`#f0xxxx` range (near-white)
 
 ## Impact
 
-- Affected specs: `dusk-theme`, `dawn-theme`, `midnight-theme`, `eclipse-theme`
-- Affected code: `src/palettes/dusk.ts`, `src/palettes/dawn.ts`, `src/palettes/midnight.ts`, `src/palettes/eclipse.ts`
+- Affected specs: `theme-system`
+- Affected code: All palette files in `src/palettes/`
+- User experience: GitHub-level clarity with unique theme personalities

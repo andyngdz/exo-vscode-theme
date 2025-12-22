@@ -1,57 +1,62 @@
 /**
  * Exo - Eclipse Palette
- * Dark theme inspired by solar eclipse and dramatic lighting
+ * Dark theme inspired by solar eclipse and dramatic corona
  *
- * Identity: Total eclipse - deep crimsons, warm shadows, corona flames
- * - Contrast: High contrast for dramatic effect
- * - Hierarchy: Code focus > UI chrome
- * - Variety: Eclipse-inspired syntax colors
- * - Unity: Warm dramatic tones throughout
+ * Identity: Fiery corona - orange-red, orange, gold
+ * Scale indices: [2] = 80% lightness, [3] = 70% lightness
+ * Hierarchy: Keywords > Functions > Strings > Types > Variables > Comments
+ * Note: Most dramatic/saturated theme
  */
+
+import { colord } from 'colord'
+
+import { createBackgroundColors, mixMirageWithHue } from '@/background'
+import { eclipseScales } from '@/palettes/scales'
+
+export { eclipseScales as scales }
+
+const eclipseBias = mixMirageWithHue(eclipseScales.primary[4], 0.03)
+const eclipseBiasHsl = colord(eclipseBias).toHsl()
+// Eclipse background: Exact Mirage base blended 3% toward eclipse hue
+const bg = createBackgroundColors(eclipseBiasHsl.h, eclipseBiasHsl.s / 100)
 
 export const eclipse = {
   name: 'Exo - Eclipse',
 
-  // Base - near-black with subtle warm undertone
-  background: '#12100f',
-  foreground: '#c8c0b8',
-  foregroundBright: '#f0e8e0',
-  foregroundDim: '#706860',
+  // Base - near-black with warm undertone, bright foreground (WCAG AAA compliant)
+  ...bg,
+  foreground: '#d0c8c0',
+  foregroundBright: '#f8f0e8',
+  foregroundDim: '#b0a8a0', // 7:1+ contrast
 
-  // Accent - muted crimson (10-15% saturation for UI)
-  primary: '#987878',
+  // Accent - dramatic crimson
+  primary: eclipseScales.info[3],
 
-  // Syntax - vibrant (30-40% saturation) for code focus
-  keyword: '#d08090', // rose - corona flames
-  function: '#d0a060', // gold - scattered sunlight
-  string: '#78b898', // sage - earth tone
-  number: '#d0a070', // bronze - light rays
-  comment: '#686058', // warm charcoal - deep shadow
-  operator: '#a09888', // warm ash - smoke
-  type: '#b890b8', // violet - corona haze
-  constant: '#c8a070', // gold - sunlit dust
-  error: '#c88080', // coral - warning
+  // Syntax - using scales
+  keyword: eclipseScales.primary[3],
+  function: eclipseScales.secondary[3],
+  string: eclipseScales.tertiary[3],
+  number: eclipseScales.warning[3],
+  comment: '#ada6a0', // WCAG AAA: 7:1+ contrast
+  operator: eclipseScales.neutral[2],
+  type: eclipseScales.success[3],
+  constant: eclipseScales.warning[3],
+  error: eclipseScales.danger[3],
 
-  // UI - dark warm surfaces
-  border: '#201c1a',
-  surface: '#181412',
-  surfaceDark: '#0a0908',
-  surfaceLight: '#201c1a',
-  overlay: '#1c1816',
-  lineNumber: '#484038',
-  panelBackground: '#12100f',
+  // UI - lineNumber needs fine-tuning per theme
+  lineNumber: '#585048',
 
-  // Git - muted conventional colors (10-15% saturation)
-  added: '#88a088',
-  deleted: '#a08080',
-  modified: '#987878',
+  // Git - using scales
+  added: eclipseScales.success[3],
+  deleted: eclipseScales.danger[3],
+  modified: eclipseScales.info[3],
   ignored: '#585048',
-  conflicting: '#a8a078',
+  conflicting: eclipseScales.warning[3],
 
-  // Terminal - muted dramatic tones (10-15% saturation)
-  red: '#a08080',
-  green: '#88a088',
-  yellow: '#a8a078',
-  blue: '#8090a0',
-  magenta: '#a08090',
+  // Terminal - using scales
+  red: eclipseScales.danger[3],
+  green: eclipseScales.success[3],
+  yellow: eclipseScales.warning[3],
+  blue: eclipseScales.info[3],
+  magenta: eclipseScales.primary[3],
 } as const

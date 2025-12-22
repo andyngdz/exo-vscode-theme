@@ -2,56 +2,60 @@
  * Exo - Dawn Palette
  * Dark theme inspired by sunrise and early morning light
  *
- * Identity: Morning glow - soft corals, rose pinks, golden rays
- * - Contrast: Light text on dark background
- * - Hierarchy: Code focus > UI chrome
- * - Variety: Sunrise-inspired syntax colors
- * - Unity: Warm morning tones throughout
+ * Identity: Warm sunrise - coral, gold, peach
+ * Scale indices: [2] = 80% lightness, [3] = 70% lightness
+ * Hierarchy: Keywords > Functions > Strings > Types > Variables > Comments
  */
+
+import { colord } from 'colord'
+
+import { createBackgroundColors, mixMirageWithHue } from '@/background'
+import { dawnScales } from '@/palettes/scales'
+
+export { dawnScales as scales }
+
+const dawnBias = mixMirageWithHue(dawnScales.primary[4], 0.03)
+const dawnBiasHsl = colord(dawnBias).toHsl()
+// Dawn background: Exact Mirage base blended 3% toward dawn hue
+const bg = createBackgroundColors(dawnBiasHsl.h, dawnBiasHsl.s / 100)
 
 export const dawn = {
   name: 'Exo - Dawn',
 
-  // Base - dark with warm undertone like pre-dawn sky
-  background: '#1a1618',
-  foreground: '#c8c0b8',
-  foregroundBright: '#f0e8e0',
-  foregroundDim: '#807870',
+  // Base - dark with warm undertone, bright foreground (WCAG AAA compliant)
+  ...bg,
+  foreground: '#d0c8c0',
+  foregroundBright: '#f8f0e8',
+  foregroundDim: '#b0a8a0', // 7:1+ contrast
 
-  // Accent - muted coral (10-15% saturation for UI)
-  primary: '#a08078',
+  // Accent - warm coral glow
+  primary: dawnScales.info[3],
 
-  // Syntax - vibrant (30-40% saturation) for code focus
-  keyword: '#d88080', // coral - sunrise glow
-  function: '#d0a060', // gold - morning rays
-  string: '#68c0a0', // mint - morning dew
-  number: '#d89870', // peach - first blush
-  comment: '#787070', // warm gray - morning mist
-  operator: '#a8a098', // warm stone - neutral
-  type: '#68b8b0', // teal - clear sky
-  constant: '#d0a068', // gold - sandy shore
-  error: '#c88080', // red - alert
+  // Syntax - using scales
+  keyword: dawnScales.primary[3],
+  function: dawnScales.secondary[3],
+  string: dawnScales.tertiary[2],
+  number: dawnScales.warning[3],
+  comment: '#aca5a5', // WCAG AAA: 7:1+ contrast
+  operator: dawnScales.neutral[2],
+  type: dawnScales.success[4],
+  constant: dawnScales.warning[3],
+  error: dawnScales.danger[3],
 
-  // UI - dark warm surfaces
-  border: '#2a2628',
-  surface: '#201c1e',
-  surfaceDark: '#141214',
-  surfaceLight: '#282426',
-  overlay: '#242022',
-  lineNumber: '#585050',
-  panelBackground: '#1a1618',
+  // UI - lineNumber needs fine-tuning per theme
+  lineNumber: '#686058',
 
-  // Git - muted conventional colors (10-15% saturation)
-  added: '#88a888',
-  deleted: '#a88080',
-  modified: '#a08078',
+  // Git - using scales
+  added: dawnScales.success[3],
+  deleted: dawnScales.danger[3],
+  modified: dawnScales.info[3],
   ignored: '#686060',
-  conflicting: '#a89878',
+  conflicting: dawnScales.warning[3],
 
-  // Terminal - muted morning tones (10-15% saturation)
-  red: '#a88080',
-  green: '#88a888',
-  yellow: '#a8a078',
-  blue: '#8098a8',
-  magenta: '#a08090',
+  // Terminal - using scales
+  red: dawnScales.danger[3],
+  green: dawnScales.success[3],
+  yellow: dawnScales.warning[3],
+  blue: dawnScales.info[3],
+  magenta: dawnScales.primary[3],
 } as const

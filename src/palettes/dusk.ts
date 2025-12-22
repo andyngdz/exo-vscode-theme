@@ -2,56 +2,60 @@
  * Exo - Dusk Palette
  * Dark theme inspired by sunset and evening twilight
  *
- * Identity: Evening sky - deep purples, warm ambers, fading orange light
- * - Contrast: Light text on dark background
- * - Hierarchy: Code focus > UI chrome
- * - Variety: Sunset-inspired syntax colors
- * - Unity: Warm evening tones throughout
+ * Identity: Purple twilight - orchid, lavender, soft violet
+ * Scale indices: [2] = 80% lightness, [3] = 70% lightness
+ * Hierarchy: Keywords > Functions > Strings > Types > Variables > Comments
  */
+
+import { colord } from 'colord'
+
+import { createBackgroundColors, mixMirageWithHue } from '@/background'
+import { duskScales } from '@/palettes/scales'
+
+export { duskScales as scales }
+
+const duskBias = mixMirageWithHue(duskScales.primary[4], 0.03)
+const duskBiasHsl = colord(duskBias).toHsl()
+// Dusk background: Exact Mirage base blended 3% toward dusk hue
+const bg = createBackgroundColors(duskBiasHsl.h, duskBiasHsl.s / 100)
 
 export const dusk = {
   name: 'Exo - Dusk',
 
-  // Base - deep evening sky
-  background: '#1a1520',
-  foreground: '#c0b8c8',
-  foregroundBright: '#e8e0f0',
-  foregroundDim: '#787080',
+  // Base - deep evening sky with bright foreground (WCAG AAA compliant)
+  ...bg,
+  foreground: '#dcd4e4',
+  foregroundBright: '#f4ecfc',
+  foregroundDim: '#a8a0b0', // 7:1+ contrast
 
-  // Accent - muted amber (10-15% saturation for UI)
-  primary: '#a08870',
+  // Accent - purple glow
+  primary: duskScales.info[3],
 
-  // Syntax - vibrant (30-40% saturation) for code focus
-  keyword: '#d888b0', // orchid - twilight bloom
-  function: '#d8a868', // amber - sunlight
-  string: '#70c8a0', // sage - evening calm
-  number: '#d8a070', // apricot - warm glow
-  comment: '#706878', // muted purple-gray - fading light
-  operator: '#a8a0b0', // lavender gray - dusk haze
-  type: '#a890d0', // violet - evening sky
-  constant: '#d0a070', // gold - twilight glow
-  error: '#d08080', // coral - warning
+  // Syntax - using scales
+  keyword: duskScales.primary[3],
+  function: duskScales.secondary[2],
+  string: duskScales.tertiary[2],
+  number: duskScales.warning[3],
+  comment: '#a8a2b0', // WCAG AAA: 7:1+ contrast
+  operator: duskScales.neutral[2],
+  type: duskScales.success[4],
+  constant: duskScales.warning[3],
+  error: duskScales.danger[3],
 
-  // UI - deep purple-tinted surfaces
-  border: '#2a2430',
-  surface: '#201a28',
-  surfaceDark: '#141018',
-  surfaceLight: '#282030',
-  overlay: '#241e2c',
-  lineNumber: '#504860',
-  panelBackground: '#1a1520',
+  // UI - lineNumber needs fine-tuning per theme
+  lineNumber: '#605070',
 
-  // Git - muted conventional colors (10-15% saturation)
-  added: '#88a890',
-  deleted: '#a88080',
-  modified: '#a08870',
+  // Git - using scales
+  added: duskScales.success[3],
+  deleted: duskScales.danger[3],
+  modified: duskScales.info[3],
   ignored: '#605868',
-  conflicting: '#a89880',
+  conflicting: duskScales.warning[3],
 
-  // Terminal - muted evening tones (10-15% saturation)
-  red: '#a88080',
-  green: '#88a890',
-  yellow: '#a8a078',
-  blue: '#8090a8',
-  magenta: '#a080a0',
+  // Terminal - using scales
+  red: duskScales.danger[3],
+  green: duskScales.success[3],
+  yellow: duskScales.warning[3],
+  blue: duskScales.info[3],
+  magenta: duskScales.primary[3],
 } as const
