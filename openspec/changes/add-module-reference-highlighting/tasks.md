@@ -3,7 +3,7 @@
 
 ## 2. Scope Discovery (Non-Code)
 - [x] 2.1 Use VS Code `Developer: Inspect Editor Tokens and Scopes` on JS/TS imports to confirm module-related scopes (e.g. `meta.module-reference`, `meta.import … variable.other.readwrite.alias`)
-- [ ] 2.2 (Optional) Inspect Python imports and record module path scopes for follow-up expansion
+- [x] 2.2 (Optional) Inspect Python imports and record module path scopes for follow-up expansion (Skipped for closeout)
 
 ## 3. Implementation
 - [x] 3.1 Add `MODULE_REFERENCE_SCOPES` constant containing `meta.module-reference`

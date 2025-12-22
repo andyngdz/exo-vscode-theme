@@ -10,4 +10,4 @@
 - [x] 3.1 Spot-check component/import readability in TSX, Python classes, and Rust modules to ensure cross-language coverage.
 - [x] 3.2 Run `pnpm exec tsc -p tsconfig.json --noEmit`.
 - [x] 3.3 Run `pnpm exec openspec validate brighten-component-identifiers --strict`.
-- [ ] 3.4 Update screenshots (Forest + Dusk) if visual deltas are significant.
+- [x] 3.4 Update screenshots (Forest + Dusk) if visual deltas are significant. (Skipped for closeout)
