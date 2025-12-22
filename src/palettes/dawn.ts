@@ -16,7 +16,7 @@ export { dawnScales as scales }
 
 const dawnBias = mixMirageWithHue(dawnScales.primary[4], 0.03)
 const dawnBiasHsl = colord(dawnBias).toHsl()
-// Dawn background: Exact Mirage base blended 10% toward dawn hue
+// Dawn background: Exact Mirage base blended 3% toward dawn hue
 const bg = createBackgroundColors(dawnBiasHsl.h, dawnBiasHsl.s / 100)
 
 export const dawn = {

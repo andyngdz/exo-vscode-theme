@@ -16,7 +16,7 @@ export { forestScales as scales }
 
 const forestBias = mixMirageWithHue(forestScales.primary[4], 0.03)
 const forestBiasHsl = colord(forestBias).toHsl()
-// Forest background: Exact Mirage base blended 10% toward forest hue
+// Forest background: Exact Mirage base blended 3% toward forest hue
 const bg = createBackgroundColors(forestBiasHsl.h, forestBiasHsl.s / 100)
 
 export const forest = {

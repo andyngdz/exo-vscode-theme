@@ -17,7 +17,7 @@ export { midnightScales as scales }
 
 const midnightBias = mixMirageWithHue(midnightScales.primary[2], 0.03)
 const midnightBiasHsl = colord(midnightBias).toHsl()
-// Midnight background: Exact Mirage base blended 10% toward midnight hue
+// Midnight background: Exact Mirage base blended 3% toward midnight hue
 const bg = createBackgroundColors(midnightBiasHsl.h, midnightBiasHsl.s / 100)
 
 export const midnight = {

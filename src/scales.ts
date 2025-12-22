@@ -69,9 +69,20 @@ export function generateScale(baseColor: string): Scale {
   const base = colord(baseColor)
   const { h, s } = base.toHsl()
 
-  const scale = LIGHTNESS_STEPS.map((l) => colord({ h, s, l }).toHex())
+  const [l0, l1, l2, l3, l4, l5, l6, l7, l8, l9] = LIGHTNESS_STEPS
 
-  return scale as unknown as Scale
+  return [
+    colord({ h, s, l: l0 }).toHex(),
+    colord({ h, s, l: l1 }).toHex(),
+    colord({ h, s, l: l2 }).toHex(),
+    colord({ h, s, l: l3 }).toHex(),
+    colord({ h, s, l: l4 }).toHex(),
+    colord({ h, s, l: l5 }).toHex(),
+    colord({ h, s, l: l6 }).toHex(),
+    colord({ h, s, l: l7 }).toHex(),
+    colord({ h, s, l: l8 }).toHex(),
+    colord({ h, s, l: l9 }).toHex(),
+  ]
 }
 
 /**

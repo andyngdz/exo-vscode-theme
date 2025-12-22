@@ -16,7 +16,7 @@ export { duskScales as scales }
 
 const duskBias = mixMirageWithHue(duskScales.primary[4], 0.03)
 const duskBiasHsl = colord(duskBias).toHsl()
-// Dusk background: Exact Mirage base blended 10% toward dusk hue
+// Dusk background: Exact Mirage base blended 3% toward dusk hue
 const bg = createBackgroundColors(duskBiasHsl.h, duskBiasHsl.s / 100)
 
 export const dusk = {

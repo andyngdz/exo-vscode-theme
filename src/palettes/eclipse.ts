@@ -17,7 +17,7 @@ export { eclipseScales as scales }
 
 const eclipseBias = mixMirageWithHue(eclipseScales.primary[4], 0.03)
 const eclipseBiasHsl = colord(eclipseBias).toHsl()
-// Eclipse background: Exact Mirage base blended 10% toward eclipse hue
+// Eclipse background: Exact Mirage base blended 3% toward eclipse hue
 const bg = createBackgroundColors(eclipseBiasHsl.h, eclipseBiasHsl.s / 100)
 
 export const eclipse = {
