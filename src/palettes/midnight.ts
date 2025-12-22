@@ -8,13 +8,17 @@
  * Note: Only cool-toned theme (all blues/cyans)
  */
 
-import { createBackgroundColors } from '../background'
-import { midnightScales } from './scales'
+import { colord } from 'colord'
+
+import { createBackgroundColors, mixMirageWithHue } from '@/background'
+import { midnightScales } from '@/palettes/scales'
 
 export { midnightScales as scales }
 
-// Midnight background: cool blue hue (220°), moderate saturation (23%)
-const bg = createBackgroundColors(220, 0.23)
+const midnightBias = mixMirageWithHue(midnightScales.primary[2], 0.03)
+const midnightBiasHsl = colord(midnightBias).toHsl()
+// Midnight background: Exact Mirage base blended 10% toward midnight hue
+const bg = createBackgroundColors(midnightBiasHsl.h, midnightBiasHsl.s / 100)
 
 export const midnight = {
   name: 'Exo - Midnight',
@@ -35,7 +39,7 @@ export const midnight = {
   number: midnightScales.warning[3],
   comment: '#a2a8b5', // WCAG AAA: 7:1+ contrast
   operator: midnightScales.neutral[2],
-  type: midnightScales.info[3],
+  type: midnightScales.info[4],
   constant: midnightScales.warning[2],
   error: midnightScales.danger[3],
 

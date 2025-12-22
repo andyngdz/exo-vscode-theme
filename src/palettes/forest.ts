@@ -7,13 +7,17 @@
  * Hierarchy: Keywords > Functions > Strings > Types > Variables > Comments
  */
 
-import { createBackgroundColors } from '../background'
-import { forestScales } from './scales'
+import { colord } from 'colord'
+
+import { createBackgroundColors, mixMirageWithHue } from '@/background'
+import { forestScales } from '@/palettes/scales'
 
 export { forestScales as scales }
 
-// Forest background: green hue (120°), low saturation (11%)
-const bg = createBackgroundColors(120, 0.11)
+const forestBias = mixMirageWithHue(forestScales.primary[4], 0.03)
+const forestBiasHsl = colord(forestBias).toHsl()
+// Forest background: Exact Mirage base blended 10% toward forest hue
+const bg = createBackgroundColors(forestBiasHsl.h, forestBiasHsl.s / 100)
 
 export const forest = {
   name: 'Exo - Forest',
@@ -30,11 +34,11 @@ export const forest = {
   // Syntax - using scales
   keyword: forestScales.primary[3],
   function: forestScales.secondary[3],
-  string: forestScales.tertiary[2],
+  string: forestScales.secondary[2],
   number: forestScales.warning[3],
   comment: '#a0ab9a', // WCAG AAA: 7:1+ contrast
   operator: forestScales.neutral[2],
-  type: forestScales.success[3],
+  type: forestScales.secondary[2],
   constant: forestScales.warning[3],
   error: forestScales.danger[3],
 

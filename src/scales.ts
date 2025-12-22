@@ -24,7 +24,7 @@ export type Scale = readonly [
   string,
   string,
   string,
-  string,
+  string
 ]
 
 /**

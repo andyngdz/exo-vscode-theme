@@ -7,13 +7,17 @@
  * Hierarchy: Keywords > Functions > Strings > Types > Variables > Comments
  */
 
-import { createBackgroundColors } from '../background'
-import { duskScales } from './scales'
+import { colord } from 'colord'
+
+import { createBackgroundColors, mixMirageWithHue } from '@/background'
+import { duskScales } from '@/palettes/scales'
 
 export { duskScales as scales }
 
-// Dusk background: purple hue (267°), moderate saturation (21%)
-const bg = createBackgroundColors(267, 0.21)
+const duskBias = mixMirageWithHue(duskScales.primary[4], 0.03)
+const duskBiasHsl = colord(duskBias).toHsl()
+// Dusk background: Exact Mirage base blended 10% toward dusk hue
+const bg = createBackgroundColors(duskBiasHsl.h, duskBiasHsl.s / 100)
 
 export const dusk = {
   name: 'Exo - Dusk',
@@ -34,7 +38,7 @@ export const dusk = {
   number: duskScales.warning[3],
   comment: '#a8a2b0', // WCAG AAA: 7:1+ contrast
   operator: duskScales.neutral[2],
-  type: duskScales.info[2],
+  type: duskScales.tertiary[3],
   constant: duskScales.warning[3],
   error: duskScales.danger[3],
 

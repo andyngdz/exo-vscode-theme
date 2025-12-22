@@ -8,13 +8,17 @@
  * Note: Most dramatic/saturated theme
  */
 
-import { createBackgroundColors } from '../background'
-import { eclipseScales } from './scales'
+import { colord } from 'colord'
+
+import { createBackgroundColors, mixMirageWithHue } from '@/background'
+import { eclipseScales } from '@/palettes/scales'
 
 export { eclipseScales as scales }
 
-// Eclipse background: warm orange hue (20°), low saturation (9%)
-const bg = createBackgroundColors(20, 0.09)
+const eclipseBias = mixMirageWithHue(eclipseScales.primary[4], 0.03)
+const eclipseBiasHsl = colord(eclipseBias).toHsl()
+// Eclipse background: Exact Mirage base blended 10% toward eclipse hue
+const bg = createBackgroundColors(eclipseBiasHsl.h, eclipseBiasHsl.s / 100)
 
 export const eclipse = {
   name: 'Exo - Eclipse',
@@ -35,7 +39,7 @@ export const eclipse = {
   number: eclipseScales.warning[3],
   comment: '#ada6a0', // WCAG AAA: 7:1+ contrast
   operator: eclipseScales.neutral[2],
-  type: eclipseScales.info[2],
+  type: eclipseScales.success[3],
   constant: eclipseScales.warning[3],
   error: eclipseScales.danger[3],
 

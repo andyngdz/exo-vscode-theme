@@ -7,13 +7,17 @@
  * Hierarchy: Keywords > Functions > Strings > Types > Variables > Comments
  */
 
-import { createBackgroundColors } from '../background'
-import { dawnScales } from './scales'
+import { colord } from 'colord'
+
+import { createBackgroundColors, mixMirageWithHue } from '@/background'
+import { dawnScales } from '@/palettes/scales'
 
 export { dawnScales as scales }
 
-// Dawn background: warm rose hue (330°), low saturation (8%)
-const bg = createBackgroundColors(330, 0.08)
+const dawnBias = mixMirageWithHue(dawnScales.primary[4], 0.03)
+const dawnBiasHsl = colord(dawnBias).toHsl()
+// Dawn background: Exact Mirage base blended 10% toward dawn hue
+const bg = createBackgroundColors(dawnBiasHsl.h, dawnBiasHsl.s / 100)
 
 export const dawn = {
   name: 'Exo - Dawn',
@@ -34,7 +38,7 @@ export const dawn = {
   number: dawnScales.warning[3],
   comment: '#aca5a5', // WCAG AAA: 7:1+ contrast
   operator: dawnScales.neutral[2],
-  type: dawnScales.success[3],
+  type: dawnScales.success[4],
   constant: dawnScales.warning[3],
   error: dawnScales.danger[3],
 

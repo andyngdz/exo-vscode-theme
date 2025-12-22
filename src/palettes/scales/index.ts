@@ -4,8 +4,8 @@
  * Exports all theme scale definitions
  */
 
-export { duskScales } from './dusk'
 export { dawnScales } from './dawn'
+export { duskScales } from './dusk'
 export { eclipseScales } from './eclipse'
 export { forestScales } from './forest'
 export { midnightScales } from './midnight'
