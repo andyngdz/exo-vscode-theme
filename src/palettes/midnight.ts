@@ -39,7 +39,7 @@ export const midnight = {
   number: midnightScales.warning[3],
   comment: '#a2a8b5', // WCAG AAA: 7:1+ contrast
   operator: midnightScales.neutral[2],
-  type: midnightScales.info[1],
+  type: midnightScales.secondary[4],
   constant: midnightScales.warning[2],
   error: midnightScales.danger[3],
 

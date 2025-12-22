@@ -3,7 +3,7 @@
 - [x] 1.2 Capture current contrast ratios (WCAG) between `palette.type` and each theme background to document baseline.
 
 ## 2. Palette Updates
-- [x] 2.1 Adjust `palette.type` (and only related derived tokens if necessary) in each palette to reach ≥7:1 contrast while retaining color identity.
+- [x] 2.1 Adjust `palette.type` (and only related derived tokens if necessary) in each palette to reach ≥7:1 contrast while retaining color identity and remain visually distinct from normal text.
 - [x] 2.2 Rebuild `themes/*.json` using `pnpm run build` and confirm generator outputs align with new palette values.
 
 ## 3. Validation

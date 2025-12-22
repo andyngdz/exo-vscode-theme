@@ -38,7 +38,7 @@ export const dusk = {
   number: duskScales.warning[3],
   comment: '#a8a2b0', // WCAG AAA: 7:1+ contrast
   operator: duskScales.neutral[2],
-  type: duskScales.tertiary[2],
+  type: duskScales.success[4],
   constant: duskScales.warning[3],
   error: duskScales.danger[3],
 

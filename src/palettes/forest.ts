@@ -38,7 +38,7 @@ export const forest = {
   number: forestScales.warning[3],
   comment: '#a0ab9a', // WCAG AAA: 7:1+ contrast
   operator: forestScales.neutral[2],
-  type: forestScales.secondary[2],
+  type: forestScales.warning[4],
   constant: forestScales.warning[3],
   error: forestScales.danger[3],
 
