@@ -7,23 +7,24 @@
  * Hierarchy: Keywords > Functions > Strings > Types > Variables > Comments
  */
 
-import { colord } from 'colord'
-
-import { createBackgroundColors, mixMirageWithHue } from '@/background'
 import { dawnScales } from '@/palettes/scales'
 
 export { dawnScales as scales }
 
-const dawnBias = mixMirageWithHue(dawnScales.primary[4], 0.03)
-const dawnBiasHsl = colord(dawnBias).toHsl()
-// Dawn background: Exact Mirage base blended 3% toward dawn hue
-const bg = createBackgroundColors(dawnBiasHsl.h, dawnBiasHsl.s / 100)
-
 export const dawn = {
   name: 'Exo - Dawn',
 
+  // Unified background (shared across all themes)
+  background: '#1f2430',
+  surface: '#1f2430',
+  surfaceDark: '#1c212b',
+  surfaceLight: '#242936',
+  border: '#171b24',
+  overlay: '#242936',
+  panelBackground: '#1f2430',
+  lineNumber: '#686058',
+
   // Base - dark with warm undertone, bright foreground (WCAG AAA compliant)
-  ...bg,
   foreground: '#dcdcdc',
   foregroundBright: '#f8f0e8',
   foregroundDim: '#b8b8b8',

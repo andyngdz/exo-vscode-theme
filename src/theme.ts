@@ -46,9 +46,9 @@ function createEditorColors(palette: Palette): ThemeColors {
 
 function createActivityBarColors(palette: Palette): ThemeColors {
   return {
-    // Activity Bar
+    // Activity Bar (minimal icons)
     'activityBar.background': palette.background,
-    'activityBar.foreground': palette.primary,
+    'activityBar.foreground': palette.foregroundDim,
     'activityBarBadge.background': palette.primary,
     'activityBarBadge.foreground': palette.background,
   }
@@ -77,19 +77,22 @@ function createListColors(palette: Palette): ThemeColors {
     'list.inactiveSelectionBackground': withOpacity(palette.primary, 0.06),
     'list.focusOutline': transparent,
     'list.activeSelectionIconForeground': palette.foregroundBright,
+    'list.errorForeground': palette.error,
+    'list.invalidItemForeground': withOpacity(palette.error, 0.7),
+    'list.deemphasizedForeground': palette.foregroundDim,
   }
 }
 
 function createStatusBarColors(palette: Palette): ThemeColors {
   return {
-    // Status Bar
-    'statusBar.background': palette.surfaceDark,
+    // Status Bar (unified background)
+    'statusBar.background': palette.background,
     'statusBar.foreground': palette.foregroundDim,
     'statusBar.border': palette.border,
     'statusBar.debuggingBackground': palette.debugStatusBar,
     'statusBar.debuggingForeground': palette.foregroundBright,
     'statusBar.debuggingBorder': transparent,
-    'statusBar.noFolderBackground': palette.surfaceDark,
+    'statusBar.noFolderBackground': palette.background,
     'statusBar.noFolderForeground': palette.foregroundDim,
     'statusBar.noFolderBorder': palette.border,
     'statusBarItem.hoverBackground': withOpacity(palette.foregroundDim, 0.15),
@@ -103,10 +106,10 @@ function createStatusBarColors(palette: Palette): ThemeColors {
 
 function createTitleBarColors(palette: Palette): ThemeColors {
   return {
-    // Title Bar
-    'titleBar.activeBackground': palette.surfaceDark,
+    // Title Bar (unified background)
+    'titleBar.activeBackground': palette.background,
     'titleBar.activeForeground': palette.foreground,
-    'titleBar.inactiveBackground': palette.surfaceDark,
+    'titleBar.inactiveBackground': palette.background,
     'titleBar.inactiveForeground': palette.comment,
   }
 }
@@ -152,6 +155,18 @@ function createInputColors(palette: Palette): ThemeColors {
     'input.border': palette.border,
     'input.placeholderForeground': palette.comment,
     'inputOption.activeBorder': palette.primary,
+  }
+}
+
+function createInputValidationColors(palette: Palette): ThemeColors {
+  return {
+    // Input Validation
+    'inputValidation.errorBackground': withOpacity(palette.error, 0.2),
+    'inputValidation.errorBorder': palette.error,
+    'inputValidation.warningBackground': withOpacity(palette.number, 0.2),
+    'inputValidation.warningBorder': palette.number,
+    'inputValidation.infoBackground': withOpacity(palette.primary, 0.2),
+    'inputValidation.infoBorder': palette.primary,
   }
 }
 
@@ -219,6 +234,16 @@ function createButtonColors(palette: Palette): ThemeColors {
     'button.background': palette.primary,
     'button.foreground': palette.background,
     'button.hoverBackground': lighten(palette.primary, 0.1),
+    'button.secondaryBackground': palette.surface,
+    'button.secondaryForeground': palette.foreground,
+    'button.secondaryHoverBackground': palette.surfaceLight,
+  }
+}
+
+function createProgressBarColors(palette: Palette): ThemeColors {
+  return {
+    // Progress Bar
+    'progressBar.background': palette.primary,
   }
 }
 
@@ -249,6 +274,22 @@ function createMiscColors(palette: Palette): ThemeColors {
   }
 }
 
+function createTextColors(palette: Palette): ThemeColors {
+  return {
+    // Text Links
+    'textLink.foreground': palette.primary,
+    'textLink.activeForeground': lighten(palette.primary, 0.15),
+    'textPreformat.foreground': palette.string,
+  }
+}
+
+function createIconColors(palette: Palette): ThemeColors {
+  return {
+    // Icons (minimal, subtle colors that don't distract from code)
+    'icon.foreground': palette.foregroundDim,
+  }
+}
+
 function createBreadcrumbColors(palette: Palette): ThemeColors {
   return {
     // Breadcrumb
@@ -256,6 +297,21 @@ function createBreadcrumbColors(palette: Palette): ThemeColors {
     'breadcrumb.foreground': palette.foregroundDim,
     'breadcrumb.focusForeground': palette.foreground,
     'breadcrumb.activeSelectionForeground': palette.foregroundBright,
+  }
+}
+
+function createTreeColors(palette: Palette): ThemeColors {
+  return {
+    // Tree (file explorer)
+    'tree.indentGuidesStroke': palette.border,
+  }
+}
+
+function createSettingsColors(palette: Palette): ThemeColors {
+  return {
+    // Settings UI
+    'settings.modifiedItemIndicator': palette.primary,
+    'settings.headerForeground': palette.foregroundBright,
   }
 }
 
@@ -310,14 +366,17 @@ function createMinimapColors(palette: Palette): ThemeColors {
     'minimap.errorHighlight': palette.error,
     'minimap.warningHighlight': palette.number,
     'minimap.findMatchHighlight': withOpacity(palette.keyword, 0.5),
+    'minimapGutter.addedBackground': palette.added,
+    'minimapGutter.modifiedBackground': palette.modified,
+    'minimapGutter.deletedBackground': palette.deleted,
   }
 }
 
 function createPeekViewColors(palette: Palette): ThemeColors {
   return {
-    // Peek View
+    // Peek View (unified background)
     'peekView.border': palette.primary,
-    'peekViewEditor.background': palette.surfaceDark,
+    'peekViewEditor.background': palette.background,
     'peekViewEditor.matchHighlightBackground': withOpacity(palette.keyword, 0.3),
     'peekViewResult.background': palette.surface,
     'peekViewResult.fileForeground': palette.foregroundBright,
@@ -901,16 +960,22 @@ export function createTheme(palette: Palette) {
     ...createPanelColors(palette),
     ...createTerminalColors(palette),
     ...createInputColors(palette),
+    ...createInputValidationColors(palette),
     ...createDropdownAndMenuColors(palette),
     ...createQuickInputColors(palette),
     ...createChatColors(palette),
     ...createNotificationColors(palette),
     ...createHoverWidgetColors(palette),
     ...createButtonColors(palette),
+    ...createProgressBarColors(palette),
     ...createScrollbarColors(palette),
     ...createBadgeColors(palette),
     ...createMiscColors(palette),
+    ...createTextColors(palette),
+    ...createIconColors(palette),
     ...createBreadcrumbColors(palette),
+    ...createTreeColors(palette),
+    ...createSettingsColors(palette),
     ...createGitDecorationColors(palette),
     ...createEditorGutterColors(palette),
     ...createOverviewRulerColors(palette),

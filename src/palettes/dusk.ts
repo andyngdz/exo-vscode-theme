@@ -7,23 +7,24 @@
  * Hierarchy: Keywords > Functions > Strings > Types > Variables > Comments
  */
 
-import { colord } from 'colord'
-
-import { createBackgroundColors, mixMirageWithHue } from '@/background'
 import { duskScales } from '@/palettes/scales'
 
 export { duskScales as scales }
 
-const duskBias = mixMirageWithHue(duskScales.primary[4], 0.03)
-const duskBiasHsl = colord(duskBias).toHsl()
-// Dusk background: Exact Mirage base blended 3% toward dusk hue
-const bg = createBackgroundColors(duskBiasHsl.h, duskBiasHsl.s / 100)
-
 export const dusk = {
   name: 'Exo - Dusk',
 
+  // Unified background (shared across all themes)
+  background: '#1f2430',
+  surface: '#1f2430',
+  surfaceDark: '#1c212b',
+  surfaceLight: '#242936',
+  border: '#171b24',
+  overlay: '#242936',
+  panelBackground: '#1f2430',
+  lineNumber: '#605070',
+
   // Base - deep evening sky with bright foreground (WCAG AAA compliant)
-  ...bg,
   foreground: '#dcdcdc',
   foregroundBright: '#f4ecfc',
   foregroundDim: '#b8b8b8',

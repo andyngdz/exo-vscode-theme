@@ -7,23 +7,24 @@
  * Hierarchy: Keywords > Functions > Strings > Types > Variables > Comments
  */
 
-import { colord } from 'colord'
-
-import { createBackgroundColors, mixMirageWithHue } from '@/background'
 import { forestScales } from '@/palettes/scales'
 
 export { forestScales as scales }
 
-const forestBias = mixMirageWithHue(forestScales.primary[4], 0.03)
-const forestBiasHsl = colord(forestBias).toHsl()
-// Forest background: Exact Mirage base blended 3% toward forest hue
-const bg = createBackgroundColors(forestBiasHsl.h, forestBiasHsl.s / 100)
-
 export const forest = {
   name: 'Exo - Forest',
 
+  // Unified background (shared across all themes)
+  background: '#1f2430',
+  surface: '#1f2430',
+  surfaceDark: '#1c212b',
+  surfaceLight: '#242936',
+  border: '#171b24',
+  overlay: '#242936',
+  panelBackground: '#1f2430',
+  lineNumber: '#586850',
+
   // Base (WCAG AAA compliant)
-  ...bg,
   foreground: '#dcdcdc',
   foregroundBright: '#f0f8e8',
   foregroundDim: '#b8b8b8',

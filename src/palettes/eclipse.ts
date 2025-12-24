@@ -8,23 +8,24 @@
  * Note: Most dramatic/saturated theme
  */
 
-import { colord } from 'colord'
-
-import { createBackgroundColors, mixMirageWithHue } from '@/background'
 import { eclipseScales } from '@/palettes/scales'
 
 export { eclipseScales as scales }
 
-const eclipseBias = mixMirageWithHue(eclipseScales.primary[4], 0.03)
-const eclipseBiasHsl = colord(eclipseBias).toHsl()
-// Eclipse background: Exact Mirage base blended 3% toward eclipse hue
-const bg = createBackgroundColors(eclipseBiasHsl.h, eclipseBiasHsl.s / 100)
-
 export const eclipse = {
   name: 'Exo - Eclipse',
 
+  // Unified background (shared across all themes)
+  background: '#1f2430',
+  surface: '#1f2430',
+  surfaceDark: '#1c212b',
+  surfaceLight: '#242936',
+  border: '#171b24',
+  overlay: '#242936',
+  panelBackground: '#1f2430',
+  lineNumber: '#585048',
+
   // Base - near-black with warm undertone, bright foreground (WCAG AAA compliant)
-  ...bg,
   foreground: '#dcdcdc',
   foregroundBright: '#f8f0e8',
   foregroundDim: '#b8b8b8',
