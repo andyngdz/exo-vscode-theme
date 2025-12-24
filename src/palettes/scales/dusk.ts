@@ -1,34 +1,35 @@
 /**
  * Dusk Theme Scales
  *
- * Purple twilight - orchid, lavender, soft violet
- * Base colors at 50% lightness, derived from target syntax colors
+ * Purple Twilight - Bright orchid, soft lavender, ice cyan
+ * Identity: Mystical evening elegance (65-75% saturation)
+ * Base colors at 50% lightness with increased saturation for distinct purple identity
  */
 
 import { createThemeScales } from '@/scales'
 
 export const duskScales = createThemeScales({
-  // Primary: Orchid/Pink-purple for keywords (target: #e098c8)
-  primary: '#c43b96',
+  // Primary: Bright magenta-purple for keywords (prominent)
+  primary: '#e640d9',
 
-  // Secondary: Lavender for functions (target: #c8a8e8)
-  secondary: '#8036c9',
+  // Secondary: Soft lavender for functions (purple family)
+  secondary: '#bf80ff',
 
-  // Tertiary: Violet for strings (target: #b0a8e0)
-  tertiary: '#5644bb',
+  // Tertiary: Ice cyan for strings (cool contrast to purple)
+  tertiary: '#66d9ff',
 
-  // Neutral: Purple-tinted gray (target: #706878)
+  // Neutral: Purple-tinted gray (unchanged)
   neutral: '#807788',
 
-  // Success: Green for added (target: #78c890)
-  success: '#4ab56a',
+  // Success: Jade green for types (natural contrast, 58% saturation)
+  success: '#5ac9a6',
 
-  // Danger: Coral for error/deleted (target: #e08080)
-  danger: '#cd3232',
+  // Danger: Bright pink-red for errors
+  danger: '#ff4d7a',
 
-  // Warning: Gold for number/constant (target: #d8b890)
-  warning: '#bd8642',
+  // Warning: Warm rose gold for numbers/constants
+  warning: '#ff9933',
 
-  // Info: Purple accent for modified/type (target: #b088d0)
-  info: '#8549b6',
+  // Info: Cyan-green accent for cool contrast
+  info: '#40d9a6',
 })

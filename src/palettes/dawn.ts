@@ -32,19 +32,16 @@ export const dawn = {
   // Accent - warm coral glow
   primary: dawnScales.info[3],
 
-  // Syntax - using scales
-  keyword: dawnScales.primary[3],
-  function: dawnScales.secondary[3],
-  string: dawnScales.tertiary[2],
-  number: dawnScales.warning[3],
+  // Syntax - using scales (hierarchy: Keywords > Functions > Strings > Types)
+  keyword: dawnScales.primary[2],    // Bright coral (prominent)
+  function: dawnScales.secondary[2],  // Bright golden orange
+  string: dawnScales.tertiary[2],     // Soft peach (warm tertiary)
+  number: dawnScales.warning[2],      // Bright gold
   comment: '#a6a6a6',
   operator: dawnScales.neutral[2],
-  type: dawnScales.success[4],
-  constant: dawnScales.warning[3],
+  type: dawnScales.success[3],        // Mint green (cool contrast)
+  constant: dawnScales.warning[4],    // Muted to differentiate from number
   error: dawnScales.danger[3],
-
-  // UI - lineNumber needs fine-tuning per theme
-  lineNumber: '#686058',
 
   // Git - using scales
   added: dawnScales.success[3],

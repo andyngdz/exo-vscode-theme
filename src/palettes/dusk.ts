@@ -32,19 +32,16 @@ export const dusk = {
   // Accent - purple glow
   primary: duskScales.info[3],
 
-  // Syntax - using scales
-  keyword: duskScales.primary[3],
-  function: duskScales.secondary[2],
-  string: duskScales.tertiary[2],
-  number: duskScales.warning[3],
+  // Syntax - using scales (hierarchy: Keywords > Functions > Strings > Types)
+  keyword: duskScales.primary[2],    // Bright magenta-purple (prominent)
+  function: duskScales.secondary[2],  // Soft lavender
+  string: duskScales.tertiary[2],     // Ice cyan (cool contrast to purple)
+  number: duskScales.warning[2],      // Warm rose gold
   comment: '#a6a6a6',
   operator: duskScales.neutral[2],
-  type: duskScales.success[4],
-  constant: duskScales.warning[3],
+  type: duskScales.success[3],        // Jade green (natural contrast)
+  constant: duskScales.warning[4],    // Muted to differentiate from number
   error: duskScales.danger[3],
-
-  // UI - lineNumber needs fine-tuning per theme
-  lineNumber: '#605070',
 
   // Git - using scales
   added: duskScales.success[3],

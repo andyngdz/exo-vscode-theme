@@ -461,18 +461,20 @@ const FUNCTION_SPECIAL_METHOD_SCOPES = [
   'entity.name.function',
   'meta.function-call',
   'variable.function',
-  'support.function',
   'keyword.other.special-method',
+  // Note: support.function moved to LIBRARY_FUNCTION_SCOPES for better differentiation
 ]
 
-const NUMBER_AND_CONSTANT_SCOPES = [
+const NUMBER_SCOPES = [
   'constant.numeric',
-  'constant.language',
+  'variable.parameter',
+  'keyword.other.unit',
+]
+
+const CONSTANT_SCOPES = [
   'support.constant',
   'constant.character',
   'constant.escape',
-  'variable.parameter',
-  'keyword.other.unit',
   'keyword.other',
 ]
 
@@ -497,59 +499,44 @@ const CLASS_SUPPORT_SCOPES = [
   'support.type.sys-types',
 ]
 
-const CSS_PROPERTY_NAME_SCOPES = [
-  'source.css support.type.property-name',
-  'source.sass support.type.property-name',
-  'source.scss support.type.property-name',
-  'source.less support.type.property-name',
-  'source.stylus support.type.property-name',
-  'source.postcss support.type.property-name',
-]
-
-const SUB_METHOD_SCOPES = [
-  'entity.name.module.js',
-  'variable.import.parameter.js',
-  'variable.other.class.js',
-]
-
-const MODULE_REFERENCE_SCOPES = [
-  'meta.module-reference',
-  'meta.import variable.other.readwrite.alias',
-]
-
-const META_METHOD_SCOPES = [
-  'meta.class-method.js entity.name.function.js',
-  'variable.function.constructor',
-]
-
 const HTML_ATTRIBUTES_SCOPES = [
   'text.html.basic entity.other.attribute-name.html',
   'text.html.basic entity.other.attribute-name',
 ]
 
-const DECORATORS_SCOPES = [
-  'tag.decorator.js entity.name.tag.js',
-  'tag.decorator.js punctuation.definition.tag.js',
+const LANGUAGE_VARIABLE_SCOPES = [
+  'variable.language.this',
+  'variable.language.self',
+  'variable.language.super',
+  'variable.language',
 ]
 
-const JSON_KEY_LEVEL_0_SCOPES = [
-  'source.json meta.structure.dictionary.json support.type.property-name.json',
+const OBJECT_PROPERTY_SCOPES = [
+  'variable.other.property',
+  'variable.other.object.property',
+  'variable.other.readwrite',
+  'support.variable.property',
+  'support.variable.dom',
+  'support.variable',
 ]
 
-const JSON_KEY_LEVEL_1_SCOPES = [
-  'source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json',
+const LIBRARY_FUNCTION_SCOPES = [
+  'support.function',
+  'support.method',
 ]
 
-const JSON_KEY_LEVEL_2_SCOPES = [
-  'source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json',
-]
-
-const JSON_KEY_LEVEL_3_SCOPES = [
-  'source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json',
-]
-
-const JSON_KEY_LEVEL_4_SCOPES = [
-  'source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json',
+const PACKAGE_KEYWORD_SCOPES = [
+  'keyword.control.import',
+  'keyword.control.export',
+  'keyword.control.from',
+  'keyword.control.as',
+  'keyword.control.default',
+  'storage.type.namespace',
+  'storage.type.class',
+  'storage.type.function',
+  'storage.type.type',
+  'storage.type.interface',
+  'storage.type.enum',
 ]
 
 const MARKDOWN_HEADING_SCOPES = [
@@ -576,6 +563,13 @@ function createCoreTokenColors(palette: Palette): TokenColor[] {
       },
     },
     {
+      name: 'Object Properties (de-emphasized for clean property chains)',
+      scope: OBJECT_PROPERTY_SCOPES,
+      settings: {
+        foreground: palette.foreground,
+      },
+    },
+    {
       name: 'Colors',
       scope: ['constant.other.color'],
       settings: {
@@ -592,6 +586,13 @@ function createCoreTokenColors(palette: Palette): TokenColor[] {
     {
       name: 'Keyword, Storage',
       scope: ['keyword', 'storage.type', 'storage.modifier'],
+      settings: {
+        foreground: palette.keyword,
+      },
+    },
+    {
+      name: 'Package/Module Keywords (import, export, from)',
+      scope: PACKAGE_KEYWORD_SCOPES,
       settings: {
         foreground: palette.keyword,
       },
@@ -618,20 +619,6 @@ function createCoreTokenColors(palette: Palette): TokenColor[] {
       },
     },
     {
-      name: 'Block Level Variables',
-      scope: ['meta.block variable.other'],
-      settings: {
-        foreground: palette.constant,
-      },
-    },
-    {
-      name: 'Module References',
-      scope: MODULE_REFERENCE_SCOPES,
-      settings: {
-        foreground: palette.type,
-      },
-    },
-    {
       name: 'Other Variable, String Link',
       scope: ['support.other.variable', 'string.other.link'],
       settings: {
@@ -639,10 +626,17 @@ function createCoreTokenColors(palette: Palette): TokenColor[] {
       },
     },
     {
-      name: 'Number, Constant, Function Argument, Tag Attribute, Embedded',
-      scope: NUMBER_AND_CONSTANT_SCOPES,
+      name: 'Numbers',
+      scope: NUMBER_SCOPES,
       settings: {
         foreground: palette.number,
+      },
+    },
+    {
+      name: 'Constants (support constants, escape chars)',
+      scope: ['support.constant', 'constant.character', 'constant.escape', 'keyword.other'],
+      settings: {
+        foreground: palette.constant,
       },
     },
     {
@@ -653,10 +647,10 @@ function createCoreTokenColors(palette: Palette): TokenColor[] {
       },
     },
     {
-      name: 'Support (Built-in Types, Classes, Functions)',
+      name: 'Support (Built-in Types, Classes, Functions) - de-emphasized',
       scope: ['support'],
       settings: {
-        foreground: palette.type,
+        foreground: palette.foreground,
       },
     },
     {
@@ -667,46 +661,10 @@ function createCoreTokenColors(palette: Palette): TokenColor[] {
       },
     },
     {
-      name: 'Entity Types',
-      scope: ['support.type'],
-      settings: {
-        foreground: palette.constant,
-      },
-    },
-    {
-      name: 'CSS Class and Support',
-      scope: CSS_PROPERTY_NAME_SCOPES,
-      settings: {
-        foreground: palette.constant,
-      },
-    },
-    {
-      name: 'Sub-methods',
-      scope: SUB_METHOD_SCOPES,
-      settings: {
-        foreground: palette.type,
-      },
-    },
-    {
       name: 'Language methods',
       scope: ['variable.language'],
       settings: {
         fontStyle: 'italic',
-        foreground: palette.function,
-      },
-    },
-    {
-      name: 'entity.name.method.js',
-      scope: ['entity.name.method.js'],
-      settings: {
-        fontStyle: 'italic',
-        foreground: palette.function,
-      },
-    },
-    {
-      name: 'meta.method.js',
-      scope: META_METHOD_SCOPES,
-      settings: {
         foreground: palette.function,
       },
     },
@@ -730,13 +688,6 @@ function createCoreTokenColors(palette: Palette): TokenColor[] {
       scope: ['entity.other.attribute-name.class'],
       settings: {
         foreground: palette.type,
-      },
-    },
-    {
-      name: "CSS ID's",
-      scope: ['source.sass keyword.control'],
-      settings: {
-        foreground: palette.function,
       },
     },
     {
@@ -782,11 +733,18 @@ function createCoreTokenColors(palette: Palette): TokenColor[] {
       },
     },
     {
-      name: 'Decorators',
-      scope: DECORATORS_SCOPES,
+      name: 'Language Variables (this, self, super) - muted',
+      scope: LANGUAGE_VARIABLE_SCOPES,
       settings: {
         fontStyle: 'italic',
-        foreground: palette.function,
+        foreground: palette.foreground,
+      },
+    },
+    {
+      name: 'Library/Built-in Functions',
+      scope: LIBRARY_FUNCTION_SCOPES,
+      settings: {
+        foreground: palette.type,
       },
     },
     {
@@ -800,46 +758,6 @@ function createCoreTokenColors(palette: Palette): TokenColor[] {
   ]
 }
 
-function createJsonTokenColors(palette: Palette): TokenColor[] {
-  return [
-    // JSON Key Levels
-    {
-      name: 'JSON Key - Level 0',
-      scope: JSON_KEY_LEVEL_0_SCOPES,
-      settings: {
-        foreground: palette.keyword,
-      },
-    },
-    {
-      name: 'JSON Key - Level 1',
-      scope: JSON_KEY_LEVEL_1_SCOPES,
-      settings: {
-        foreground: palette.function,
-      },
-    },
-    {
-      name: 'JSON Key - Level 2',
-      scope: JSON_KEY_LEVEL_2_SCOPES,
-      settings: {
-        foreground: palette.constant,
-      },
-    },
-    {
-      name: 'JSON Key - Level 3',
-      scope: JSON_KEY_LEVEL_3_SCOPES,
-      settings: {
-        foreground: palette.type,
-      },
-    },
-    {
-      name: 'JSON Key - Level 4',
-      scope: JSON_KEY_LEVEL_4_SCOPES,
-      settings: {
-        foreground: palette.string,
-      },
-    },
-  ]
-}
 
 function createMarkdownTokenColors(palette: Palette): TokenColor[] {
   return [
@@ -989,7 +907,6 @@ export function createTheme(palette: Palette) {
 
   const tokenColors: TokenColor[] = [
     ...createCoreTokenColors(palette),
-    ...createJsonTokenColors(palette),
     ...createMarkdownTokenColors(palette),
   ]
 

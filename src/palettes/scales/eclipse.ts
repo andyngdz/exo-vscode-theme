@@ -1,34 +1,35 @@
 /**
  * Eclipse Theme Scales
  *
- * Fiery corona - orange-red, orange, gold
- * Base colors at 50% lightness, derived from target syntax colors
+ * Fiery Corona - Intense red-orange, solar gold, bright gold
+ * Identity: Dramatic solar eclipse (75-85% saturation)
+ * Base colors at 50% lightness with high saturation for bold, intense character
  */
 
 import { createThemeScales } from '@/scales'
 
 export const eclipseScales = createThemeScales({
-  // Primary: Orange-Red for keywords (target: #f08868)
-  primary: '#e84817',
+  // Primary: Bright flame orange for keywords (intense, prominent)
+  primary: '#ff6633',
 
-  // Secondary: Orange for functions (target: #f0a868)
-  secondary: '#e87917',
+  // Secondary: Solar gold for functions (bright secondary)
+  secondary: '#ff9926',
 
-  // Tertiary: Gold for strings (target: #e8c888)
-  tertiary: '#d69c29',
+  // Tertiary: Bright gold for strings (radiant)
+  tertiary: '#ffc433',
 
-  // Neutral: Warm charcoal (target: #686058)
+  // Neutral: Warm charcoal (unchanged)
   neutral: '#8a8075',
 
-  // Success: Green for added (target: #78c890)
-  success: '#4ab56a',
+  // Success: Lime green for types (sharp contrast, 58% saturation)
+  success: '#85c973',
 
-  // Danger: Bright red for error/deleted (target: #e08078)
-  danger: '#d03d2f',
+  // Danger: Bright coral-red for errors
+  danger: '#ff5247',
 
-  // Warning: Amber for number/constant (target: #e8c080)
-  warning: '#d79428',
+  // Warning: Bright amber for numbers/constants
+  warning: '#ffa633',
 
-  // Info: Crimson accent for modified (target: #d87070)
-  info: '#c83737',
+  // Info: Warm orange accent
+  info: '#ff8c4d',
 })

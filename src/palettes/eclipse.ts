@@ -33,19 +33,16 @@ export const eclipse = {
   // Accent - dramatic crimson
   primary: eclipseScales.info[3],
 
-  // Syntax - using scales
-  keyword: eclipseScales.primary[3],
-  function: eclipseScales.secondary[3],
-  string: eclipseScales.tertiary[3],
-  number: eclipseScales.warning[3],
+  // Syntax - using scales (hierarchy + high saturation for drama)
+  keyword: eclipseScales.primary[2],    // Bright flame orange (intense)
+  function: eclipseScales.secondary[2],  // Solar gold
+  string: eclipseScales.tertiary[2],     // Bright gold (radiant)
+  number: eclipseScales.warning[2],      // Bright amber
   comment: '#a6a6a6',
   operator: eclipseScales.neutral[2],
-  type: eclipseScales.success[3],
-  constant: eclipseScales.warning[3],
+  type: eclipseScales.success[2],        // Electric lime green (sharp contrast)
+  constant: eclipseScales.warning[4],    // Muted to differentiate from number
   error: eclipseScales.danger[3],
-
-  // UI - lineNumber needs fine-tuning per theme
-  lineNumber: '#585048',
 
   // Git - using scales
   added: eclipseScales.success[3],

@@ -1,34 +1,35 @@
 /**
  * Forest Theme Scales
  *
- * Woodland - emerald, tan, moss
- * Base colors at 50% lightness, derived from target syntax colors
+ * Woodland Nature - Natural emerald, warm earth, sage greens
+ * Identity: Deep forest and moss (55-65% saturation)
+ * Base colors at 50% lightness with natural greens for earthy character
  */
 
 import { createThemeScales } from '@/scales'
 
 export const forestScales = createThemeScales({
-  // Primary: Emerald for keywords (target: #78d898)
-  primary: '#39c668',
+  // Primary: Natural emerald for keywords (forest green, not neon)
+  primary: '#5ac980',
 
-  // Secondary: Tan for functions (target: #d0b888)
-  secondary: '#b69249',
+  // Secondary: Warm tan for functions (earthy secondary, 58% saturation)
+  secondary: '#cca066',
 
-  // Tertiary: Moss for strings (target: #a8d8b8)
-  tertiary: '#4fb06f',
+  // Tertiary: Soft sage for strings (natural earth)
+  tertiary: '#a6d98c',
 
-  // Neutral: Deep olive (target: #687860)
+  // Neutral: Deep olive (unchanged)
   neutral: '#7b8e71',
 
-  // Success: Green for added (target: #78c890)
-  success: '#4ab56a',
+  // Success: Teal green for types (cool natural contrast)
+  success: '#59b38c',
 
-  // Danger: Rust for error/deleted (target: #d88878)
-  danger: '#c65139',
+  // Danger: Rusty red for errors
+  danger: '#d96659',
 
-  // Warning: Amber for number/constant (target: #d0c088)
-  warning: '#b69f49',
+  // Warning: Golden amber for numbers/constants
+  warning: '#d9b359',
 
-  // Info: Moss green accent for modified (target: #80b888)
-  info: '#5ca367',
+  // Info: Moss green accent
+  info: '#99b366',
 })

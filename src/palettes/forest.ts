@@ -2,7 +2,7 @@
  * Exo - Forest Palette
  * Dark theme inspired by deep woodland and natural growth
  *
- * Identity: Woodland - emerald, tan, moss
+ * Identity: Woodland - natural emerald, warm earth, sage greens
  * Scale indices: [2] = 80% lightness, [3] = 70% lightness
  * Hierarchy: Keywords > Functions > Strings > Types > Variables > Comments
  */
@@ -32,19 +32,16 @@ export const forest = {
   // Accent - moss green
   primary: forestScales.info[3],
 
-  // Syntax - using scales
-  keyword: forestScales.primary[3],
-  function: forestScales.secondary[3],
-  string: forestScales.secondary[2],
-  number: forestScales.warning[3],
+  // Syntax - using scales (hierarchy: Keywords > Functions > Strings > Types)
+  keyword: forestScales.primary[2],    // Natural emerald (prominent)
+  function: forestScales.secondary[2],  // Warm tan (earthy)
+  string: forestScales.tertiary[2],     // Soft sage (natural green)
+  number: forestScales.warning[2],      // Golden amber
   comment: '#a6a6a6',
   operator: forestScales.neutral[2],
-  type: forestScales.warning[4],
-  constant: forestScales.warning[3],
+  type: forestScales.secondary[3],      // Deeper tan (earthy contrast to green)
+  constant: forestScales.warning[4],    // Muted to differentiate from number
   error: forestScales.danger[3],
-
-  // UI - lineNumber needs fine-tuning per theme
-  lineNumber: '#586850',
 
   // Git - using scales
   added: forestScales.success[3],

@@ -33,19 +33,16 @@ export const midnight = {
   // Accent - steel blue
   primary: midnightScales.info[3],
 
-  // Syntax - using scales
-  keyword: midnightScales.primary[2],
-  function: midnightScales.secondary[3],
-  string: midnightScales.tertiary[2],
-  number: midnightScales.warning[3],
+  // Syntax - using scales (hierarchy: Keywords > Functions > Strings > Types)
+  keyword: midnightScales.primary[2],    // Bright periwinkle (prominent)
+  function: midnightScales.secondary[2],  // Ice cyan
+  string: midnightScales.tertiary[2],     // Pale ice (frosty)
+  number: midnightScales.warning[2],      // Warm gold (contrast)
   comment: '#a6a6a6',
   operator: midnightScales.neutral[2],
-  type: midnightScales.secondary[4],
-  constant: midnightScales.warning[2],
+  type: midnightScales.success[3],        // Seafoam (aqua contrast)
+  constant: midnightScales.warning[4],    // Muted to differentiate from number
   error: midnightScales.danger[3],
-
-  // UI - lineNumber needs fine-tuning per theme
-  lineNumber: '#506070',
 
   // Git - using scales
   added: midnightScales.success[3],
