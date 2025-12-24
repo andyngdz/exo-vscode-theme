@@ -59,4 +59,7 @@ export const midnight = {
   yellow: midnightScales.warning[3],
   blue: midnightScales.info[3],
   magenta: midnightScales.primary[3],
+
+  // Debug status bar
+  debugStatusBar: midnightScales.info[7],
 } as const

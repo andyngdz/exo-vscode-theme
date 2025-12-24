@@ -58,4 +58,7 @@ export const forest = {
   yellow: forestScales.warning[3],
   blue: forestScales.info[3],
   magenta: forestScales.primary[3],
+
+  // Debug status bar
+  debugStatusBar: forestScales.info[7],
 } as const

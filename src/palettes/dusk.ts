@@ -58,4 +58,7 @@ export const dusk = {
   yellow: duskScales.warning[3],
   blue: duskScales.info[3],
   magenta: duskScales.primary[3],
+
+  // Debug status bar
+  debugStatusBar: duskScales.info[7],
 } as const

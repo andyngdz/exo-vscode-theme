@@ -59,4 +59,7 @@ export const eclipse = {
   yellow: eclipseScales.warning[3],
   blue: eclipseScales.info[3],
   magenta: eclipseScales.primary[3],
+
+  // Debug status bar
+  debugStatusBar: eclipseScales.info[7],
 } as const

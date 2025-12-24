@@ -85,8 +85,19 @@ function createStatusBarColors(palette: Palette): ThemeColors {
     // Status Bar
     'statusBar.background': palette.surfaceDark,
     'statusBar.foreground': palette.foregroundDim,
-    'statusBar.debuggingBackground': palette.error,
+    'statusBar.border': palette.border,
+    'statusBar.debuggingBackground': palette.debugStatusBar,
+    'statusBar.debuggingForeground': palette.foregroundBright,
+    'statusBar.debuggingBorder': transparent,
     'statusBar.noFolderBackground': palette.surfaceDark,
+    'statusBar.noFolderForeground': palette.foregroundDim,
+    'statusBar.noFolderBorder': palette.border,
+    'statusBarItem.hoverBackground': withOpacity(palette.foregroundDim, 0.15),
+    'statusBarItem.activeBackground': withOpacity(palette.foregroundDim, 0.25),
+    'statusBarItem.prominentBackground': palette.primary,
+    'statusBarItem.prominentForeground': palette.background,
+    'statusBarItem.remoteBackground': withOpacity(palette.primary, 0.2),
+    'statusBarItem.remoteForeground': palette.foregroundBright,
   }
 }
 

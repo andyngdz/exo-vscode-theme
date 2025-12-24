@@ -58,4 +58,7 @@ export const dawn = {
   yellow: dawnScales.warning[3],
   blue: dawnScales.info[3],
   magenta: dawnScales.primary[3],
+
+  // Debug status bar
+  debugStatusBar: dawnScales.info[7],
 } as const
