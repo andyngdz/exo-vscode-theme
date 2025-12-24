@@ -68,11 +68,13 @@ function createSidebarColors(palette: Palette): ThemeColors {
 function createListColors(palette: Palette): ThemeColors {
   return {
     // Lists
-    'list.activeSelectionBackground': withOpacity(palette.primary, 0.25),
+    'list.activeSelectionBackground': withOpacity(palette.primary, 0.10),
     'list.activeSelectionForeground': palette.foregroundBright,
-    'list.hoverBackground': withOpacity(palette.primary, 0.15),
-    'list.focusBackground': withOpacity(palette.primary, 0.25),
-    'list.inactiveSelectionBackground': withOpacity(palette.primary, 0.18),
+    'list.hoverBackground': withOpacity(palette.primary, 0.05),
+    'list.focusBackground': withOpacity(palette.primary, 0.10),
+    'list.inactiveFocusBackground': withOpacity(palette.primary, 0.04),
+    'list.inactiveFocusOutline': transparent,
+    'list.inactiveSelectionBackground': withOpacity(palette.primary, 0.06),
     'list.focusOutline': transparent,
     'list.activeSelectionIconForeground': palette.foregroundBright,
   }

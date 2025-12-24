@@ -24,9 +24,9 @@ export const dawn = {
 
   // Base - dark with warm undertone, bright foreground (WCAG AAA compliant)
   ...bg,
-  foreground: '#d0c8c0',
+  foreground: '#dcdcdc',
   foregroundBright: '#f8f0e8',
-  foregroundDim: '#b0a8a0', // 7:1+ contrast
+  foregroundDim: '#b8b8b8',
 
   // Accent - warm coral glow
   primary: dawnScales.info[3],
@@ -36,7 +36,7 @@ export const dawn = {
   function: dawnScales.secondary[3],
   string: dawnScales.tertiary[2],
   number: dawnScales.warning[3],
-  comment: '#aca5a5', // WCAG AAA: 7:1+ contrast
+  comment: '#a6a6a6',
   operator: dawnScales.neutral[2],
   type: dawnScales.success[4],
   constant: dawnScales.warning[3],

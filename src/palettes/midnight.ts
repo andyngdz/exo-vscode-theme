@@ -25,9 +25,9 @@ export const midnight = {
 
   // Base (WCAG AAA compliant)
   ...bg,
-  foreground: '#c0c8d8',
+  foreground: '#dcdcdc',
   foregroundBright: '#f0f4f8',
-  foregroundDim: '#a0a8b8', // 7:1+ contrast
+  foregroundDim: '#b8b8b8',
 
   // Accent - steel blue
   primary: midnightScales.info[3],
@@ -37,7 +37,7 @@ export const midnight = {
   function: midnightScales.secondary[3],
   string: midnightScales.tertiary[2],
   number: midnightScales.warning[3],
-  comment: '#a2a8b5', // WCAG AAA: 7:1+ contrast
+  comment: '#a6a6a6',
   operator: midnightScales.neutral[2],
   type: midnightScales.secondary[4],
   constant: midnightScales.warning[2],

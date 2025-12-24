@@ -24,9 +24,9 @@ export const dusk = {
 
   // Base - deep evening sky with bright foreground (WCAG AAA compliant)
   ...bg,
-  foreground: '#dcd4e4',
+  foreground: '#dcdcdc',
   foregroundBright: '#f4ecfc',
-  foregroundDim: '#a8a0b0', // 7:1+ contrast
+  foregroundDim: '#b8b8b8',
 
   // Accent - purple glow
   primary: duskScales.info[3],
@@ -36,7 +36,7 @@ export const dusk = {
   function: duskScales.secondary[2],
   string: duskScales.tertiary[2],
   number: duskScales.warning[3],
-  comment: '#a8a2b0', // WCAG AAA: 7:1+ contrast
+  comment: '#a6a6a6',
   operator: duskScales.neutral[2],
   type: duskScales.success[4],
   constant: duskScales.warning[3],

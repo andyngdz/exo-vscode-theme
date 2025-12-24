@@ -25,9 +25,9 @@ export const eclipse = {
 
   // Base - near-black with warm undertone, bright foreground (WCAG AAA compliant)
   ...bg,
-  foreground: '#d0c8c0',
+  foreground: '#dcdcdc',
   foregroundBright: '#f8f0e8',
-  foregroundDim: '#b0a8a0', // 7:1+ contrast
+  foregroundDim: '#b8b8b8',
 
   // Accent - dramatic crimson
   primary: eclipseScales.info[3],
@@ -37,7 +37,7 @@ export const eclipse = {
   function: eclipseScales.secondary[3],
   string: eclipseScales.tertiary[3],
   number: eclipseScales.warning[3],
-  comment: '#ada6a0', // WCAG AAA: 7:1+ contrast
+  comment: '#a6a6a6',
   operator: eclipseScales.neutral[2],
   type: eclipseScales.success[3],
   constant: eclipseScales.warning[3],

@@ -24,9 +24,9 @@ export const forest = {
 
   // Base (WCAG AAA compliant)
   ...bg,
-  foreground: '#c8d0c0',
+  foreground: '#dcdcdc',
   foregroundBright: '#f0f8e8',
-  foregroundDim: '#a0a898', // 7:1+ contrast
+  foregroundDim: '#b8b8b8',
 
   // Accent - moss green
   primary: forestScales.info[3],
@@ -36,7 +36,7 @@ export const forest = {
   function: forestScales.secondary[3],
   string: forestScales.secondary[2],
   number: forestScales.warning[3],
-  comment: '#a0ab9a', // WCAG AAA: 7:1+ contrast
+  comment: '#a6a6a6',
   operator: forestScales.neutral[2],
   type: forestScales.warning[4],
   constant: forestScales.warning[3],
