@@ -88,13 +88,13 @@ function createStatusBarColors(palette: Palette): ThemeColors {
     // Status Bar (unified background)
     'statusBar.background': palette.background,
     'statusBar.foreground': palette.foregroundDim,
-    'statusBar.border': palette.border,
+    'statusBar.border': withOpacity(palette.foregroundDim, 0.2),
     'statusBar.debuggingBackground': palette.debugStatusBar,
     'statusBar.debuggingForeground': palette.foregroundBright,
     'statusBar.debuggingBorder': transparent,
     'statusBar.noFolderBackground': palette.background,
     'statusBar.noFolderForeground': palette.foregroundDim,
-    'statusBar.noFolderBorder': palette.border,
+    'statusBar.noFolderBorder': withOpacity(palette.foregroundDim, 0.2),
     'statusBarItem.hoverBackground': withOpacity(palette.foregroundDim, 0.15),
     'statusBarItem.activeBackground': withOpacity(palette.foregroundDim, 0.25),
     'statusBarItem.prominentBackground': palette.border,
@@ -135,7 +135,7 @@ function createPanelColors(palette: Palette): ThemeColors {
   return {
     // Panel
     'panel.background': palette.background,
-    'panel.border': palette.border,
+    'panel.border': withOpacity(palette.foregroundDim, 0.2),
     'panelTitle.activeForeground': palette.foreground,
     'panelTitle.inactiveForeground': palette.comment,
   }
@@ -154,7 +154,7 @@ function createInputColors(palette: Palette): ThemeColors {
     // Input
     'input.background': palette.surface,
     'input.foreground': palette.foreground,
-    'input.border': palette.border,
+    'input.border': withOpacity(palette.foregroundDim, 0.2),
     'input.placeholderForeground': palette.comment,
     'inputOption.activeBorder': palette.primary,
   }
@@ -176,14 +176,14 @@ function createDropdownAndMenuColors(palette: Palette): ThemeColors {
   return {
     // Dropdown & Menus
     'dropdown.background': palette.overlay,
-    'dropdown.border': palette.border,
+    'dropdown.border': withOpacity(palette.foregroundDim, 0.2),
     'dropdown.listBackground': palette.overlay,
     'menu.background': palette.overlay,
-    'menu.border': palette.border,
+    'menu.border': withOpacity(palette.foregroundDim, 0.2),
     'menu.foreground': palette.foreground,
     'menu.selectionBackground': withOpacity(palette.primary, 0.3),
     'menu.selectionForeground': palette.foregroundBright,
-    'menu.separatorBackground': palette.border,
+    'menu.separatorBackground': withOpacity(palette.foregroundDim, 0.2),
     'menubar.selectionBackground': withOpacity(palette.primary, 0.28),
   }
 }
@@ -197,7 +197,7 @@ function createQuickInputColors(palette: Palette): ThemeColors {
     'quickInputList.focusForeground': palette.foregroundBright,
     'quickInputList.focusIconForeground': palette.foregroundBright,
     'quickInputTitle.background': palette.overlay,
-    'pickerGroup.border': palette.border,
+    'pickerGroup.border': withOpacity(palette.foregroundDim, 0.2),
     'pickerGroup.foreground': palette.primary,
     'editorWidget.background': palette.overlay,
     'editorWidget.border': withOpacity(palette.primary, 0.4),
@@ -209,7 +209,7 @@ function createChatColors(palette: Palette): ThemeColors {
   return {
     // Chat / AI panels
     'chat.requestBackground': palette.overlay,
-    'chat.requestBorder': palette.border,
+    'chat.requestBorder': withOpacity(palette.foregroundDim, 0.2),
   }
 }
 
@@ -217,7 +217,7 @@ function createNotificationColors(palette: Palette): ThemeColors {
   return {
     // Notifications
     'notifications.background': palette.overlay,
-    'notifications.border': palette.border,
+    'notifications.border': withOpacity(palette.foregroundDim, 0.2),
     'notificationCenterHeader.background': palette.overlay,
   }
 }
@@ -270,7 +270,7 @@ function createBadgeColors(palette: Palette): ThemeColors {
 function createMiscColors(palette: Palette): ThemeColors {
   return {
     // Misc
-    'focusBorder': palette.primary,
+    'focusBorder': withOpacity(palette.primary, 0.5),
     'sash.hoverBorder': palette.primary,
     'widget.shadow': transparent,
     'scrollbar.shadow': transparent,
@@ -306,7 +306,7 @@ function createBreadcrumbColors(palette: Palette): ThemeColors {
 function createTreeColors(palette: Palette): ThemeColors {
   return {
     // Tree (file explorer)
-    'tree.indentGuidesStroke': palette.border,
+    'tree.indentGuidesStroke': withOpacity(palette.foregroundDim, 0.2),
   }
 }
 
@@ -411,7 +411,7 @@ function createMergeConflictColors(palette: Palette): ThemeColors {
     'merge.currentContentBackground': withOpacity(palette.added, 0.18),
     'merge.incomingHeaderBackground': withOpacity(palette.primary, 0.3),
     'merge.incomingContentBackground': withOpacity(palette.primary, 0.18),
-    'merge.border': palette.border,
+    'merge.border': withOpacity(palette.foregroundDim, 0.2),
   }
 }
 
