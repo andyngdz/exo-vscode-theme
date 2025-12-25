@@ -330,7 +330,7 @@ function createGitDecorationColors(palette: Palette): ThemeColors {
     'gitDecoration.modifiedResourceForeground': palette.modified,
     'gitDecoration.deletedResourceForeground': palette.deleted,
     'gitDecoration.untrackedResourceForeground': palette.added,
-    'gitDecoration.ignoredResourceForeground': palette.ignored,
+    'gitDecoration.ignoredResourceForeground': withOpacity(palette.comment, 0.5),
     'gitDecoration.conflictingResourceForeground': palette.conflicting,
   }
 }

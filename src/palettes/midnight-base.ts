@@ -34,7 +34,6 @@ export const midnightBase = {
   added: midnightScales.success[3],
   deleted: midnightScales.danger[3],
   modified: midnightScales.info[3],
-  ignored: '#505868',
   conflicting: midnightScales.warning[3],
 
   // Terminal - using scales

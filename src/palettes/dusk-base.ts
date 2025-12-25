@@ -33,7 +33,6 @@ export const duskBase = {
   added: duskScales.success[3],
   deleted: duskScales.danger[3],
   modified: duskScales.info[3],
-  ignored: '#605868',
   conflicting: duskScales.warning[3],
 
   // Terminal - using scales

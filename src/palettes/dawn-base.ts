@@ -33,7 +33,6 @@ export const dawnBase = {
   added: dawnScales.success[3],
   deleted: dawnScales.danger[3],
   modified: dawnScales.info[3],
-  ignored: '#686060',
   conflicting: dawnScales.warning[3],
 
   // Terminal - using scales

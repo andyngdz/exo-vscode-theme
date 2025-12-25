@@ -33,7 +33,6 @@ export const forestBase = {
   added: forestScales.success[3],
   deleted: forestScales.danger[3],
   modified: forestScales.info[3],
-  ignored: '#586850',
   conflicting: forestScales.warning[3],
 
   // Terminal - using scales

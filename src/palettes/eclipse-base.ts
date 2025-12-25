@@ -34,7 +34,6 @@ export const eclipseBase = {
   added: eclipseScales.success[3],
   deleted: eclipseScales.danger[3],
   modified: eclipseScales.info[3],
-  ignored: '#585048',
   conflicting: eclipseScales.warning[3],
 
   // Terminal - using scales
