@@ -1,16 +1,16 @@
 /**
- * Exo Eclipse Palette (Standard)
+ * Exo Eclipse - Darker Palette
  * Dark theme inspired by solar eclipse and dramatic corona
  *
  * Identity: Fiery corona - orange-red, orange, gold
- * Background: Standard (#1a1e28)
+ * Background: Darker (#0b0e14)
  */
 
 import { eclipseBase } from '@/palettes/eclipse-base'
-import { standardBg } from '@/palettes/shared'
+import { darkerBg } from '@/palettes/shared'
 
-export const eclipse = {
-  name: 'Exo Eclipse',
-  ...standardBg,
+export const eclipseDarker = {
+  name: 'Exo Eclipse - Darker',
+  ...darkerBg,
   ...eclipseBase,
 } as const

@@ -1,34 +1,35 @@
 /**
  * Midnight Theme Scales
  *
- * Cool night - periwinkle, cyan, ice blue
- * Base colors at 50% lightness, derived from target syntax colors
+ * Deep Night Sky - Bright periwinkle, ice cyan, pale blue
+ * Identity: Cool starlit night (70-80% saturation)
+ * Base colors at 50% lightness with vibrant blues for crisp, clear character
  */
 
 import { createThemeScales } from '@/scales'
 
 export const midnightScales = createThemeScales({
-  // Primary: Periwinkle for keywords (target: #98a8f0)
-  primary: '#2043df',
+  // Primary: Bright periwinkle for keywords (sky blue, prominent)
+  primary: '#6666ff',
 
-  // Secondary: Cyan for functions (target: #88d0e0)
-  secondary: '#34afcb',
+  // Secondary: Ice cyan for functions (cool secondary)
+  secondary: '#33ccff',
 
-  // Tertiary: Ice Blue for strings (target: #a8c8f0)
-  tertiary: '#2576da',
+  // Tertiary: Pale ice for strings (frosty)
+  tertiary: '#99ddff',
 
-  // Neutral: Deep slate (target: #606878)
+  // Neutral: Deep slate (unchanged)
   neutral: '#717b8e',
 
-  // Success: Teal-green for added (target: #70c898)
-  success: '#47b87a',
+  // Success: Seafoam for types (aqua, 58% saturation)
+  success: '#5ac9b3',
 
-  // Danger: Rose for error/deleted (target: #e08088)
-  danger: '#cd323f',
+  // Danger: Bright rose for errors
+  danger: '#ff5c66',
 
-  // Warning: Warm gold for number (target: #d8c078)
-  warning: '#c6a339',
+  // Warning: Warm gold for numbers (contrast warmth)
+  warning: '#ffd966',
 
-  // Info: Steel blue accent for modified (target: #6898d0)
-  info: '#3c7bc3',
+  // Info: Cool gray-blue accent
+  info: '#a6b3d9',
 })

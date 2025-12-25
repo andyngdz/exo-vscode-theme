@@ -1,16 +1,16 @@
 /**
- * Exo Midnight Palette (Standard)
+ * Exo Midnight - Darker Palette
  * Dark theme inspired by deep night sky and moonlight
  *
  * Identity: Cool night - periwinkle, cyan, ice blue
- * Background: Standard (#1a1e28)
+ * Background: Darker (#0b0e14)
  */
 
 import { midnightBase } from '@/palettes/midnight-base'
-import { standardBg } from '@/palettes/shared'
+import { darkerBg } from '@/palettes/shared'
 
-export const midnight = {
-  name: 'Exo Midnight',
-  ...standardBg,
+export const midnightDarker = {
+  name: 'Exo Midnight - Darker',
+  ...darkerBg,
   ...midnightBase,
 } as const

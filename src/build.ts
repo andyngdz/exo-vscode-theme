@@ -2,11 +2,33 @@ import { writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 
 import type { Palette } from '@/palettes'
-import { dawn, dusk, eclipse, forest, midnight } from '@/palettes'
+import {
+  dawn,
+  dawnDarker,
+  dusk,
+  duskDarker,
+  eclipse,
+  eclipseDarker,
+  forest,
+  forestDarker,
+  midnight,
+  midnightDarker,
+} from '@/palettes'
 import { createTheme } from '@/theme'
 import { colord } from 'colord'
 
-const palettes = [dusk, dawn, midnight, eclipse, forest]
+const palettes = [
+  dusk,
+  duskDarker,
+  dawn,
+  dawnDarker,
+  midnight,
+  midnightDarker,
+  eclipse,
+  eclipseDarker,
+  forest,
+  forestDarker,
+]
 
 const MIN_KEYWORD_TYPE_DISTANCE = 60
 const MIN_TYPE_BACKGROUND_CONTRAST = 4.5

@@ -1,16 +1,16 @@
 /**
- * Exo Dusk Palette (Standard)
+ * Exo Dusk - Darker Palette
  * Dark theme inspired by sunset and evening twilight
  *
  * Identity: Purple twilight - orchid, lavender, soft violet
- * Background: Standard (#1a1e28)
+ * Background: Darker (#0b0e14)
  */
 
 import { duskBase } from '@/palettes/dusk-base'
-import { standardBg } from '@/palettes/shared'
+import { darkerBg } from '@/palettes/shared'
 
-export const dusk = {
-  name: 'Exo Dusk',
-  ...standardBg,
+export const duskDarker = {
+  name: 'Exo Dusk - Darker',
+  ...darkerBg,
   ...duskBase,
 } as const

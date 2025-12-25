@@ -1,14 +1,17 @@
 <!-- OPENSPEC:START -->
+
 # OpenSpec Instructions
 
 These instructions are for AI assistants working in this project.
 
 Always open `@/openspec/AGENTS.md` when the request:
+
 - Mentions planning or proposals (words like proposal, spec, change, plan)
 - Introduces new capabilities, breaking changes, architecture shifts, or big performance/security work
 - Sounds ambiguous and you need the authoritative spec before coding
 
 Use `@/openspec/AGENTS.md` to learn:
+
 - How to create and apply change proposals
 - Spec format and conventions
 - Project structure and guidelines
@@ -104,10 +107,12 @@ Follow the [12 Principles of Design](https://www.toptal.com/designers/ui/princip
 - Themes are separate creative works, not light/dark variants of each other
 
 Examples:
+
 - Dusk: teal accent, coral keywords, golden functions, cool undertones
 - Dawn: different accent, different syntax colors, warm undertones
 
 When creating a new theme:
+
 1. Define its unique personality first (mood, temperature, inspiration)
 2. Choose a distinct primary/accent color
 3. Build syntax colors that complement the new identity

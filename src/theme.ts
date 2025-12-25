@@ -3,7 +3,7 @@
  */
 
 import type { Palette } from '@/palettes'
-import { lighten, transparent, withOpacity } from '@/utils'
+import { darken, lighten, transparent, withOpacity } from '@/utils'
 
 type ThemeColors = Record<string, string>
 
@@ -39,16 +39,16 @@ function createEditorColors(palette: Palette): ThemeColors {
     'editor.snippetTabstopHighlightBackground': withOpacity(palette.string, 0.2),
     'editorError.foreground': palette.error,
     'editorWarning.foreground': palette.number,
-    'editorLineNumber.foreground': palette.lineNumber,
-    'editorLineNumber.activeForeground': lighten(palette.lineNumber, 0.3),
+    'editorLineNumber.foreground': withOpacity(palette.lineNumber, 0.3),
+    'editorLineNumber.activeForeground': withOpacity(palette.lineNumber, 0.9),
   }
 }
 
 function createActivityBarColors(palette: Palette): ThemeColors {
   return {
-    // Activity Bar
+    // Activity Bar (minimal icons)
     'activityBar.background': palette.background,
-    'activityBar.foreground': palette.primary,
+    'activityBar.foreground': palette.foregroundDim,
     'activityBarBadge.background': palette.primary,
     'activityBarBadge.foreground': palette.background,
   }
@@ -67,33 +67,51 @@ function createSidebarColors(palette: Palette): ThemeColors {
 
 function createListColors(palette: Palette): ThemeColors {
   return {
-    // Lists
-    'list.activeSelectionBackground': withOpacity(palette.primary, 0.25),
+    // Lists (using neutral selection)
+    'list.activeSelectionBackground': withOpacity(palette.neutralSelection, 0.15),
     'list.activeSelectionForeground': palette.foregroundBright,
-    'list.hoverBackground': withOpacity(palette.primary, 0.15),
-    'list.focusBackground': withOpacity(palette.primary, 0.25),
-    'list.inactiveSelectionBackground': withOpacity(palette.primary, 0.18),
+    'list.hoverBackground': withOpacity(palette.neutralSelection, 0.15),
+    'list.focusBackground': withOpacity(palette.neutralSelection, 0.15),
+    'list.inactiveFocusBackground': withOpacity(palette.neutralSelection, 0.10),
+    'list.inactiveFocusOutline': transparent,
+    'list.inactiveSelectionBackground': withOpacity(palette.neutralSelection, 0.10),
     'list.focusOutline': transparent,
     'list.activeSelectionIconForeground': palette.foregroundBright,
+    'list.errorForeground': palette.error,
+    'list.invalidItemForeground': withOpacity(palette.error, 0.7),
+    'list.deemphasizedForeground': palette.foregroundDim,
   }
 }
 
 function createStatusBarColors(palette: Palette): ThemeColors {
   return {
-    // Status Bar
-    'statusBar.background': palette.surfaceDark,
+    // Status Bar (unified background)
+    'statusBar.background': palette.background,
     'statusBar.foreground': palette.foregroundDim,
-    'statusBar.debuggingBackground': palette.error,
-    'statusBar.noFolderBackground': palette.surfaceDark,
+    'statusBar.border': withOpacity(palette.foregroundDim, 0.2),
+    'statusBar.debuggingBackground': palette.debugStatusBar,
+    'statusBar.debuggingForeground': palette.foregroundBright,
+    'statusBar.debuggingBorder': transparent,
+    'statusBar.noFolderBackground': palette.background,
+    'statusBar.noFolderForeground': palette.foregroundDim,
+    'statusBar.noFolderBorder': withOpacity(palette.foregroundDim, 0.2),
+    'statusBarItem.hoverBackground': withOpacity(palette.foregroundDim, 0.15),
+    'statusBarItem.activeBackground': withOpacity(palette.foregroundDim, 0.25),
+    'statusBarItem.prominentBackground': palette.border,
+    'statusBarItem.prominentForeground': palette.foreground,
+    'statusBarItem.prominentHoverBackground': palette.surfaceLight,
+    'statusBarItem.prominentHoverForeground': palette.foreground,
+    'statusBarItem.remoteBackground': withOpacity(palette.primary, 0.2),
+    'statusBarItem.remoteForeground': palette.foregroundBright,
   }
 }
 
 function createTitleBarColors(palette: Palette): ThemeColors {
   return {
-    // Title Bar
-    'titleBar.activeBackground': palette.surfaceDark,
+    // Title Bar (unified background)
+    'titleBar.activeBackground': palette.background,
     'titleBar.activeForeground': palette.foreground,
-    'titleBar.inactiveBackground': palette.surfaceDark,
+    'titleBar.inactiveBackground': palette.background,
     'titleBar.inactiveForeground': palette.comment,
   }
 }
@@ -117,7 +135,7 @@ function createPanelColors(palette: Palette): ThemeColors {
   return {
     // Panel
     'panel.background': palette.background,
-    'panel.border': palette.border,
+    'panel.border': withOpacity(palette.foregroundDim, 0.2),
     'panelTitle.activeForeground': palette.foreground,
     'panelTitle.inactiveForeground': palette.comment,
   }
@@ -136,9 +154,21 @@ function createInputColors(palette: Palette): ThemeColors {
     // Input
     'input.background': palette.surface,
     'input.foreground': palette.foreground,
-    'input.border': palette.border,
+    'input.border': withOpacity(palette.foregroundDim, 0.2),
     'input.placeholderForeground': palette.comment,
     'inputOption.activeBorder': palette.primary,
+  }
+}
+
+function createInputValidationColors(palette: Palette): ThemeColors {
+  return {
+    // Input Validation
+    'inputValidation.errorBackground': withOpacity(palette.error, 0.2),
+    'inputValidation.errorBorder': palette.error,
+    'inputValidation.warningBackground': withOpacity(palette.number, 0.2),
+    'inputValidation.warningBorder': palette.number,
+    'inputValidation.infoBackground': withOpacity(palette.primary, 0.2),
+    'inputValidation.infoBorder': palette.primary,
   }
 }
 
@@ -146,28 +176,28 @@ function createDropdownAndMenuColors(palette: Palette): ThemeColors {
   return {
     // Dropdown & Menus
     'dropdown.background': palette.overlay,
-    'dropdown.border': palette.border,
+    'dropdown.border': withOpacity(palette.foregroundDim, 0.2),
     'dropdown.listBackground': palette.overlay,
     'menu.background': palette.overlay,
-    'menu.border': palette.border,
+    'menu.border': withOpacity(palette.foregroundDim, 0.2),
     'menu.foreground': palette.foreground,
     'menu.selectionBackground': withOpacity(palette.primary, 0.3),
     'menu.selectionForeground': palette.foregroundBright,
-    'menu.separatorBackground': palette.border,
+    'menu.separatorBackground': withOpacity(palette.foregroundDim, 0.2),
     'menubar.selectionBackground': withOpacity(palette.primary, 0.28),
   }
 }
 
 function createQuickInputColors(palette: Palette): ThemeColors {
   return {
-    // Quick Input (Command Palette)
+    // Quick Input (Command Palette) - using neutral selection
     'quickInput.background': palette.overlay,
     'quickInput.foreground': palette.foreground,
-    'quickInputList.focusBackground': withOpacity(palette.primary, 0.3),
+    'quickInputList.focusBackground': withOpacity(palette.neutralSelection, 0.15),
     'quickInputList.focusForeground': palette.foregroundBright,
     'quickInputList.focusIconForeground': palette.foregroundBright,
     'quickInputTitle.background': palette.overlay,
-    'pickerGroup.border': palette.border,
+    'pickerGroup.border': withOpacity(palette.foregroundDim, 0.2),
     'pickerGroup.foreground': palette.primary,
     'editorWidget.background': palette.overlay,
     'editorWidget.border': withOpacity(palette.primary, 0.4),
@@ -179,7 +209,7 @@ function createChatColors(palette: Palette): ThemeColors {
   return {
     // Chat / AI panels
     'chat.requestBackground': palette.overlay,
-    'chat.requestBorder': palette.border,
+    'chat.requestBorder': withOpacity(palette.foregroundDim, 0.2),
   }
 }
 
@@ -187,7 +217,7 @@ function createNotificationColors(palette: Palette): ThemeColors {
   return {
     // Notifications
     'notifications.background': palette.overlay,
-    'notifications.border': palette.border,
+    'notifications.border': withOpacity(palette.foregroundDim, 0.2),
     'notificationCenterHeader.background': palette.overlay,
   }
 }
@@ -205,7 +235,24 @@ function createButtonColors(palette: Palette): ThemeColors {
     // Button
     'button.background': palette.primary,
     'button.foreground': palette.background,
-    'button.hoverBackground': lighten(palette.primary, 0.1),
+    'button.hoverBackground': darken(palette.primary, 0.05),
+    // Secondary buttons
+    'button.secondaryBackground': withOpacity(palette.foregroundDim, 0.2),
+    'button.secondaryForeground': palette.foreground,
+    'button.secondaryHoverBackground': withOpacity(palette.foregroundDim, 0.5),
+    // Extension buttons
+    'extensionButton.prominentBackground': palette.primary,
+    'extensionButton.prominentForeground': palette.background,
+    'extensionButton.prominentHoverBackground': darken(palette.primary, 0.05),
+    // Welcome page button
+    'welcomePage.buttonBackground': withOpacity(palette.primary, 0.4),
+  }
+}
+
+function createProgressBarColors(palette: Palette): ThemeColors {
+  return {
+    // Progress Bar
+    'progressBar.background': palette.primary,
   }
 }
 
@@ -221,18 +268,34 @@ function createScrollbarColors(palette: Palette): ThemeColors {
 function createBadgeColors(palette: Palette): ThemeColors {
   return {
     // Badge
-    'badge.background': palette.primary,
-    'badge.foreground': palette.background,
+    'badge.background': withOpacity(palette.primary, 0.2),
+    'badge.foreground': palette.primary,
   }
 }
 
 function createMiscColors(palette: Palette): ThemeColors {
   return {
     // Misc
-    'focusBorder': palette.primary,
+    'focusBorder': withOpacity(palette.primary, 0.5),
     'sash.hoverBorder': palette.primary,
     'widget.shadow': transparent,
     'scrollbar.shadow': transparent,
+  }
+}
+
+function createTextColors(palette: Palette): ThemeColors {
+  return {
+    // Text Links
+    'textLink.foreground': palette.primary,
+    'textLink.activeForeground': lighten(palette.primary, 0.15),
+    'textPreformat.foreground': palette.string,
+  }
+}
+
+function createIconColors(palette: Palette): ThemeColors {
+  return {
+    // Icons (minimal, subtle colors that don't distract from code)
+    'icon.foreground': palette.foregroundDim,
   }
 }
 
@@ -246,13 +309,28 @@ function createBreadcrumbColors(palette: Palette): ThemeColors {
   }
 }
 
+function createTreeColors(palette: Palette): ThemeColors {
+  return {
+    // Tree (file explorer)
+    'tree.indentGuidesStroke': withOpacity(palette.foregroundDim, 0.2),
+  }
+}
+
+function createSettingsColors(palette: Palette): ThemeColors {
+  return {
+    // Settings UI
+    'settings.modifiedItemIndicator': palette.primary,
+    'settings.headerForeground': palette.foregroundBright,
+  }
+}
+
 function createGitDecorationColors(palette: Palette): ThemeColors {
   return {
     // Git Decorations
     'gitDecoration.modifiedResourceForeground': palette.modified,
     'gitDecoration.deletedResourceForeground': palette.deleted,
     'gitDecoration.untrackedResourceForeground': palette.added,
-    'gitDecoration.ignoredResourceForeground': palette.ignored,
+    'gitDecoration.ignoredResourceForeground': withOpacity(palette.comment, 0.5),
     'gitDecoration.conflictingResourceForeground': palette.conflicting,
   }
 }
@@ -297,14 +375,17 @@ function createMinimapColors(palette: Palette): ThemeColors {
     'minimap.errorHighlight': palette.error,
     'minimap.warningHighlight': palette.number,
     'minimap.findMatchHighlight': withOpacity(palette.keyword, 0.5),
+    'minimapGutter.addedBackground': palette.added,
+    'minimapGutter.modifiedBackground': palette.modified,
+    'minimapGutter.deletedBackground': palette.deleted,
   }
 }
 
 function createPeekViewColors(palette: Palette): ThemeColors {
   return {
-    // Peek View
+    // Peek View (unified background)
     'peekView.border': palette.primary,
-    'peekViewEditor.background': palette.surfaceDark,
+    'peekViewEditor.background': palette.background,
     'peekViewEditor.matchHighlightBackground': withOpacity(palette.keyword, 0.3),
     'peekViewResult.background': palette.surface,
     'peekViewResult.fileForeground': palette.foregroundBright,
@@ -336,7 +417,7 @@ function createMergeConflictColors(palette: Palette): ThemeColors {
     'merge.currentContentBackground': withOpacity(palette.added, 0.18),
     'merge.incomingHeaderBackground': withOpacity(palette.primary, 0.3),
     'merge.incomingContentBackground': withOpacity(palette.primary, 0.18),
-    'merge.border': palette.border,
+    'merge.border': withOpacity(palette.foregroundDim, 0.2),
   }
 }
 
@@ -389,18 +470,20 @@ const FUNCTION_SPECIAL_METHOD_SCOPES = [
   'entity.name.function',
   'meta.function-call',
   'variable.function',
-  'support.function',
   'keyword.other.special-method',
+  // Note: support.function moved to LIBRARY_FUNCTION_SCOPES for better differentiation
 ]
 
-const NUMBER_AND_CONSTANT_SCOPES = [
+const NUMBER_SCOPES = [
   'constant.numeric',
-  'constant.language',
+  'variable.parameter',
+  'keyword.other.unit',
+]
+
+const CONSTANT_SCOPES = [
   'support.constant',
   'constant.character',
   'constant.escape',
-  'variable.parameter',
-  'keyword.other.unit',
   'keyword.other',
 ]
 
@@ -425,59 +508,44 @@ const CLASS_SUPPORT_SCOPES = [
   'support.type.sys-types',
 ]
 
-const CSS_PROPERTY_NAME_SCOPES = [
-  'source.css support.type.property-name',
-  'source.sass support.type.property-name',
-  'source.scss support.type.property-name',
-  'source.less support.type.property-name',
-  'source.stylus support.type.property-name',
-  'source.postcss support.type.property-name',
-]
-
-const SUB_METHOD_SCOPES = [
-  'entity.name.module.js',
-  'variable.import.parameter.js',
-  'variable.other.class.js',
-]
-
-const MODULE_REFERENCE_SCOPES = [
-  'meta.module-reference',
-  'meta.import variable.other.readwrite.alias',
-]
-
-const META_METHOD_SCOPES = [
-  'meta.class-method.js entity.name.function.js',
-  'variable.function.constructor',
-]
-
 const HTML_ATTRIBUTES_SCOPES = [
   'text.html.basic entity.other.attribute-name.html',
   'text.html.basic entity.other.attribute-name',
 ]
 
-const DECORATORS_SCOPES = [
-  'tag.decorator.js entity.name.tag.js',
-  'tag.decorator.js punctuation.definition.tag.js',
+const LANGUAGE_VARIABLE_SCOPES = [
+  'variable.language.this',
+  'variable.language.self',
+  'variable.language.super',
+  'variable.language',
 ]
 
-const JSON_KEY_LEVEL_0_SCOPES = [
-  'source.json meta.structure.dictionary.json support.type.property-name.json',
+const OBJECT_PROPERTY_SCOPES = [
+  'variable.other.property',
+  'variable.other.object.property',
+  'variable.other.readwrite',
+  'support.variable.property',
+  'support.variable.dom',
+  'support.variable',
 ]
 
-const JSON_KEY_LEVEL_1_SCOPES = [
-  'source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json',
+const LIBRARY_FUNCTION_SCOPES = [
+  'support.function',
+  'support.method',
 ]
 
-const JSON_KEY_LEVEL_2_SCOPES = [
-  'source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json',
-]
-
-const JSON_KEY_LEVEL_3_SCOPES = [
-  'source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json',
-]
-
-const JSON_KEY_LEVEL_4_SCOPES = [
-  'source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json',
+const PACKAGE_KEYWORD_SCOPES = [
+  'keyword.control.import',
+  'keyword.control.export',
+  'keyword.control.from',
+  'keyword.control.as',
+  'keyword.control.default',
+  'storage.type.namespace',
+  'storage.type.class',
+  'storage.type.function',
+  'storage.type.type',
+  'storage.type.interface',
+  'storage.type.enum',
 ]
 
 const MARKDOWN_HEADING_SCOPES = [
@@ -504,6 +572,13 @@ function createCoreTokenColors(palette: Palette): TokenColor[] {
       },
     },
     {
+      name: 'Object Properties (de-emphasized for clean property chains)',
+      scope: OBJECT_PROPERTY_SCOPES,
+      settings: {
+        foreground: palette.foreground,
+      },
+    },
+    {
       name: 'Colors',
       scope: ['constant.other.color'],
       settings: {
@@ -520,6 +595,13 @@ function createCoreTokenColors(palette: Palette): TokenColor[] {
     {
       name: 'Keyword, Storage',
       scope: ['keyword', 'storage.type', 'storage.modifier'],
+      settings: {
+        foreground: palette.keyword,
+      },
+    },
+    {
+      name: 'Package/Module Keywords (import, export, from)',
+      scope: PACKAGE_KEYWORD_SCOPES,
       settings: {
         foreground: palette.keyword,
       },
@@ -546,20 +628,6 @@ function createCoreTokenColors(palette: Palette): TokenColor[] {
       },
     },
     {
-      name: 'Block Level Variables',
-      scope: ['meta.block variable.other'],
-      settings: {
-        foreground: palette.constant,
-      },
-    },
-    {
-      name: 'Module References',
-      scope: MODULE_REFERENCE_SCOPES,
-      settings: {
-        foreground: palette.type,
-      },
-    },
-    {
       name: 'Other Variable, String Link',
       scope: ['support.other.variable', 'string.other.link'],
       settings: {
@@ -567,10 +635,17 @@ function createCoreTokenColors(palette: Palette): TokenColor[] {
       },
     },
     {
-      name: 'Number, Constant, Function Argument, Tag Attribute, Embedded',
-      scope: NUMBER_AND_CONSTANT_SCOPES,
+      name: 'Numbers',
+      scope: NUMBER_SCOPES,
       settings: {
         foreground: palette.number,
+      },
+    },
+    {
+      name: 'Constants (support constants, escape chars)',
+      scope: ['support.constant', 'constant.character', 'constant.escape', 'keyword.other'],
+      settings: {
+        foreground: palette.constant,
       },
     },
     {
@@ -581,10 +656,10 @@ function createCoreTokenColors(palette: Palette): TokenColor[] {
       },
     },
     {
-      name: 'Support (Built-in Types, Classes, Functions)',
+      name: 'Support (Built-in Types, Classes, Functions) - de-emphasized',
       scope: ['support'],
       settings: {
-        foreground: palette.type,
+        foreground: palette.foreground,
       },
     },
     {
@@ -595,46 +670,10 @@ function createCoreTokenColors(palette: Palette): TokenColor[] {
       },
     },
     {
-      name: 'Entity Types',
-      scope: ['support.type'],
-      settings: {
-        foreground: palette.constant,
-      },
-    },
-    {
-      name: 'CSS Class and Support',
-      scope: CSS_PROPERTY_NAME_SCOPES,
-      settings: {
-        foreground: palette.constant,
-      },
-    },
-    {
-      name: 'Sub-methods',
-      scope: SUB_METHOD_SCOPES,
-      settings: {
-        foreground: palette.type,
-      },
-    },
-    {
       name: 'Language methods',
       scope: ['variable.language'],
       settings: {
         fontStyle: 'italic',
-        foreground: palette.function,
-      },
-    },
-    {
-      name: 'entity.name.method.js',
-      scope: ['entity.name.method.js'],
-      settings: {
-        fontStyle: 'italic',
-        foreground: palette.function,
-      },
-    },
-    {
-      name: 'meta.method.js',
-      scope: META_METHOD_SCOPES,
-      settings: {
         foreground: palette.function,
       },
     },
@@ -658,13 +697,6 @@ function createCoreTokenColors(palette: Palette): TokenColor[] {
       scope: ['entity.other.attribute-name.class'],
       settings: {
         foreground: palette.type,
-      },
-    },
-    {
-      name: "CSS ID's",
-      scope: ['source.sass keyword.control'],
-      settings: {
-        foreground: palette.function,
       },
     },
     {
@@ -710,11 +742,18 @@ function createCoreTokenColors(palette: Palette): TokenColor[] {
       },
     },
     {
-      name: 'Decorators',
-      scope: DECORATORS_SCOPES,
+      name: 'Language Variables (this, self, super) - muted',
+      scope: LANGUAGE_VARIABLE_SCOPES,
       settings: {
         fontStyle: 'italic',
-        foreground: palette.function,
+        foreground: palette.foreground,
+      },
+    },
+    {
+      name: 'Library/Built-in Functions',
+      scope: LIBRARY_FUNCTION_SCOPES,
+      settings: {
+        foreground: palette.type,
       },
     },
     {
@@ -728,46 +767,6 @@ function createCoreTokenColors(palette: Palette): TokenColor[] {
   ]
 }
 
-function createJsonTokenColors(palette: Palette): TokenColor[] {
-  return [
-    // JSON Key Levels
-    {
-      name: 'JSON Key - Level 0',
-      scope: JSON_KEY_LEVEL_0_SCOPES,
-      settings: {
-        foreground: palette.keyword,
-      },
-    },
-    {
-      name: 'JSON Key - Level 1',
-      scope: JSON_KEY_LEVEL_1_SCOPES,
-      settings: {
-        foreground: palette.function,
-      },
-    },
-    {
-      name: 'JSON Key - Level 2',
-      scope: JSON_KEY_LEVEL_2_SCOPES,
-      settings: {
-        foreground: palette.constant,
-      },
-    },
-    {
-      name: 'JSON Key - Level 3',
-      scope: JSON_KEY_LEVEL_3_SCOPES,
-      settings: {
-        foreground: palette.type,
-      },
-    },
-    {
-      name: 'JSON Key - Level 4',
-      scope: JSON_KEY_LEVEL_4_SCOPES,
-      settings: {
-        foreground: palette.string,
-      },
-    },
-  ]
-}
 
 function createMarkdownTokenColors(palette: Palette): TokenColor[] {
   return [
@@ -888,16 +887,22 @@ export function createTheme(palette: Palette) {
     ...createPanelColors(palette),
     ...createTerminalColors(palette),
     ...createInputColors(palette),
+    ...createInputValidationColors(palette),
     ...createDropdownAndMenuColors(palette),
     ...createQuickInputColors(palette),
     ...createChatColors(palette),
     ...createNotificationColors(palette),
     ...createHoverWidgetColors(palette),
     ...createButtonColors(palette),
+    ...createProgressBarColors(palette),
     ...createScrollbarColors(palette),
     ...createBadgeColors(palette),
     ...createMiscColors(palette),
+    ...createTextColors(palette),
+    ...createIconColors(palette),
     ...createBreadcrumbColors(palette),
+    ...createTreeColors(palette),
+    ...createSettingsColors(palette),
     ...createGitDecorationColors(palette),
     ...createEditorGutterColors(palette),
     ...createOverviewRulerColors(palette),
@@ -911,7 +916,6 @@ export function createTheme(palette: Palette) {
 
   const tokenColors: TokenColor[] = [
     ...createCoreTokenColors(palette),
-    ...createJsonTokenColors(palette),
     ...createMarkdownTokenColors(palette),
   ]
 
