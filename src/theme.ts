@@ -236,10 +236,16 @@ function createButtonColors(palette: Palette): ThemeColors {
     'button.background': palette.primary,
     'button.foreground': palette.background,
     'button.hoverBackground': darken(palette.primary, 0.05),
-    'button.hoverForeground': palette.background,
-    'button.secondaryBackground': palette.surface,
+    // Secondary buttons
+    'button.secondaryBackground': withOpacity(palette.foregroundDim, 0.2),
     'button.secondaryForeground': palette.foreground,
-    'button.secondaryHoverBackground': palette.surfaceLight,
+    'button.secondaryHoverBackground': withOpacity(palette.foregroundDim, 0.5),
+    // Extension buttons
+    'extensionButton.prominentBackground': palette.primary,
+    'extensionButton.prominentForeground': palette.background,
+    'extensionButton.prominentHoverBackground': darken(palette.primary, 0.05),
+    // Welcome page button
+    'welcomePage.buttonBackground': withOpacity(palette.primary, 0.4),
   }
 }
 
@@ -262,8 +268,8 @@ function createScrollbarColors(palette: Palette): ThemeColors {
 function createBadgeColors(palette: Palette): ThemeColors {
   return {
     // Badge
-    'badge.background': palette.primary,
-    'badge.foreground': palette.background,
+    'badge.background': withOpacity(palette.primary, 0.2),
+    'badge.foreground': palette.primary,
   }
 }
 
