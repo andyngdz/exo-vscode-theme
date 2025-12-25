@@ -3,7 +3,7 @@
  */
 
 import type { Palette } from '@/palettes'
-import { lighten, transparent, withOpacity } from '@/utils'
+import { darken, lighten, transparent, withOpacity } from '@/utils'
 
 type ThemeColors = Record<string, string>
 
@@ -67,14 +67,14 @@ function createSidebarColors(palette: Palette): ThemeColors {
 
 function createListColors(palette: Palette): ThemeColors {
   return {
-    // Lists
-    'list.activeSelectionBackground': withOpacity(palette.primary, 0.10),
+    // Lists (using neutral selection)
+    'list.activeSelectionBackground': withOpacity(palette.neutralSelection, 0.15),
     'list.activeSelectionForeground': palette.foregroundBright,
-    'list.hoverBackground': withOpacity(palette.primary, 0.05),
-    'list.focusBackground': withOpacity(palette.primary, 0.10),
-    'list.inactiveFocusBackground': withOpacity(palette.primary, 0.04),
+    'list.hoverBackground': withOpacity(palette.neutralSelection, 0.15),
+    'list.focusBackground': withOpacity(palette.neutralSelection, 0.15),
+    'list.inactiveFocusBackground': withOpacity(palette.neutralSelection, 0.10),
     'list.inactiveFocusOutline': transparent,
-    'list.inactiveSelectionBackground': withOpacity(palette.primary, 0.06),
+    'list.inactiveSelectionBackground': withOpacity(palette.neutralSelection, 0.10),
     'list.focusOutline': transparent,
     'list.activeSelectionIconForeground': palette.foregroundBright,
     'list.errorForeground': palette.error,
@@ -97,8 +97,10 @@ function createStatusBarColors(palette: Palette): ThemeColors {
     'statusBar.noFolderBorder': palette.border,
     'statusBarItem.hoverBackground': withOpacity(palette.foregroundDim, 0.15),
     'statusBarItem.activeBackground': withOpacity(palette.foregroundDim, 0.25),
-    'statusBarItem.prominentBackground': palette.primary,
-    'statusBarItem.prominentForeground': palette.background,
+    'statusBarItem.prominentBackground': palette.border,
+    'statusBarItem.prominentForeground': palette.foreground,
+    'statusBarItem.prominentHoverBackground': palette.surfaceLight,
+    'statusBarItem.prominentHoverForeground': palette.foreground,
     'statusBarItem.remoteBackground': withOpacity(palette.primary, 0.2),
     'statusBarItem.remoteForeground': palette.foregroundBright,
   }
@@ -188,10 +190,10 @@ function createDropdownAndMenuColors(palette: Palette): ThemeColors {
 
 function createQuickInputColors(palette: Palette): ThemeColors {
   return {
-    // Quick Input (Command Palette)
+    // Quick Input (Command Palette) - using neutral selection
     'quickInput.background': palette.overlay,
     'quickInput.foreground': palette.foreground,
-    'quickInputList.focusBackground': withOpacity(palette.primary, 0.3),
+    'quickInputList.focusBackground': withOpacity(palette.neutralSelection, 0.15),
     'quickInputList.focusForeground': palette.foregroundBright,
     'quickInputList.focusIconForeground': palette.foregroundBright,
     'quickInputTitle.background': palette.overlay,
@@ -233,7 +235,8 @@ function createButtonColors(palette: Palette): ThemeColors {
     // Button
     'button.background': palette.primary,
     'button.foreground': palette.background,
-    'button.hoverBackground': lighten(palette.primary, 0.1),
+    'button.hoverBackground': darken(palette.primary, 0.05),
+    'button.hoverForeground': palette.background,
     'button.secondaryBackground': palette.surface,
     'button.secondaryForeground': palette.foreground,
     'button.secondaryHoverBackground': palette.surfaceLight,

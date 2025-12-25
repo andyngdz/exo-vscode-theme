@@ -30,29 +30,54 @@
   "contributes": {
     "themes": [
       {
-        "label": "Exo - Dusk",
+        "label": "Exo Dusk",
         "uiTheme": "vs-dark",
-        "path": "./themes/Exo - Dusk-color-theme.json"
+        "path": "./themes/Exo Dusk-color-theme.json"
       },
       {
-        "label": "Exo - Dawn",
+        "label": "Exo Dusk - Darker",
         "uiTheme": "vs-dark",
-        "path": "./themes/Exo - Dawn-color-theme.json"
+        "path": "./themes/Exo Dusk - Darker-color-theme.json"
       },
       {
-        "label": "Exo - Midnight",
+        "label": "Exo Dawn",
         "uiTheme": "vs-dark",
-        "path": "./themes/Exo - Midnight-color-theme.json"
+        "path": "./themes/Exo Dawn-color-theme.json"
       },
       {
-        "label": "Exo - Eclipse",
+        "label": "Exo Dawn - Darker",
         "uiTheme": "vs-dark",
-        "path": "./themes/Exo - Eclipse-color-theme.json"
+        "path": "./themes/Exo Dawn - Darker-color-theme.json"
       },
       {
-        "label": "Exo - Forest",
+        "label": "Exo Midnight",
         "uiTheme": "vs-dark",
-        "path": "./themes/Exo - Forest-color-theme.json"
+        "path": "./themes/Exo Midnight-color-theme.json"
+      },
+      {
+        "label": "Exo Midnight - Darker",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Exo Midnight - Darker-color-theme.json"
+      },
+      {
+        "label": "Exo Eclipse",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Exo Eclipse-color-theme.json"
+      },
+      {
+        "label": "Exo Eclipse - Darker",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Exo Eclipse - Darker-color-theme.json"
+      },
+      {
+        "label": "Exo Forest",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Exo Forest-color-theme.json"
+      },
+      {
+        "label": "Exo Forest - Darker",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Exo Forest - Darker-color-theme.json"
       }
     ]
   },
