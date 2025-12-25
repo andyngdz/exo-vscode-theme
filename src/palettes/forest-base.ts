@@ -47,7 +47,7 @@ export const forestBase = {
   debugStatusBar: forestScales.info[7],
 
   // Line number (theme-specific)
-  lineNumber: '#586850',
+  lineNumber: '#a6a6a6',
 
   // Neutral selection for lists/menus
   neutralSelection: '#637599',

@@ -48,7 +48,7 @@ export const eclipseBase = {
   debugStatusBar: eclipseScales.info[7],
 
   // Line number (theme-specific)
-  lineNumber: '#585048',
+  lineNumber: '#a6a6a6',
 
   // Neutral selection for lists/menus
   neutralSelection: '#637599',

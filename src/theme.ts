@@ -39,8 +39,8 @@ function createEditorColors(palette: Palette): ThemeColors {
     'editor.snippetTabstopHighlightBackground': withOpacity(palette.string, 0.2),
     'editorError.foreground': palette.error,
     'editorWarning.foreground': palette.number,
-    'editorLineNumber.foreground': palette.lineNumber,
-    'editorLineNumber.activeForeground': lighten(palette.lineNumber, 0.3),
+    'editorLineNumber.foreground': withOpacity(palette.lineNumber, 0.3),
+    'editorLineNumber.activeForeground': withOpacity(palette.lineNumber, 0.9),
   }
 }
 

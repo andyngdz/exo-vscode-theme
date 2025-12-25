@@ -48,7 +48,7 @@ export const midnightBase = {
   debugStatusBar: midnightScales.info[7],
 
   // Line number (theme-specific)
-  lineNumber: '#506070',
+  lineNumber: '#a6a6a6',
 
   // Neutral selection for lists/menus
   neutralSelection: '#637599',
