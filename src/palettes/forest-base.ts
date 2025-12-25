@@ -8,12 +8,13 @@
  */
 
 import { forestScales } from '@/palettes/scales'
+import { shared } from '@/palettes/shared'
 
 export const forestBase = {
   // Base (WCAG AAA compliant)
-  foreground: '#dcdcdc',
-  foregroundBright: '#f0f8e8',
-  foregroundDim: '#b8b8b8',
+  foreground: shared.foreground,
+  foregroundBright: shared.foregroundBrightForest,
+  foregroundDim: shared.foregroundDim,
 
   // Accent - moss green
   primary: forestScales.primary[3],
@@ -23,7 +24,7 @@ export const forestBase = {
   function: forestScales.secondary[2],  // Warm tan (earthy)
   string: forestScales.tertiary[2],     // Soft sage (natural green)
   number: forestScales.warning[2],      // Golden amber
-  comment: '#a6a6a6',
+  comment: shared.neutral,
   operator: forestScales.neutral[2],
   type: forestScales.secondary[3],      // Deeper tan (earthy contrast to green)
   constant: forestScales.warning[4],    // Muted to differentiate from number
@@ -45,9 +46,9 @@ export const forestBase = {
   // Debug status bar
   debugStatusBar: forestScales.info[7],
 
-  // Line number (theme-specific)
-  lineNumber: '#a6a6a6',
+  // Line number
+  lineNumber: shared.neutral,
 
   // Neutral selection for lists/menus
-  neutralSelection: '#637599',
+  neutralSelection: shared.neutralSelection,
 } as const

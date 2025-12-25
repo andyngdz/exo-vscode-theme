@@ -8,12 +8,13 @@
  */
 
 import { dawnScales } from '@/palettes/scales'
+import { shared } from '@/palettes/shared'
 
 export const dawnBase = {
   // Base - dark with warm undertone, bright foreground (WCAG AAA compliant)
-  foreground: '#dcdcdc',
-  foregroundBright: '#f8f0e8',
-  foregroundDim: '#b8b8b8',
+  foreground: shared.foreground,
+  foregroundBright: shared.foregroundBrightWarm,
+  foregroundDim: shared.foregroundDim,
 
   // Accent - warm coral glow
   primary: dawnScales.primary[3],
@@ -23,7 +24,7 @@ export const dawnBase = {
   function: dawnScales.secondary[2],  // Bright golden orange
   string: dawnScales.tertiary[2],     // Soft peach (warm tertiary)
   number: dawnScales.warning[2],      // Bright gold
-  comment: '#a6a6a6',
+  comment: shared.neutral,
   operator: dawnScales.neutral[2],
   type: dawnScales.success[3],        // Mint green (cool contrast)
   constant: dawnScales.warning[4],    // Muted to differentiate from number
@@ -45,9 +46,9 @@ export const dawnBase = {
   // Debug status bar
   debugStatusBar: dawnScales.info[7],
 
-  // Line number (theme-specific)
-  lineNumber: '#a6a6a6',
+  // Line number
+  lineNumber: shared.neutral,
 
   // Neutral selection for lists/menus
-  neutralSelection: '#637599',
+  neutralSelection: shared.neutralSelection,
 } as const

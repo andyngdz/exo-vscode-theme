@@ -8,12 +8,13 @@
  */
 
 import { duskScales } from '@/palettes/scales'
+import { shared } from '@/palettes/shared'
 
 export const duskBase = {
   // Base - deep evening sky with bright foreground (WCAG AAA compliant)
-  foreground: '#dcdcdc',
-  foregroundBright: '#f4ecfc',
-  foregroundDim: '#b8b8b8',
+  foreground: shared.foreground,
+  foregroundBright: shared.foregroundBrightDusk,
+  foregroundDim: shared.foregroundDim,
 
   // Accent - purple glow
   primary: duskScales.primary[3],
@@ -23,7 +24,7 @@ export const duskBase = {
   function: duskScales.secondary[2],  // Soft lavender
   string: duskScales.tertiary[2],     // Ice cyan (cool contrast to purple)
   number: duskScales.warning[2],      // Warm rose gold
-  comment: '#a6a6a6',
+  comment: shared.neutral,
   operator: duskScales.neutral[2],
   type: duskScales.success[3],        // Jade green (natural contrast)
   constant: duskScales.warning[4],    // Muted to differentiate from number
@@ -45,9 +46,9 @@ export const duskBase = {
   // Debug status bar
   debugStatusBar: duskScales.info[7],
 
-  // Line number (theme-specific)
-  lineNumber: '#a6a6a6',
+  // Line number
+  lineNumber: shared.neutral,
 
   // Neutral selection for lists/menus
-  neutralSelection: '#637599',
+  neutralSelection: shared.neutralSelection,
 } as const

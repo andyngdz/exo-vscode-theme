@@ -9,12 +9,13 @@
  */
 
 import { midnightScales } from '@/palettes/scales'
+import { shared } from '@/palettes/shared'
 
 export const midnightBase = {
   // Base (WCAG AAA compliant)
-  foreground: '#dcdcdc',
-  foregroundBright: '#f0f4f8',
-  foregroundDim: '#b8b8b8',
+  foreground: shared.foreground,
+  foregroundBright: shared.foregroundBrightCool,
+  foregroundDim: shared.foregroundDim,
 
   // Accent - steel blue
   primary: midnightScales.primary[3],
@@ -24,7 +25,7 @@ export const midnightBase = {
   function: midnightScales.secondary[2],  // Ice cyan
   string: midnightScales.tertiary[2],     // Pale ice (frosty)
   number: midnightScales.warning[2],      // Warm gold (contrast)
-  comment: '#a6a6a6',
+  comment: shared.neutral,
   operator: midnightScales.neutral[2],
   type: midnightScales.success[3],        // Seafoam (aqua contrast)
   constant: midnightScales.warning[4],    // Muted to differentiate from number
@@ -46,9 +47,9 @@ export const midnightBase = {
   // Debug status bar
   debugStatusBar: midnightScales.info[7],
 
-  // Line number (theme-specific)
-  lineNumber: '#a6a6a6',
+  // Line number
+  lineNumber: shared.neutral,
 
   // Neutral selection for lists/menus
-  neutralSelection: '#637599',
+  neutralSelection: shared.neutralSelection,
 } as const

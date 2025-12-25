@@ -9,12 +9,13 @@
  */
 
 import { eclipseScales } from '@/palettes/scales'
+import { shared } from '@/palettes/shared'
 
 export const eclipseBase = {
   // Base - near-black with warm undertone, bright foreground (WCAG AAA compliant)
-  foreground: '#dcdcdc',
-  foregroundBright: '#f8f0e8',
-  foregroundDim: '#b8b8b8',
+  foreground: shared.foreground,
+  foregroundBright: shared.foregroundBrightWarm,
+  foregroundDim: shared.foregroundDim,
 
   // Accent - dramatic crimson
   primary: eclipseScales.primary[3],
@@ -24,7 +25,7 @@ export const eclipseBase = {
   function: eclipseScales.secondary[2],  // Solar gold
   string: eclipseScales.tertiary[2],     // Bright gold (radiant)
   number: eclipseScales.warning[2],      // Bright amber
-  comment: '#a6a6a6',
+  comment: shared.neutral,
   operator: eclipseScales.neutral[2],
   type: eclipseScales.success[2],        // Electric lime green (sharp contrast)
   constant: eclipseScales.warning[4],    // Muted to differentiate from number
@@ -46,9 +47,9 @@ export const eclipseBase = {
   // Debug status bar
   debugStatusBar: eclipseScales.info[7],
 
-  // Line number (theme-specific)
-  lineNumber: '#a6a6a6',
+  // Line number
+  lineNumber: shared.neutral,
 
   // Neutral selection for lists/menus
-  neutralSelection: '#637599',
+  neutralSelection: shared.neutralSelection,
 } as const
