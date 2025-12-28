@@ -16,8 +16,8 @@ export const duskBase = {
   foregroundBright: shared.foregroundBrightDusk,
   foregroundDim: shared.foregroundDim,
 
-  // Accent - purple glow
-  primary: duskScales.primary[3],
+  // Accent - purple glow (softer)
+  primary: duskScales.primary[4],
 
   // Syntax - using scales (hierarchy: Keywords > Functions > Strings > Types)
   keyword: duskScales.primary[2],    // Bright magenta-purple (prominent)
@@ -27,7 +27,7 @@ export const duskBase = {
   comment: shared.neutral,
   operator: duskScales.neutral[2],
   type: duskScales.success[3],        // Jade green (natural contrast)
-  constant: duskScales.warning[4],    // Muted to differentiate from number
+  constant: duskScales.secondary[1],  // Soft lavender (high lightness like Ayu)
   error: duskScales.danger[3],
 
   // Git - using scales

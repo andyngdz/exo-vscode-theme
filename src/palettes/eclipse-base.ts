@@ -17,8 +17,8 @@ export const eclipseBase = {
   foregroundBright: shared.foregroundBrightWarm,
   foregroundDim: shared.foregroundDim,
 
-  // Accent - dramatic crimson
-  primary: eclipseScales.primary[3],
+  // Accent - dramatic crimson (softer)
+  primary: eclipseScales.primary[4],
 
   // Syntax - using scales (hierarchy + high saturation for drama)
   keyword: eclipseScales.primary[2],    // Bright flame orange (intense)
@@ -28,7 +28,7 @@ export const eclipseBase = {
   comment: shared.neutral,
   operator: eclipseScales.neutral[2],
   type: eclipseScales.success[2],        // Electric lime green (sharp contrast)
-  constant: eclipseScales.warning[4],    // Muted to differentiate from number
+  constant: eclipseScales.warning[1],    // Soft amber (high lightness)
   error: eclipseScales.danger[3],
 
   // Git - using scales
