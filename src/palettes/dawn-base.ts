@@ -16,8 +16,8 @@ export const dawnBase = {
   foregroundBright: shared.foregroundBrightWarm,
   foregroundDim: shared.foregroundDim,
 
-  // Accent - warm coral glow
-  primary: dawnScales.primary[3],
+  // Accent - warm coral glow (softer)
+  primary: dawnScales.primary[4],
 
   // Syntax - using scales (hierarchy: Keywords > Functions > Strings > Types)
   keyword: dawnScales.primary[2],    // Bright coral (prominent)
@@ -27,7 +27,7 @@ export const dawnBase = {
   comment: shared.neutral,
   operator: dawnScales.neutral[2],
   type: dawnScales.success[3],        // Mint green (cool contrast)
-  constant: dawnScales.warning[4],    // Muted to differentiate from number
+  constant: dawnScales.warning[1],    // Soft gold (high lightness)
   error: dawnScales.danger[3],
 
   // Git - using scales

@@ -17,8 +17,8 @@ export const midnightBase = {
   foregroundBright: shared.foregroundBrightCool,
   foregroundDim: shared.foregroundDim,
 
-  // Accent - steel blue
-  primary: midnightScales.primary[3],
+  // Accent - steel blue (softer)
+  primary: midnightScales.primary[4],
 
   // Syntax - using scales (hierarchy: Keywords > Functions > Strings > Types)
   keyword: midnightScales.primary[2],    // Bright periwinkle (prominent)
@@ -28,7 +28,7 @@ export const midnightBase = {
   comment: shared.neutral,
   operator: midnightScales.neutral[2],
   type: midnightScales.success[3],        // Seafoam (aqua contrast)
-  constant: midnightScales.warning[4],    // Muted to differentiate from number
+  constant: midnightScales.secondary[1],  // Soft cyan (high lightness)
   error: midnightScales.danger[3],
 
   // Git - using scales

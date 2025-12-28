@@ -16,8 +16,8 @@ export const forestBase = {
   foregroundBright: shared.foregroundBrightForest,
   foregroundDim: shared.foregroundDim,
 
-  // Accent - moss green
-  primary: forestScales.primary[3],
+  // Accent - moss green (darker for better button contrast)
+  primary: forestScales.primary[5],
 
   // Syntax - using scales (hierarchy: Keywords > Functions > Strings > Types)
   keyword: forestScales.primary[2],    // Natural emerald (prominent)
@@ -27,7 +27,7 @@ export const forestBase = {
   comment: shared.neutral,
   operator: forestScales.neutral[2],
   type: forestScales.secondary[3],      // Deeper tan (earthy contrast to green)
-  constant: forestScales.warning[4],    // Muted to differentiate from number
+  constant: forestScales.tertiary[1],   // Soft sage (high lightness)
   error: forestScales.danger[3],
 
   // Git - using scales

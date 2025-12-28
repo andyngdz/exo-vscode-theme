@@ -232,18 +232,19 @@ function createHoverWidgetColors(palette: Palette): ThemeColors {
 
 function createButtonColors(palette: Palette): ThemeColors {
   return {
-    // Button
-    'button.background': palette.primary,
-    'button.foreground': palette.background,
-    'button.hoverBackground': darken(palette.primary, 0.05),
+    // Button (softened with opacity)
+    'button.background': withOpacity(palette.primary, 0.9),
+    'button.foreground': palette.foregroundBright,
+    'button.hoverBackground': palette.primary,
+    'button.separator': withOpacity(palette.foregroundBright, 0.3),
     // Secondary buttons
     'button.secondaryBackground': withOpacity(palette.foregroundDim, 0.2),
     'button.secondaryForeground': palette.foreground,
     'button.secondaryHoverBackground': withOpacity(palette.foregroundDim, 0.5),
-    // Extension buttons
-    'extensionButton.prominentBackground': palette.primary,
-    'extensionButton.prominentForeground': palette.background,
-    'extensionButton.prominentHoverBackground': darken(palette.primary, 0.05),
+    // Extension buttons (softened with opacity)
+    'extensionButton.prominentBackground': withOpacity(palette.primary, 0.9),
+    'extensionButton.prominentForeground': palette.foregroundBright,
+    'extensionButton.prominentHoverBackground': palette.primary,
     // Welcome page button
     'welcomePage.buttonBackground': withOpacity(palette.primary, 0.4),
   }
@@ -484,6 +485,7 @@ const CONSTANT_SCOPES = [
   'support.constant',
   'constant.character',
   'constant.escape',
+  'constant.language',
   'keyword.other',
 ]
 
@@ -643,7 +645,7 @@ function createCoreTokenColors(palette: Palette): TokenColor[] {
     },
     {
       name: 'Constants (support constants, escape chars)',
-      scope: ['support.constant', 'constant.character', 'constant.escape', 'keyword.other'],
+      scope: CONSTANT_SCOPES,
       settings: {
         foreground: palette.constant,
       },
