@@ -2,6 +2,33 @@
   "name": "Exo Eclipse - Darker",
   "type": "dark",
   "semanticHighlighting": true,
+  "semanticTokenColors": {
+    "keyword": "#ffb399",
+    "keyword.controlFlow": "#ffb399",
+    "function": "#ffcf99",
+    "method": "#ffcf99",
+    "string": "#ffe299",
+    "number": "#ffd399",
+    "operator": "#d0ccc8",
+    "comment": "#a6a6a6",
+    "class": "#bfe2b6",
+    "enum": "#bfe2b6",
+    "struct": "#bfe2b6",
+    "type": "#bfe2b6",
+    "interface": "#bfe2b6",
+    "class.defaultLibrary": "#bfe2b6",
+    "enum.defaultLibrary": "#bfe2b6",
+    "struct.defaultLibrary": "#bfe2b6",
+    "type.defaultLibrary": "#bfe2b6",
+    "interface.defaultLibrary": {
+      "foreground": "#bfe2b6",
+      "italic": true
+    },
+    "enumMember": "#ffe4c2",
+    "macro": "#ffe4c2",
+    "event": "#d0ccc8",
+    "regexp": "#d0ccc8"
+  },
   "colors": {
     "editor.background": "#0b0e14",
     "editor.foreground": "#dcdcdc",
