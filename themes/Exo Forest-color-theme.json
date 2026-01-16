@@ -2,6 +2,33 @@
   "name": "Exo Forest",
   "type": "dark",
   "semanticHighlighting": true,
+  "semanticTokenColors": {
+    "keyword": "#b2e6c4",
+    "keyword.controlFlow": "#b2e6c4",
+    "function": "#e6cfb3",
+    "method": "#e6cfb3",
+    "string": "#c4e6b3",
+    "number": "#ecd9ac",
+    "operator": "#cad2c6",
+    "comment": "#a6a6a6",
+    "class": "#d9b88c",
+    "enum": "#d9b88c",
+    "struct": "#d9b88c",
+    "type": "#d9b88c",
+    "interface": "#d9b88c",
+    "class.defaultLibrary": "#d9b88c",
+    "enum.defaultLibrary": "#d9b88c",
+    "struct.defaultLibrary": "#d9b88c",
+    "type.defaultLibrary": "#d9b88c",
+    "interface.defaultLibrary": {
+      "foreground": "#d9b88c",
+      "italic": true
+    },
+    "enumMember": "#dbf0d1",
+    "macro": "#dbf0d1",
+    "event": "#cad2c6",
+    "regexp": "#cad2c6"
+  },
   "colors": {
     "editor.background": "#1a1e28",
     "editor.foreground": "#dcdcdc",

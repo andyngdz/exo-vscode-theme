@@ -2,6 +2,33 @@
   "name": "Exo Dawn",
   "type": "dark",
   "semanticHighlighting": true,
+  "semanticTokenColors": {
+    "keyword": "#ffaa99",
+    "keyword.controlFlow": "#ffaa99",
+    "function": "#ffcc99",
+    "method": "#ffcc99",
+    "string": "#ffcc99",
+    "number": "#ffd399",
+    "operator": "#cecaca",
+    "comment": "#a6a6a6",
+    "class": "#8bdab4",
+    "enum": "#8bdab4",
+    "struct": "#8bdab4",
+    "type": "#8bdab4",
+    "interface": "#8bdab4",
+    "class.defaultLibrary": "#8bdab4",
+    "enum.defaultLibrary": "#8bdab4",
+    "struct.defaultLibrary": "#8bdab4",
+    "type.defaultLibrary": "#8bdab4",
+    "interface.defaultLibrary": {
+      "foreground": "#8bdab4",
+      "italic": true
+    },
+    "enumMember": "#ffe4c2",
+    "macro": "#ffe4c2",
+    "event": "#cecaca",
+    "regexp": "#cecaca"
+  },
   "colors": {
     "editor.background": "#1a1e28",
     "editor.foreground": "#dcdcdc",

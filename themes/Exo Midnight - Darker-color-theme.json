@@ -2,6 +2,33 @@
   "name": "Exo Midnight - Darker",
   "type": "dark",
   "semanticHighlighting": true,
+  "semanticTokenColors": {
+    "keyword": "#9999ff",
+    "keyword.controlFlow": "#9999ff",
+    "function": "#99e6ff",
+    "method": "#99e6ff",
+    "string": "#99ddff",
+    "number": "#ffe699",
+    "operator": "#c6cad2",
+    "comment": "#a6a6a6",
+    "class": "#8bdaca",
+    "enum": "#8bdaca",
+    "struct": "#8bdaca",
+    "type": "#8bdaca",
+    "interface": "#8bdaca",
+    "class.defaultLibrary": "#8bdaca",
+    "enum.defaultLibrary": "#8bdaca",
+    "struct.defaultLibrary": "#8bdaca",
+    "type.defaultLibrary": "#8bdaca",
+    "interface.defaultLibrary": {
+      "foreground": "#8bdaca",
+      "italic": true
+    },
+    "enumMember": "#c2f0ff",
+    "macro": "#c2f0ff",
+    "event": "#c6cad2",
+    "regexp": "#c6cad2"
+  },
   "colors": {
     "editor.background": "#0b0e14",
     "editor.foreground": "#dcdcdc",
