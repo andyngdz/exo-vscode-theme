@@ -453,6 +453,19 @@ type TokenColor = {
   }
 }
 
+type SemanticTokenStyle = {
+  foreground?: string
+  italic?: boolean
+  bold?: boolean
+  underline?: boolean
+  strikethrough?: boolean
+}
+
+type SemanticTokenColor = string | SemanticTokenStyle
+
+type SemanticTokenColors = Record<string, SemanticTokenColor>
+
+
 const OPERATOR_MISC_SCOPES = [
   'constant.other.color',
   'punctuation',
@@ -877,6 +890,42 @@ function createMarkdownTokenColors(palette: Palette): TokenColor[] {
   ]
 }
 
+function createSemanticTokenColors(palette: Palette): SemanticTokenColors {
+  return {
+    // Ensure language-server-driven tokens follow palette hierarchy
+    keyword: palette.keyword,
+    'keyword.controlFlow': palette.keyword,
+
+    function: palette.function,
+    method: palette.function,
+
+    string: palette.string,
+    number: palette.number,
+    operator: palette.operator,
+    comment: palette.comment,
+
+    class: palette.type,
+    enum: palette.type,
+    struct: palette.type,
+    type: palette.type,
+    interface: palette.type,
+
+    'class.defaultLibrary': palette.type,
+    'enum.defaultLibrary': palette.type,
+    'struct.defaultLibrary': palette.type,
+    'type.defaultLibrary': palette.type,
+    'interface.defaultLibrary': {
+      foreground: palette.type,
+      italic: true,
+    },
+
+    enumMember: palette.constant,
+    macro: palette.constant,
+    event: palette.operator,
+    regexp: palette.operator,
+  }
+}
+
 export function createTheme(palette: Palette) {
   const colors: ThemeColors = {
     ...createEditorColors(palette),
@@ -921,10 +970,13 @@ export function createTheme(palette: Palette) {
     ...createMarkdownTokenColors(palette),
   ]
 
+  const semanticTokenColors = createSemanticTokenColors(palette)
+
   return {
     name: palette.name,
     type: 'dark',
     semanticHighlighting: true,
+    semanticTokenColors,
     colors,
     tokenColors,
   }

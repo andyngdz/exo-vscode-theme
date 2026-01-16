@@ -2,6 +2,33 @@
   "name": "Exo Dusk",
   "type": "dark",
   "semanticHighlighting": true,
+  "semanticTokenColors": {
+    "keyword": "#f3a5ed",
+    "keyword.controlFlow": "#f3a5ed",
+    "function": "#cc99ff",
+    "method": "#cc99ff",
+    "string": "#99e6ff",
+    "number": "#ffcc99",
+    "operator": "#ccc8d0",
+    "comment": "#a6a6a6",
+    "class": "#8bdac1",
+    "enum": "#8bdac1",
+    "struct": "#8bdac1",
+    "type": "#8bdac1",
+    "interface": "#8bdac1",
+    "class.defaultLibrary": "#8bdac1",
+    "enum.defaultLibrary": "#8bdac1",
+    "struct.defaultLibrary": "#8bdac1",
+    "type.defaultLibrary": "#8bdac1",
+    "interface.defaultLibrary": {
+      "foreground": "#8bdac1",
+      "italic": true
+    },
+    "enumMember": "#e0c2ff",
+    "macro": "#e0c2ff",
+    "event": "#ccc8d0",
+    "regexp": "#ccc8d0"
+  },
   "colors": {
     "editor.background": "#1a1e28",
     "editor.foreground": "#dcdcdc",
