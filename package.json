@@ -88,7 +88,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
-    "colord": "^2.9.3",
+    "colord": "^2.9.4",
     "tsx": "^4.7.0",
     "typescript": "^5.0.0"
   }
